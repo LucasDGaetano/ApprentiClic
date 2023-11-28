@@ -72,11 +72,11 @@ chapter3_1 = Chapter.create!(
 puts "CREATED CHAPTERS"
 
 
-user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
-user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456")
-user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456")
-user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456")
-user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456")
+user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023", username:"zaira")
+user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456", username:"lucas")
+user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456", username:"valentin")
+user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456", username:"pierre")
+user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456", username:"lucile")
 puts "CREATED USERS"
 
 ucourse1 = UsersCourse.create!(user: user2, course: course1)

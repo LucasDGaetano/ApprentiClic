@@ -3,7 +3,7 @@
   <h2><%= @course.description %></h2>
 
   <% if current_user.users_courses.any? { |uc| uc.course == @course } %>
-    <p>Vous suivez deja ce cours</p>
+    <p>Vous suivez déjà ce cours</p>
     <%= link_to "Cliquez ici pour vous y rendre", course_path(@course) %>
   <% else %>
     <%= simple_form_for [@course, @uc] do |f|%>
