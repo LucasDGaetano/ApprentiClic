@@ -5,9 +5,9 @@ class CoursesController < ApplicationController
   end
 
   def overview
+    @uc = UsersCourse.new
     @course = Course.find(params[:id])
   end
-
 
   def show
     @course = Course.find(params[:id])

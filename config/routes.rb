@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :courses, only: [:index, :show, :new, :create] do
     resources :comments, only: :create
+    resources :users_courses, only: :create
   end
   resources :chapters, only: :update
 
