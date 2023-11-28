@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:index, :show, :new, :create] do
     resources :comments, only: :create
   end
+  resources :chapters, only: :update
 
   resources :comments, only: :show do
     resources :answers, only: :create
