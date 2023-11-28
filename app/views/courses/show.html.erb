@@ -8,8 +8,7 @@
     <% if chapter.done %>
      <button class="btn btn-success disabled">Bravo!</button>
     <% else %>
-      <%= link_to chapter_path(chapter), data: { turbo_method: :patch}
-      do %>
+      <%= link_to chapter_path(chapter), data: { turbo_method: :patch} do %>
         <button class="btn btn-success">J'ai compris !</button>
       <% end %>
     <% end %>

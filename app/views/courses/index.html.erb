@@ -1,1 +1,8 @@
-<h1>Index of courses !</h1>
+<div class="container">
+  <h1>Index of courses !</h1>
+  <% @courses.each do |course| %>
+    <%= course.title %>
+    <%= link_to 'acceder à ce cours', overview_path(course) %>
+    <hr>
+  <% end %>
+</div>

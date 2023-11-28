@@ -41,6 +41,12 @@ course3 = Course.create!(
 course3.save!
 puts "CREATED COURSES"
 
+chapter1_1 = Chapter.create!(
+  course: course1,
+  title: "Suivez le rythme !",
+  content: "*Cliquez dans la case en suivant le rythme donner par l'indicateur*"
+)
+
 chapter2_1 = Chapter.create!(
   course: course2,
   title: "Selectionner le texte",
@@ -56,6 +62,13 @@ chapter2_3 = Chapter.create!(
  title: "Selectionner la destination et faire une combinaison : 'Ctrl' et 'V'",
  content: "*Explications sur comment faire la combinaison de touche*"
 )
+
+chapter3_1 = Chapter.create!(
+  course: course3,
+  title: "Ouvrir le navigateur de fichier",
+  content: "*Explications et image sur comment ouvrir le navigateur de dossiers*"
+)
+
 puts "CREATED CHAPTERS"
 
 
@@ -72,6 +85,8 @@ ucourse3 = UsersCourse.create!(user: user1, course: course2)
 ucourse4 = UsersCourse.create!(user: user3, course: course3)
 ucourse5 = UsersCourse.create!(user: user1, course: course1)
 ucourse6 = UsersCourse.create!(user: user5, course: course1)
+ucourse7 = UsersCourse.create!(user: user2, course: course2)
+
 puts "CREATED USERS_COURSES"
 
 comment1 = Comment.create!(user: user1, course: course1, content: "Je ne suis pas sur d'avoir bien compris le rythme")
