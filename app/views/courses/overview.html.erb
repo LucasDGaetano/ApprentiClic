@@ -1,7 +1,13 @@
-<h1>Bienvenue à l'overview du cours <%= @course.title %></h1>
-<h2><%= @course.description %></h2>
+<div class="container">
+  <h1>Bienvenue à l'overview du cours <%= @course.title %></h1>
+  <h2><%= @course.description %></h2>
 
-
-<%= simple_form_for [@course, @uc] do |f|%>
-<%= f.submit "Commencer le cours" %>
-<% end %>
+  <% if current_user.users_courses.any? { |uc| uc.course == @course } %>
+    <p>Vous suivez deja ce cours</p>
+    <%= link_to "Cliquez ici pour vous y rendre", course_path(@course) %>
+  <% else %>
+    <%= simple_form_for [@course, @uc] do |f|%>
+    <%= f.submit "Commencer le cours" %>
+    <% end %>
+  <% end %>
+</div>
