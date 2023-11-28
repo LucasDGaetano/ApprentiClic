@@ -9,10 +9,12 @@
 #   end
 Answer.destroy_all
 Comment.destroy_all
+Chapter.destroy_all
 UsersCourse.destroy_all
 Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
+
 
 course1 = Course.create!(
    title: "S'entrainer à faire un double-clic",
@@ -32,34 +34,40 @@ course2.save!
 
 course3 = Course.create!(
   title: "Réussir à reconnaitre le chemin d'un dossier ou fichier dans l'ordinateur",
-  description: "Dans ce cours vous apprendrez à naviguer dans votre ordinateur grâce aux chemins, et ainsi retrouver facilement où vous etes dans l'ordinateur de même que vos fichiers",
+  description: "Dans ce cours vous apprendrez à naviguer dans votre ordinateur grâce aux chemins, et ainsi retrouver facilement où vous êtes dans l'ordinateur de même que vos fichiers",
   category: "Navigation",
   difficulty: "Avancé"
 )
 course3.save!
 puts "CREATED COURSES"
 
+chapter2_1 = Chapter.create!(
+  course: course2,
+  title: "Selectionner le texte",
+  content: "*Explications sur comment selectionner le texte à la souris*"
+)
+chapter2_2 = Chapter.create!(
+ course: course2,
+ title: "Faire la combinaison au clavier : 'Ctrl' et 'C' en même temps",
+ content: "*Explications sur comment faire la combinaison de touche et expliquer que le texte est en mémoire*"
+)
+chapter2_3 = Chapter.create!(
+ course: course2,
+ title: "Selectionner la destination et faire une combinaison : 'Ctrl' et 'V'",
+ content: "*Explications sur comment faire la combinaison de touche*"
+)
+puts "CREATED CHAPTERS"
+
 
 user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
-user1.save!
-
 user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456")
-user2.save!
-
 user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456")
-user3.save!
-
 user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456")
-user4.save!
-
 user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456")
-user5.save!
 puts "CREATED USERS"
 
 ucourse1 = UsersCourse.create!(user: user2, course: course1)
-
 ucourse2 = UsersCourse.create!(user: user4, course: course2)
-
 ucourse3 = UsersCourse.create!(user: user1, course: course2)
 ucourse4 = UsersCourse.create!(user: user3, course: course3)
 ucourse5 = UsersCourse.create!(user: user1, course: course1)
