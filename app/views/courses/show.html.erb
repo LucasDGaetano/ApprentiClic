@@ -6,6 +6,7 @@
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h2><%= chapter.title %></h2>
     <p><%= chapter.content %></p>
+    <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
     <% if users_chapter.done %>
      <button class="btn btn-success disabled">Bravo!</button>
     <% else %>
