@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_28_121045) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_29_093426) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,7 +27,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_121045) do
   create_table "chapters", force: :cascade do |t|
     t.string "title"
     t.text "content"
-    t.boolean "done", default: false
     t.bigint "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -67,6 +66,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_121045) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "users_chapters", force: :cascade do |t|
+    t.boolean "done", default: false
+    t.bigint "users_course_id", null: false
+    t.bigint "chapter_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_users_chapters_on_chapter_id"
+    t.index ["users_course_id"], name: "index_users_chapters_on_users_course_id"
+  end
+
   create_table "users_courses", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "course_id", null: false
@@ -82,6 +91,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_121045) do
   add_foreign_key "chapters", "courses"
   add_foreign_key "comments", "courses"
   add_foreign_key "comments", "users"
+  add_foreign_key "users_chapters", "chapters"
+  add_foreign_key "users_chapters", "users_courses"
   add_foreign_key "users_courses", "courses"
   add_foreign_key "users_courses", "users"
 end

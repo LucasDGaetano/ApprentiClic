@@ -9,6 +9,7 @@
 #   end
 Answer.destroy_all
 Comment.destroy_all
+UsersChapter.destroy_all
 Chapter.destroy_all
 UsersCourse.destroy_all
 Course.destroy_all
@@ -68,15 +69,13 @@ chapter3_1 = Chapter.create!(
   title: "Ouvrir le navigateur de fichier",
   content: "*Explications et image sur comment ouvrir le navigateur de dossiers*"
 )
-
 puts "CREATED CHAPTERS"
 
-
-user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023", username:"zaira")
-user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456", username:"lucas")
-user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456", username:"valentin")
-user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456", username:"pierre")
-user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456", username:"lucile")
+user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
+user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456")
+user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456")
+user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456")
+user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456")
 puts "CREATED USERS"
 
 ucourse1 = UsersCourse.create!(user: user2, course: course1)
@@ -88,6 +87,13 @@ ucourse6 = UsersCourse.create!(user: user5, course: course1)
 ucourse7 = UsersCourse.create!(user: user2, course: course2)
 
 puts "CREATED USERS_COURSES"
+
+UsersCourse.all.each do |uc|
+  uc.course.chapters.each do |chap|
+    UsersChapter.create(users_course: uc, chapter: chap)
+  end
+end
+puts "LINKED USERS_COURSES TO USERS_CHAPTERS"
 
 comment1 = Comment.create!(user: user1, course: course1, content: "Je ne suis pas sur d'avoir bien compris le rythme")
 comment2 = Comment.create!(user: user1, course: course2, content: "Je ne suis pas sur d'avoir bien compris comment appuyer sur deux touches en meme temps. merci.")

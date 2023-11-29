@@ -3,12 +3,13 @@
   <p>pour rappel : <%= @course.description %></p>
 
   <% @chapters.each do |chapter| %>
+    <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h2><%= chapter.title %></h2>
     <p><%= chapter.content %></p>
-    <% if chapter.done %>
+    <% if users_chapter.done %>
      <button class="btn btn-success disabled">Bravo!</button>
     <% else %>
-      <%= link_to chapter_path(chapter), data: { turbo_method: :patch} do %>
+      <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch} do %>
         <button class="btn btn-success">J'ai compris !</button>
       <% end %>
     <% end %>

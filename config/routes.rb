@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :comments, only: :create
     resources :users_courses, only: :create
   end
-  resources :chapters, only: :update
+  resources :users_chapters, only: :update
 
   resources :comments, only: :show do
     resources :answers, only: :create
