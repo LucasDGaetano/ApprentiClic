@@ -1,1 +1,9 @@
-<h1>welcome to the dashboard !</h1>
+<h1>Bienvenu sur votre profil !</h1>
+
+
+<p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
+<p>dont débutant</p>
+<p>dont intermédiaire</p>
+<p>dont confirmé</p>
+
+<p>Et vous en avez terminé : <%= @completed_courses %> </p>
