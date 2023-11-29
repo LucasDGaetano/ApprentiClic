@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Bienvenue sur le cours <strong><%= @course.title %></strong></h1>
+  <p>pour rappel : <%= @course.description %></p>
+
+  <% @chapters.each do |chapter| %>
+    <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
+    <h2><%= chapter.title %></h2>
+    <p><%= chapter.content %></p>
+    <% if users_chapter.done %>
+     <button class="btn btn-success disabled">Bravo!</button>
+    <% else %>
+      <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch} do %>
+        <button class="btn btn-success">J'ai compris !</button>
+      <% end %>
+    <% end %>
+  <% end %>
+
+
+  <%# EXERCICE POUR LE COURS DE COPIER/COLLER AU CLAVIER %>
+  <% if @course.title == "Apprendre à faire un copier/coller au clavier" %>
+    <h2>C'est à vous !</h2>
+    <p>Exercez vous avec les cases et le texte ci-dessous : déplacez le texte de gauche sur la droite</p>
+    <div class="d-flex justify-content-around">
+        <input type="text" value="Déplacer le texte à droite avec un copier/coller au clavier !">
+        <input type="text" placeholder="Mettez le texte ici !">
+    </div>
+  <% end %>
+
+</div>
