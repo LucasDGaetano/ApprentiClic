@@ -1,8 +1,51 @@
 <div class="container">
   <h1>Index of courses !</h1>
-  <% @courses.each do |course| %>
-    <%= course.title %>
-    <%= link_to 'acceder à ce cours', overview_path(course) %>
-    <hr>
-  <% end %>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: courses_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Recherchez un mot-clé"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="d-flex">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Catégories
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <% Course::CATEGORIES.each do |categorie| %>
+            <%= link_to categorie, courses_path(categories: categorie), class: "dropdown-item" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Difficulté
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <% Course::DIFFICULTIES.each do |difficulty| %>
+            <%= link_to difficulty, courses_path(difficulty: difficulty), class: "dropdown-item" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <% @courses.each do |course| %>
+        <%= course.title %>
+        <%= link_to 'Accéder à ce cours', overview_path(course) %>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+
 </div>
