@@ -5,7 +5,6 @@ class Course < ApplicationRecord
   has_many :answers, through: :comments
   has_many :chapters, dependent: :destroy
 
-
   DIFFICULTIES = %w[Débutant Intermédiaire Avancé]
   CATEGORIES = %w[Souris Clavier Navigation Internet Saisie Messagerie]
 
@@ -13,4 +12,11 @@ class Course < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :difficulty, inclusion: { in: DIFFICULTIES }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title,
+    against: [:title],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

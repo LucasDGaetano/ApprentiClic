@@ -62,13 +62,17 @@ chapter1_3 = Chapter.create!(
   content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur."
 )
 
-chapter2_1 = Chapter.create!(
+file1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
+chapter2_1 = Chapter.new(
   course: course2,
   title: "Pour commencer",
   content: "Savoir comment effectuer un copier-coller vous permet d’économiser
   du temps et de l’effort lors de la manipulation de texte,
   d’images ou d’autres types de contenu. Cette fonction vous aide aussi à bien organiser votre ordinateur."
 )
+chapter2_1.photo.attach(io: file1, filename: "atelier.png", content_type: "image/png")
+chapter2_1.save!
+
 chapter2_2 = Chapter.create!(
  course: course2,
  title: "Qu’est-ce qu’un copier-coller ?",
