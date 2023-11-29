@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   resources :comments, only: :show do
     resources :answers, only: :create
   end
+
+  get "fake_site", to: "fake_caf#welcome"
+  get "fake_site/my_resources", to: "fake_caf#my_resources"
+
 end
