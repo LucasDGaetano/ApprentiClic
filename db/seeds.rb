@@ -48,11 +48,15 @@ chapter1_1 = Chapter.create!(
   content: "*Cliquez dans la case en suivant le rythme donner par l'indicateur*"
 )
 
-chapter2_1 = Chapter.create!(
+file1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
+chapter2_1 = Chapter.new(
   course: course2,
   title: "Selectionner le texte",
   content: "*Explications sur comment selectionner le texte à la souris*"
 )
+chapter2_1.photo.attach(io: file1, filename: "atelier.png", content_type: "image/png")
+chapter2_1.save!
+
 chapter2_2 = Chapter.create!(
  course: course2,
  title: "Faire la combinaison au clavier : 'Ctrl' et 'C' en même temps",
