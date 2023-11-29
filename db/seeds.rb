@@ -34,40 +34,93 @@ course2 = Course.create!(
 course2.save!
 
 course3 = Course.create!(
-  title: "Réussir à reconnaitre le chemin d'un dossier ou fichier dans l'ordinateur",
-  description: "Dans ce cours vous apprendrez à naviguer dans votre ordinateur grâce aux chemins, et ainsi retrouver facilement où vous êtes dans l'ordinateur de même que vos fichiers",
-  category: "Navigation",
-  difficulty: "Avancé"
+  title: "Envoyer un email avec Gmail",
+  description: "Dans ce cours vous apprendrez à vous servir de Gmail pour envoyer vos premiers messages",
+  category: "Messagerie",
+  difficulty: "Débutant"
 )
 course3.save!
 puts "CREATED COURSES"
 
 chapter1_1 = Chapter.create!(
   course: course1,
-  title: "Suivez le rythme !",
-  content: "*Cliquez dans la case en suivant le rythme donner par l'indicateur*"
+  title: "Pour commencer",
+  content: "Le double clic permet d’ouvrir un fichier, un dossier ou un logiciel dont l’icône se situerait sur le bureau ou dans une fenêtre.
+  Le double-clic s'effectue le plus souvent sur le bouton gauche."
+)
+
+chapter1_2 = Chapter.create!(
+  course: course1,
+  title: "Qu’est ce qu’un double-clic ?",
+  content: "Il s’agit d’une action courante utilisée dans divers programmes et applications informatiques.
+  Le double clic c’est le fait de cliquer 2 fois consécutives et rapides sur le bouton gauche de la souris."
+)
+
+chapter1_3 = Chapter.create!(
+  course: course1,
+  title: "A quoi sert un double-clic ?",
+  content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur."
 )
 
 chapter2_1 = Chapter.create!(
   course: course2,
-  title: "Selectionner le texte",
-  content: "*Explications sur comment selectionner le texte à la souris*"
+  title: "Pour commencer",
+  content: "Savoir comment effectuer un copier-coller vous permet d’économiser
+  du temps et de l’effort lors de la manipulation de texte,
+  d’images ou d’autres types de contenu. Cette fonction vous aide aussi à bien organiser votre ordinateur."
 )
 chapter2_2 = Chapter.create!(
  course: course2,
- title: "Faire la combinaison au clavier : 'Ctrl' et 'C' en même temps",
- content: "*Explications sur comment faire la combinaison de touche et expliquer que le texte est en mémoire*"
+ title: "Qu’est-ce qu’un copier-coller ?",
+ content: "Il s’agit d’une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
+ l’identique sur un support numérique.Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers."
 )
 chapter2_3 = Chapter.create!(
  course: course2,
- title: "Selectionner la destination et faire une combinaison : 'Ctrl' et 'V'",
- content: "*Explications sur comment faire la combinaison de touche*"
+ title: "A quoi sert un copier-coller ?",
+ content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels :
+ - un traitement de texte, comme word, ou le bloc note. Vous pourrez copier et coller du texte, dupliquer rapidement un paragraphe ou une phrase pour agrémenter la mise en forme ou revoir la mise en page de vos documents.
+ - Dans votre navigateur internet, vous avez possibilité de copier du texte pour ensuite le coller dans un traitement de texte par exemple
+ - Ça marche également dans les tableurs comme excel dans lequel vous pouvez effectuer le collage de cellules.
+ - La technique du coller vous sera utile lors de la capture d’écran pour déposer votre capture dans un logiciel tel que Paint…"
+)
+
+chapter2_4 = Chapter.create!(
+  course: course2,
+  title: "Faire un copier-coller : l’essentiel",
+  content: "- Sélectionnez l’élément à copier en plaçant la souris sur l’élément et en le sélectionnant jusqu’à ce que vous le voyez surligné
+  - Pressez en même temps les touches Ctrl et C pour copier
+  - Allez à l’emplacement où vous désirez placer la copie
+  - Appuyez simultanément sur les touches Ctrl et V pour coller
+  - La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi"
 )
 
 chapter3_1 = Chapter.create!(
   course: course3,
-  title: "Ouvrir le navigateur de fichier",
-  content: "*Explications et image sur comment ouvrir le navigateur de dossiers*"
+  title: "Pour commencer",
+  content: "Envoyer un mail est une des actions de base sur Internet.
+  Elle va vous permettre de communiquer avec vos amis et vos proches mais également avec les administrations. "
+)
+
+chapter3_2 = Chapter.create!(
+  course: course3,
+  title: "Les différents champs d’un email",
+  content: "Dans un email, vous aurez différentes informations à entrer comme le destinataire, l’objet, le contenu.
+  Le champ 1 correspond la première étape de l’envoi d’un email, il s’agit de l’adresse email de votre destinataire. L’adresse que vous saisissez dans l’étape 1 doit être une adresse complète. Elle doit se composer d’un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
+  Le champ 2 correspond à l’objet de votre email, c’est en quelque sorte le sujet sur lequel porte votre email. La saisie de l’objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
+  Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez."
+)
+
+chapter3_3 = Chapter.create!(
+  course: course3,
+  title: "Comment envoyer un email ?",
+  content: " 1 - Cliquez sur le bouton NOUVEAU MESSAGE. Lorsque vous cliquez sur le bouton NOUVEAU MESSAGE, une nouvelle fenêtre s’ouvre dans laquelle vous allez remplir les différents champs détaillés au-dessus et rédiger votre message
+  2 - Dans le champ de saisie À, tapez l’adresse email de votre destinataire
+  3 - Complétez le champ objet en précisant le sujet de votre email
+  4 - Dans le dernier champ, écrivez votre message
+  5 - Cliquez sur le bouton Envoyer pour faire partir votre message
+
+  "
 )
 puts "CREATED CHAPTERS"
 
