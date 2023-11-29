@@ -14,8 +14,10 @@ Rails.application.routes.draw do
     resources :answers, only: :create
   end
 
-  get "fake_site", to: "fake_caf#welcome"
-  get "fake_site/my_resources", to: "fake_caf#my_resources"
-  get "fake_site/my_resources/my_profile", to: "fake_caf#my_profile"
-  
+  get "faux_site", to: "fake_caf#welcome"
+  get "faux_site/mes_ressources", to: "fake_caf#my_resources"
+  get "faux_site/mes_ressources/mon_profil", to: "fake_caf#my_profile"
+  get "faux_site/mes_ressources/mon_profil/details", to: "fake_caf#my_profile_details"
+  get "faux_site/mes_ressources/mon_profil/modifications", to: "fake_caf#modify"
+  get "faux_site/mes_ressources/amont", to: "fake_caf#amount"
 end
