@@ -16,5 +16,6 @@ Rails.application.routes.draw do
 
   get "fake_site", to: "fake_caf#welcome"
   get "fake_site/my_resources", to: "fake_caf#my_resources"
-
+  get "fake_site/my_resources/my_profile", to: "fake_caf#my_profile"
+  
 end
