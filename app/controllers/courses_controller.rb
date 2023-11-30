@@ -2,9 +2,9 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
-    if params[:categories].present?
+    if params[:category].present?
       sql_subquery = "category ILIKE :query"
-      @courses = @courses.where(sql_subquery, query: "%#{params[:categories]}%")
+      @courses = @courses.where(sql_subquery, query: "%#{params[:category]}%")
     end
     if params[:difficulty].present?
       sql_subquery = "difficulty ILIKE :query"

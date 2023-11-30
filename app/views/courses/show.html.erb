@@ -19,7 +19,7 @@
     <p><%= sanitize chapter.content %></p>
     <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
     <% if users_chapter.done %>
-    
+
   <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
      <button class="btn btn-success disabled">Bravo!</button>
     <% else %>
