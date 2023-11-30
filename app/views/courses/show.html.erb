@@ -1,3 +1,5 @@
+<%= sanitize "<ul><li>test</li></ul>" %>
+
 <div class="container">
   <h1>Bienvenue sur le cours <strong><%= @course.title %></strong></h1>
   <p>pour rappel : <%= @course.description %></p>
@@ -5,7 +7,7 @@
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h2><%= chapter.title %></h2>
-    <p><%= chapter.content %></p>
+    <p><%= sanitize chapter.content %></p>
     <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
     <% if users_chapter.done %>
      <button class="btn btn-success disabled">Bravo!</button>

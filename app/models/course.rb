@@ -6,7 +6,7 @@ class Course < ApplicationRecord
   has_many :chapters, dependent: :destroy
 
   DIFFICULTIES = %w[Débutant Intermédiaire Avancé]
-  CATEGORIES = %w[Souris Clavier Navigation Internet Saisie]
+  CATEGORIES = %w[Souris Clavier Navigation Internet Saisie Messagerie]
 
   validates :category, inclusion: { in: CATEGORIES }
   validates :title, presence: true
