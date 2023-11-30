@@ -16,13 +16,14 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
-
-course1 = Course.create!(
+file_course_1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
+course1 = Course.new(
    title: "S'entrainer à faire un double-clic",
    description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
    category: "Souris",
    difficulty: "Débutant"
  )
+course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
 course1.save!
 
 course2 = Course.create!(
