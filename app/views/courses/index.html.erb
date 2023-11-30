@@ -35,6 +35,11 @@
               <%= link_to overview_path(course) do %>
               <button class="btn btn-success">Acceder à ce cours</button>
               <% end %>
+              <p><%= course.comments.count %> commentaires</p>
+              <p>|</p>
+              <p><%= course.category %></p>
+              <p>|</p>
+              <p><%= course.difficulty %></p>
             </div>
           </div>
         </div>
