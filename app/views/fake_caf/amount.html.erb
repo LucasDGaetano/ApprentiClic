@@ -1,15 +1,48 @@
-<h1 class="text-primary text-uppercase">Ressources</h1>
-<h2>Mois 1</h2>
-<h2>Mois 2</h2>
-<h3> Mois 3</h2>
 
-<div class="d-flex">
-  <ul>
-    <li>Salaires</li>
-    <li>Revenus non salariés</li>
-    <li>Indemnités chômage</li>
-    <li>Pensions alimentaires</li>
-    <li>Autre ressource perçue</li>
-  </ul>
 
-<%= link_to "Quitter", faux_site_path %>
+<div class="container">
+  <h1 class="text-primary text-uppercase">Ressources</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Mois 1</th>
+        <th scope="col">Mois 2</th>
+        <th scope="col">Mois 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Salaires (y compris le montant perçu au titre du chômage partiel) <i class="fas fa-info-circle"></i></th>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+      </tr>
+      <tr>
+        <th scope="row">Revenus non salariés (chiffre d'affaires mensuel net) <i class="fas fa-info-circle"></i></th>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+      </tr>
+      <tr>
+        <th scope="row">Indemnités chômage <i class="fas fa-info-circle"></i></th>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+      </tr>
+      <tr>
+        <th scope="row">Pensions alimentaires <i class="fas fa-info-circle"></i></th>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+        <td><input type="number" class="form-control" placeholder="€"></td>
+      </tr>
+      <tr>
+        <th scope="row">Aucune ressource perçue <i class="fas fa-info-circle"></i></th>
+        <td><input type="checkbox" class="form-check-input"></td>
+        <td><input type="checkbox" class="form-check-input"></td>
+        <td><input type="checkbox" class="form-check-input"></td>
+      </tr>
+    </tbody>
+  </table>
+  <%= link_to "Quitter", faux_site_path %>
+</div>
