@@ -19,6 +19,7 @@ class CoursesController < ApplicationController
   def overview
     @uc = UsersCourse.new
     @course = Course.find(params[:id])
+    @chapters = @course.chapters.order(created_at: :asc)
   end
 
   def show

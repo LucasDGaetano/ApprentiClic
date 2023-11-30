@@ -1,9 +1,31 @@
-<h1>Bienvenu sur votre profil !</h1>
+<div class="container">
+  <h1>Bienvenue sur votre profil !</h1>
 
 
-<p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
-<p>dont débutant</p>
-<p>dont intermédiaire</p>
-<p>dont confirmé</p>
+  <p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
+  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.first).count %> débutants</p>
+  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.second).count %> intermédiaires</p>
+  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.third).count %> avancés</p>
 
-<p>Et vous en avez terminé : <%= @completed_courses %> </p>
+  <div>
+    <h3>Voici vos progrès actuels :</h3>
+      <ul>
+        <% current_user.users_courses.each do |ucourses| %>
+        <li><%= ucourses.course.title %> - progrès : <%= ucourses.progress %>%</li>
+        <%= link_to "Retourner au cours", course_path(ucourses.course), class: "btn btn-success" %>
+        <% end %>
+      </ul>
+  </div>
+  <div>
+  <% if @completed_courses_count > 0 %>
+    <h3>Vous avez actuellement terminé <%= @completed_courses_count %> cours !</h3>
+    <ul>
+      <% @completed_courses.each do |cc| %>
+      <li><%= cc.course.title %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <h3>Vous n'avez pas encore terminé de cours, courage !</h3>
+  <% end %>
+  </div>
+</div>
