@@ -23,7 +23,7 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @chapters = @course.chapters
+    @chapters = @course.chapters.order(created_at: :asc)
   end
 
 end

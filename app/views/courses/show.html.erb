@@ -1,15 +1,26 @@
-<%= sanitize "<ul><li>test</li></ul>" %>
+<%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
 
 <div class="container">
-  <h1>Bienvenue sur le cours <strong><%= @course.title %></strong></h1>
-  <p>Pour rappel : <%= @course.description %></p>
+  <%# Section image du cour %>
+  <div>
+    <%= cl_image_tag(@course.cover.key, class: "image-cour") if @course.cover.attached?%>
+  </div>
 
+  <%# Section titre et mini-descriptif du cour %>
+  <div>
+    <h1><strong><%= @course.title %></strong></h1>
+      <p><%= @course.description %></p>
+  </div>
+
+  <%# Section chapitre du cour %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
-    <h2><%= chapter.title %></h2>
+    <h4><%= chapter.title %></h4>
     <p><%= sanitize chapter.content %></p>
     <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
     <% if users_chapter.done %>
+
+  <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
      <button class="btn btn-success disabled">Bravo!</button>
     <% else %>
       <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch} do %>
@@ -18,15 +29,13 @@
     <% end %>
   <% end %>
 
-
-  <%# EXERCICE POUR LE COURS DE COPIER/COLLER AU CLAVIER %>
-  <% if @course.title == "Apprendre à faire un copier/coller au clavier" %>
-    <h2>C'est à vous !</h2>
-    <p>Exercez vous avec les cases et le texte ci-dessous : déplacez le texte de gauche sur la droite</p>
-    <div class="d-flex justify-content-around">
-        <input type="text" value="Déplacer le texte à droite avec un copier/coller au clavier !">
-        <input type="text" placeholder="Mettez le texte ici !">
+<%# Section encart commentaire %>
+  <div class="flex flex-col my-3 w-full p-3 lg:max-w-3xl">
+    <h2 class="text-left w-full text-md font-extrabold">Commentaires </h2>
+    <div class="AddComment__AddCommentStyled-zwnbey-0 jiWEeD">
+      <textarea role="textbox" placeholder="Qu'en pensez-vous ?"></textarea>
+      <button class="btn btn-success">Envoyer</button>
     </div>
-  <% end %>
+  </div>
 
 </div>

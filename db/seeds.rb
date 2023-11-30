@@ -40,12 +40,14 @@ course3 = Course.create!(
   category: "Messagerie",
   difficulty: "Débutant"
 )
+cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341724/Apprenticlic/photo_cour_envoyer_email.jpg")
+course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
 course4 = Course.create!(
   title: "Faire une capture d'écran",
   description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
-  category: "Messagerie",
+  category: "Souris",
   difficulty: "Intermédiaire"
 )
 course4.save!
@@ -129,6 +131,8 @@ chapter3_2 = Chapter.create!(
   <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
   </ul>"
 )
+file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
+chapter3_2.photo.attach(io: file2, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
 chapter3_3 = Chapter.create!(
   course: course3,
