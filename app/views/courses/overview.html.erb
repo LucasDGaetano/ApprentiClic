@@ -1,13 +1,26 @@
+  <div>
+    <%= cl_image_tag(@course.cover.key, class: "image-cour", crop: :fill) if @course.cover.attached?%>
+  </div>
 <div class="container">
-  <h1>Bienvenue à l'overview du cours <%= @course.title %></h1>
-  <h2><%= @course.description %></h2>
+
+  <h1><strong><%= @course.title %></strong></h1>
+  <h2>Pour rappel avant de commencer :</h2>
+  <p><%= @course.description %></p>
+
+  <h3 class="my-4">Sommaire</h3>
+  <ol>
+    <% @chapters.each do |chapter| %>
+     <li><h4><%= chapter.title %></h4></li>
+    <% end %>
+  </ol>
 
   <% if current_user.users_courses.any? { |uc| uc.course == @course } %>
     <p>Vous suivez déjà ce cours</p>
-    <%= link_to "Cliquez ici pour vous y rendre", course_path(@course) %>
+    <%= link_to "Cliquez ici pour vous y rendre", course_path(@course), class: "btn btn-success mb-5" %>
   <% else %>
+    <h3 class="mt-5">Vous êtes prêt ? On se lance ?</h3>
     <%= simple_form_for [@course, @uc] do |f|%>
-    <%= f.submit "Commencer le cours" %>
+    <%= f.submit "Commencer le cours !", class: "btn btn-success mb-5" %>
     <% end %>
   <% end %>
 </div>
