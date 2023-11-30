@@ -1,12 +1,12 @@
 <%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
 
-<div class="container">
   <%# Section image du cour %>
   <div>
     <%= cl_image_tag(@course.cover.key, class: "image-cour") if @course.cover.attached?%>
   </div>
 
   <%# Section titre et mini-descriptif du cour %>
+  <div class="container">
   <div>
     <h1><strong><%= @course.title %></strong></h1>
       <p><%= @course.description %></p>

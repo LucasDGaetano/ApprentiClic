@@ -40,7 +40,7 @@ course3 = Course.create!(
   category: "Messagerie",
   difficulty: "Débutant"
 )
-cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341724/Apprenticlic/photo_cour_envoyer_email.jpg")
+cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362973/priscilla-du-preez-OEdkPaxYMXU-unsplash_cnhz1m.jpg")
 course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
