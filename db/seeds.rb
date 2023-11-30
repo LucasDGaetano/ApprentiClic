@@ -40,6 +40,15 @@ course3 = Course.create!(
   difficulty: "Débutant"
 )
 course3.save!
+
+course4 = Course.create!(
+  title: "Faire une capture d'écran",
+  description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
+  category: "Messagerie",
+  difficulty: "Intermédiaire"
+)
+course4.save!
+
 puts "CREATED COURSES"
 
 chapter1_1 = Chapter.create!(
@@ -82,21 +91,24 @@ chapter2_2 = Chapter.create!(
 chapter2_3 = Chapter.create!(
  course: course2,
  title: "A quoi sert un copier-coller ?",
- content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels :
- - un traitement de texte, comme word, ou le bloc note. Vous pourrez copier et coller du texte, dupliquer rapidement un paragraphe ou une phrase pour agrémenter la mise en forme ou revoir la mise en page de vos documents.
- - Dans votre navigateur internet, vous avez possibilité de copier du texte pour ensuite le coller dans un traitement de texte par exemple
- - Ça marche également dans les tableurs comme excel dans lequel vous pouvez effectuer le collage de cellules.
- - La technique du coller vous sera utile lors de la capture d’écran pour déposer votre capture dans un logiciel tel que Paint…"
+ content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels : <ul>
+ <li> un traitement de texte, comme word, ou le bloc note. Vous pourrez copier et coller du texte, dupliquer rapidement un paragraphe ou une phrase pour agrémenter la mise en forme ou revoir la mise en page de vos documents.</li>
+ <li> Dans votre navigateur internet, vous avez possibilité de copier du texte pour ensuite le coller dans un traitement de texte par exemple </li>
+ <li> Ça marche également dans les tableurs comme excel dans lequel vous pouvez effectuer le collage de cellules.</li>
+ <li> La technique du coller vous sera utile lors de la capture d’écran pour déposer votre capture dans un logiciel tel que Paint…</li>
+ </ul>"
 )
 
 chapter2_4 = Chapter.create!(
   course: course2,
   title: "Faire un copier-coller : l’essentiel",
-  content: "- Sélectionnez l’élément à copier en plaçant la souris sur l’élément et en le sélectionnant jusqu’à ce que vous le voyez surligné
-  - Pressez en même temps les touches Ctrl et C pour copier
-  - Allez à l’emplacement où vous désirez placer la copie
-  - Appuyez simultanément sur les touches Ctrl et V pour coller
-  - La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi"
+  content: "<ul>
+  <li>Sélectionnez l’élément à copier en plaçant la souris sur l’élément et en le sélectionnant jusqu’à ce que vous le voyez surligné
+  <li>Pressez en même temps les touches Ctrl et C pour copier
+  <li>Allez à l’emplacement où vous désirez placer la copie
+  <li>Appuyez simultanément sur les touches Ctrl et V pour coller
+  <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
+  </ul>"
 )
 
 chapter3_1 = Chapter.create!(
@@ -110,22 +122,39 @@ chapter3_2 = Chapter.create!(
   course: course3,
   title: "Les différents champs d’un email",
   content: "Dans un email, vous aurez différentes informations à entrer comme le destinataire, l’objet, le contenu.
-  Le champ 1 correspond la première étape de l’envoi d’un email, il s’agit de l’adresse email de votre destinataire. L’adresse que vous saisissez dans l’étape 1 doit être une adresse complète. Elle doit se composer d’un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
-  Le champ 2 correspond à l’objet de votre email, c’est en quelque sorte le sujet sur lequel porte votre email. La saisie de l’objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
-  Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez."
+  <ul>
+  <li>Le champ 1 correspond la première étape de l’envoi d’un email, il s’agit de l’adresse email de votre destinataire. L’adresse que vous saisissez dans l’étape 1 doit être une adresse complète. Elle doit se composer d’un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
+  <li>Le champ 2 correspond à l’objet de votre email, c’est en quelque sorte le sujet sur lequel porte votre email. La saisie de l’objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
+  <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
+  </ul>"
 )
 
 chapter3_3 = Chapter.create!(
   course: course3,
   title: "Comment envoyer un email ?",
-  content: " 1 - Cliquez sur le bouton NOUVEAU MESSAGE. Lorsque vous cliquez sur le bouton NOUVEAU MESSAGE, une nouvelle fenêtre s’ouvre dans laquelle vous allez remplir les différents champs détaillés au-dessus et rédiger votre message
-  2 - Dans le champ de saisie À, tapez l’adresse email de votre destinataire
-  3 - Complétez le champ objet en précisant le sujet de votre email
-  4 - Dans le dernier champ, écrivez votre message
-  5 - Cliquez sur le bouton Envoyer pour faire partir votre message
-
-  "
+  content: " <ol>
+  <li>Cliquez sur le bouton NOUVEAU MESSAGE. Lorsque vous cliquez sur le bouton NOUVEAU MESSAGE, une nouvelle fenêtre s’ouvre dans laquelle vous allez remplir les différents champs détaillés au-dessus et rédiger votre message
+  <li>Dans le champ de saisie À, tapez l’adresse email de votre destinataire
+  <li>Complétez le champ objet en précisant le sujet de votre email
+  <li>Dans le dernier champ, écrivez votre message
+  <li>Cliquez sur le bouton Envoyer pour faire partir votre message
+  </ol>
+  Ces 5 étapes sont matérialisées dans la copie d’écran suivante :"
 )
+
+chapter4_1 = Chapter.create!(
+  course: course4,
+  title: "Pour commencer",
+  content: "Une capture d’écran est une photo du contenu apparaissant à l’écran qui peut être enregistrée sous la forme d’un fichier dans la mémoire de votre ordinateur.
+  Une capture d’écran peut-être une photo de l’ensemble ou d’une portion de votre écran."
+)
+
+chapter4_2 = Chapter.create!(
+  course: course4,
+  title: "Vidéo explicative sur Mac ou PC",
+  content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d’écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC."
+)
+
 puts "CREATED CHAPTERS"
 
 user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
