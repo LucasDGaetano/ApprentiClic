@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @completed_courses = current_user.users_courses.select { |uc| uc.users_chapters.all?(&:done) }
-    @completed_courses = @completed_courses.count
+    @completed_courses_count = @completed_courses.count
     #current_user.courses.joins(:user_courses).where(user_course: { progress: 100 }).count
   end
 end
