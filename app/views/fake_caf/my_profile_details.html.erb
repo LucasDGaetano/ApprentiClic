@@ -1,25 +1,69 @@
-<h1>MON PROFIL</h1>
+<div class="container">
+  <h1 class="text-primary text-uppercase">MON PROFIL</h1>
 
-<p> C'est sur cette page que seront renseignés les différentes informations des
-  encadrés. Pour les modifier, il faut appuyer sur le crayon bleu à droite des
-  titres. Pour continuer (lorsque toutes les informations sont remplies)
-  appuyez ensuite sur "Confirmer mon profil"
-</p>
-<h3>SITUATION FAMILIALE</h3>
+  <p> C'est sur cette page que seront renseignés les différentes informations des
+    encadrés. Pour les modifier, il faut appuyer sur le crayon bleu à droite des
+    titres. Pour continuer (lorsque toutes les informations sont remplies)
+    appuyez ensuite sur "Confirmer mon profil"
+  </p>
+</div>
 
-<h3>SITUATION PROFESSIONNELLE</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">SITUATION FAMILIALE</h5>
+          <p class="card-text">...</p>
+          <a href="#" class="btn btn-primary">Modifier</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">SITUATION PROFESSIONNELLE</h5>
+          <p class="card-text">...</p>
+          <a href="#" class="btn btn-primary">Modifier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card w-100 mb-3 mt-3">
+    <div class="card-body">
+      <h5 class="card-title">ENFANTS ET AUTRES PERSONNES</h5>
+      <p class="card-text">...</p>
+      <a href="#" class="btn btn-primary">Modifier</a>
+    </div>
+  </div>
 
-<h3>ENFANTS ET AUTRES PERSONNES</h3>
+  <div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">ADRESSE</h5>
+        <p class="card-text">...</p>
+        <a href="#" class="btn btn-primary">Modifier</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">ADRESSE MAIL ET TELEPHONES</h5>
+        <p class="card-text">...</p>
+        <a href="#" class="btn btn-primary">Modifier</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h3>DECLARER UNE GROSSESSE</h3>
-
-<h3>DECLARER UNE NAISSANCE</h3>
-
-<h3>ADRESSE</h3>
-
-<h3>ADRESSES MAIL ET TELEPHONES</h3>
-
-<h3>COORDONNES BANCAIRES</h3>
-
-
-<%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path %>
+<div class="card w-100 mb-3 mt-3">
+  <div class="card-body">
+    <h5 class="card-title">COORDONNES BANCAIRES</h5>
+    <p class="card-text">...</p>
+    <a href="#" class="btn btn-primary">Modifier</a>
+  </div>
+</div>
+  <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path %></div>
+</div>
