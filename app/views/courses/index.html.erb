@@ -10,8 +10,8 @@
             class: "form-control",
             placeholder: "Recherchez un mot-clé"
         %>
-        <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select", prompt: "Sélectionnez une catégorie" %>
-        <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select", prompt: "Sélectionnez une difficulté" %>
+        <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select text-center", prompt: "Sélectionnez une catégorie" %>
+        <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select text-center", prompt: "Sélectionnez une difficulté" %>
         <%= button_tag(class:"btn form-button") do %>
           <i class="fa-solid fa-magnifying-glass"></i>
         <% end %>
@@ -31,9 +31,11 @@
           <div class="card-product-infos">
             <h4><%= course.title %></h4>
             <p><%= course.description %></p>
-             <%= link_to overview_path(course) do %>
-            <button class="btn btn-success">Acceder à ce cours</button>
-            <% end %>
+            <div class="card-product-footer mt-2">
+              <%= link_to overview_path(course) do %>
+              <button class="btn btn-success">Acceder à ce cours</button>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
