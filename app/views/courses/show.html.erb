@@ -2,7 +2,7 @@
 
 <div class="container">
   <h1>Bienvenue sur le cours <strong><%= @course.title %></strong></h1>
-  <p>pour rappel : <%= @course.description %></p>
+  <p>Pour rappel : <%= @course.description %></p>
 
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>

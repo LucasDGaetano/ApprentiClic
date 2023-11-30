@@ -1,64 +1,41 @@
-<div class="container">
-  <h1>Index of courses !</h1>
+<div class="container mt-5">
+  <h1>Catalogue de nos cours</h1>
 
   <div class="row justify-content-center">
-    <div class="col-sm-8 my-3">
-      <%= form_with url: courses_path, method: :get, class: "d-flex" do %>
+    <div class="col-8 my-3">
+      <%= form_with url: courses_path, method: :get do %>
+      <div class="d-flex justify-content-evenly form-holder">
         <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Recherchez un mot-clé"
-          %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        %>
+        <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select", prompt: "Sélectionnez une catégorie" %>
+        <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select", prompt: "Sélectionnez une difficulté" %>
+        <%= button_tag(class:"btn form-button") do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
+      </div>
       <% end %>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-4">
-      <div class="d-flex">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <% if params[:categories].present? %>
-              <%= params[:categories] %>
-              <% else %>
-                Catégorie
-              <% end %>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonCat">
-            <% Course::CATEGORIES.each do |categorie| %>
-            <%= link_to categorie, courses_path(categories: categorie), class: "dropdown-item" %>
-            <% end %>
-          </div>
-        </div>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDif" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <% if params[:difficulty].present? %>
-              <%= params[:difficulty] %>
-              <% else %>
-                Difficulté
-              <% end %>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonDif">
-            <% Course::DIFFICULTIES.each do |difficulty| %>
-            <%= link_to difficulty, courses_path(difficulty: difficulty), class: "dropdown-item" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="row justify-content-center my-5">
     <div class="col-8">
-        <% if params[:categories].present? %>
-          <h2>Voici les résultat pour la catégorie <%= params[:categories] %></h2>
-        <% elsif params[:difficulty].present? %>
-          <h2>Voici les résultat pour la difficulté <%= params[:difficulty] %></h2>
-        <% elsif params[:query].present? %>
+        <% if params[:query].present? %>
           <h2>Voici les résultat pour votre recherche "<%= params[:query] %>"</h2>
         <% end %>
       <% @courses.each do |course| %>
-        <%= course.title %>
-        <%= link_to 'Accéder à ce cours', overview_path(course) %>
-        <hr>
+        <div class="card-product my-4">
+          <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
+          <div class="card-product-infos">
+            <h4><%= course.title %></h4>
+            <p><%= course.description %></p>
+             <%= link_to overview_path(course) do %>
+            <button class="btn btn-success">Acceder à ce cours</button>
+            <% end %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
