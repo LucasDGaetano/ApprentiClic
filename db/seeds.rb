@@ -32,7 +32,7 @@ cover2 = URI.open("https://www.justgeek.fr/wp-content/uploads/2021/11/comment-fa
 file_course_2 = URI.open("https://www.justgeek.fr/wp-content/uploads/2021/11/comment-faire-un-copier-coller-avec-le-clavier-1160x653.jpg")
 course2 = Course.create!(
   title: "Apprendre à faire un copier/coller au clavier",
-  description: "Dans ce cours vous apprendrez à utiliser les combinaisons de touches pour faire des copier/coller",
+  description: "Dans ce cours vous apprenez à utiliser les combinaisons de touches pour faire des copier/coller",
   category: "Clavier",
   difficulty: "Intermédiaire"
 )
@@ -43,7 +43,7 @@ course2.save!
 file_course_3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362739/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash_qbr9qi.jpg")
 course3 = Course.create!(
   title: "Envoyer un email avec Gmail",
-  description: "Dans ce cours vous apprendrez à vous servir de Gmail pour envoyer vos premiers messages",
+  description: "Dans ce cours vous apprenez à vous servir de Gmail pour envoyer vos premiers messages",
   category: "Messagerie",
   difficulty: "Débutant"
 )
@@ -56,7 +56,7 @@ cover4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701425817
 file_course_4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701425817/Apprenticlic/capture-ecran_ljat1m.png")
 course4 = Course.create!(
   title: "Faire une capture d'écran",
-  description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
+  description: "Dans ce cours vous apprenez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
   category: "Souris",
   difficulty: "Intermédiaire"
 )
@@ -68,7 +68,7 @@ cover5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150
 file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150/Apprenticlic/glisser-deposer_sbbguz.png")
 course5 = Course.create!(
   title: "Glissé-Déposé",
-  description: "Dans ce cours vous apprendrez à déplacer pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
+  description: "Dans ce cours vous apprenez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
   category: "Souris",
   difficulty: "Intermédiaire"
 )
@@ -80,7 +80,7 @@ cover6 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426475
 file_course_6 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426475/Apprenticlic/noun-computer-keyboard-32403781_uuhqzg.png")
 course6 = Course.create!(
   title: "Le raccourci clavier",
-  description: "Dans ce cours vous apprendrez à faire un raccourci avec votre clavier à l'aide de l’utilisation d’une ou plusieurs touches afin de réaliser une action ou une commande sur votre ordinateur.",
+  description: "Dans ce cours vous apprenez à faire un raccourci avec votre clavier à l'aide de l’utilisation d’une ou plusieurs touches afin de réaliser une action ou une commande sur votre ordinateur.",
   category: "Clavier",
   difficulty: "Intermédiaire"
 )
@@ -92,7 +92,7 @@ cover7 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750
 file_course_7 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
 course7 = Course.create!(
   title: "Sélectionner plusieurs fichiers ou dossiers?",
-  description: "Dans ce cours vous apprendrez à sélectionner plusieurs fichiers en même temps pour gagner du temps et bien organiser votre ordinateur.",
+  description: "Dans ce cours vous apprenez à sélectionner plusieurs fichiers en même temps pour gagner du temps et bien organiser votre ordinateur.",
   category: "Navigation",
   difficulty: "Intermédiaire"
 )
@@ -128,7 +128,7 @@ cover10 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v170142675
 file_course_10 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
 course10 = Course.create!(
   title: "Enregistrer un fichier en pdf",
-  description: "Dans ce cours, vous apprendrez à enregistrer un fichier pdf à partir de n’importe quel document.",
+  description: "Dans ce cours, vous apprenez à enregistrer un fichier pdf à partir de n’importe quel document.",
   category: "Internet",
   difficulty: "Débutant"
 )
