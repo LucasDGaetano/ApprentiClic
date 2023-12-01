@@ -1,0 +1,30 @@
+.form-control {
+  background-color: whitesmoke;
+}
+
+.explanations {
+  font-size: 30px;
+  background-color: $red;
+}
+
+.column {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: rgb(50, 78, 106) !important;
+  border: solid;
+  border-bottom: solid !important;
+  border-top: solid !important;
+}
+
+.line{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: #e8e8e8 !important;
+  border: solid;
+  border-bottom: solid !important;
+  border-top: solid !important;
+}
+
+td {
+  background-color: #e8e8e8;
+}

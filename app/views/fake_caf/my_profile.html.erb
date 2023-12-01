@@ -1,9 +1,11 @@
-<p>Ici la CAF vous indique les procédures à suivre sur le remplissage de votre
-  profil. C'est un simple message de prévention. Appuyez sur Commencer pour
-  aller à la suite.
-</p>
+<div class= "container text-intro">
+  <p class= "text-intro">Ici la CAF vous indique les procédures à suivre sur le remplissage de votre
+    profil. C'est un simple message de prévention. Appuyez sur Commencer pour
+    aller à la suite.
+  </p>
+</div>
 
-<div class="container">
+<div class="container replique">
   <h1 class="text-primary text-uppercase">MON PROFIL</h1>
 
   <div class="container">
@@ -13,7 +15,7 @@
     situation comprend 3 étapes à faire situées en 3 et 5 minutes chacune.
       </p>
       <p class="justify-content-center align-items-center">Des bulles d'aide s'affichent pour vous expliquer les informations à saisir</p>
-      <button class="btn begin-button" type="button"><%= link_to "Commencer", faux_site_mes_ressources_mon_profil_details_path %></button>
+      <%= link_to "Commencer", faux_site_mes_ressources_mon_profil_details_path, class: 'btn-caf text-end' %>
     </div>
   </div>
 </div>
