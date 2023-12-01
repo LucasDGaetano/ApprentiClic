@@ -2,13 +2,16 @@
 
 <div class="container">
   <h1 class="text-primary text-uppercase">Ressources</h1>
+  <p class="explanations"> C'est dans ce tableau que vous devez renseigner les différentes
+    sources de revenus dont vous disposez sur les 3 derniers mois (fond blanc)
+  </p>
   <table class="table table-bordered">
     <thead>
       <tr>
         <th scope="col"></th>
-        <th scope="col">Mois 1</th>
-        <th scope="col">Mois 2</th>
-        <th scope="col">Mois 3</th>
+        <th scope="col" class="column">Mois 1</th>
+        <th scope="col" class="column">Mois 2</th>
+        <th scope="col" class="column">Mois 3</th>
       </tr>
     </thead>
     <tbody>
@@ -44,5 +47,5 @@
       </tr>
     </tbody>
   </table>
-  <%= link_to "Quitter", faux_site_path %>
+  <div class="text-end"><%= link_to "Quitter", faux_site_path, class: 'btn-caf' %></div>
 </div>
