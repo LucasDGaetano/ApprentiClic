@@ -17,7 +17,7 @@
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h4><%= chapter.title %></h4>
     <p><%= sanitize chapter.content %></p>
-    <%= cl_image_tag chapter.photos.key, height: 300, width: 400, crop: :fill if chapter.photos.attached?%>
+    <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
      <%= cl_video_tag chapter.video.key, height: 300, width: 400, crop: :fill, controls: true if chapter.video.attached?%>
     <% if users_chapter.done %>
 
