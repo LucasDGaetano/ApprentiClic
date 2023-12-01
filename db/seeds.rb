@@ -48,7 +48,7 @@ course3 = Course.create!(
   difficulty: "Débutant"
 )
 cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362739/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash_qbr9qi.jpg")
-course2.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
+course3.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
 course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
@@ -197,9 +197,9 @@ chapter2_4 = Chapter.create!(
   <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
   </ul>"
 )
-chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
-chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
-chapter2_4.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
+chapter2_4.photos.attach(io: file1, filename: "selection.png", content_type: "image/png")
+chapter2_4.photos.attach(io: file2, filename: "copier.png", content_type: "image/png")
+chapter2_4.photos.attach(io: file3, filename: "coller.png", content_type: "image/png")
 
 chapter3_1 = Chapter.create!(
   course: course3,
@@ -219,7 +219,7 @@ chapter3_2 = Chapter.create!(
   </ul>"
 )
 file4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
-chapter3_2.photo.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
+chapter3_2.photos.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
 chapter3_3 = Chapter.create!(
   course: course3,
@@ -234,7 +234,7 @@ chapter3_3 = Chapter.create!(
   Ces 5 étapes sont matérialisées dans la copie d’écran suivante :"
 )
 file5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341809/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.43.31_sbkdn6.png")
-chapter3_2.photo.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
+chapter3_3.photos.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
 chapter4_1 = Chapter.create!(
   course: course4,
