@@ -13,27 +13,33 @@
     <div class="col-sm-6 mb-3 mb-sm-0">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">SITUATION FAMILIALE</h5>
+          <div class="card-caf">
+            <h5 class="card-title">SITUATION FAMILIALE</h5>
+            <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+          </div>
           <p class="card-text">...</p>
-          <a href="#" class="btn btn-primary">Modifier</a>
         </div>
       </div>
     </div>
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">SITUATION PROFESSIONNELLE</h5>
+          <div class="card-caf">
+            <h5 class="card-title">SITUATION PROFESSIONNELLE</h5>
+            <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+          </div>
           <p class="card-text">...</p>
-          <a href="#" class="btn btn-primary">Modifier</a>
         </div>
       </div>
     </div>
   </div>
   <div class="card w-100 mb-3 mt-3">
     <div class="card-body">
-      <h5 class="card-title">ENFANTS ET AUTRES PERSONNES</h5>
+      <div class="card-caf">
+        <h5 class="card-title">ENFANTS ET AUTRES PERSONNES</h5>
+        <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+      </div>
       <p class="card-text">...</p>
-      <a href="#" class="btn btn-primary">Modifier</a>
     </div>
   </div>
 
@@ -41,18 +47,22 @@
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">ADRESSE</h5>
+        <div class="card-caf">
+          <h5 class="card-title">ADRESSE</h5>
+          <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+        </div>
         <p class="card-text">...</p>
-        <a href="#" class="btn btn-primary">Modifier</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">ADRESSE MAIL ET TELEPHONES</h5>
+        <div class="card-caf">
+          <h5 class="card-title">ADRESSE MAIL ET TELEPHONES</h5>
+          <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+        </div>
         <p class="card-text">...</p>
-        <a href="#" class="btn btn-primary">Modifier</a>
       </div>
     </div>
   </div>
@@ -60,10 +70,12 @@
 
 <div class="card w-100 mb-3 mt-3">
   <div class="card-body">
-    <h5 class="card-title">COORDONNES BANCAIRES</h5>
+    <div class="card-caf">
+      <h5 class="card-title">COORDONNES BANCAIRES</h5>
+      <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+    </div>
     <p class="card-text">...</p>
-    <a href="#" class="btn btn-primary">Modifier</a>
   </div>
 </div>
-  <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path %></div>
+  <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path, class: 'btn-caf' %></div>
 </div>
