@@ -1,13 +1,15 @@
 <div class="container">
+
   <h1>Bienvenue sur votre profil !</h1>
 
+  <div class="my-3">
+    <p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
+    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.first).count %> débutants</p>
+    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.second).count %> intermédiaires</p>
+    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.third).count %> avancés</p>
+  </div>
 
-  <p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
-  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.first).count %> débutants</p>
-  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.second).count %> intermédiaires</p>
-  <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.third).count %> avancés</p>
-
-  <div>
+  <div class="my-3">
     <h3>Voici vos progrès actuels :</h3>
       <ul>
         <% current_user.users_courses.each do |ucourses| %>
@@ -16,7 +18,8 @@
         <% end %>
       </ul>
   </div>
-  <div>
+
+  <div class="my-3">
   <% if @completed_courses_count > 0 %>
     <h3>Vous avez actuellement terminé <%= @completed_courses_count %> cours !</h3>
     <ul>
