@@ -7,7 +7,7 @@
   </div>
 
   <%# Section titre et mini-descriptif du cour %>
-  <div>
+  <div class="mb-5">
     <h1><strong><%= @course.title %></strong></h1>
       <p><%= @course.description %></p>
   </div>
@@ -16,23 +16,27 @@
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h4><%= chapter.title %></h4>
-    <p><%= sanitize chapter.content %></p>
+    <p><%= chapter.content.html_safe %></p>
     <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
-    <% if users_chapter.done %>
-
   <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
+    <% if users_chapter.done %>
+    <div class="my-3">
      <button class="btn btn-success disabled">Bravo!</button>
+    </div>
     <% else %>
       <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch} do %>
+      <div class="my-3">
         <button class="btn btn-success">J'ai compris !</button>
+      </div>
       <% end %>
     <% end %>
+    <hr>
   <% end %>
 
 <%# Section encart commentaire %>
 
   <div class="my-5">
-    <h2>Commentaires</h2>
+    <h5>Commentaires</h5>
     <% @course.comments.each do |comment| %>
       <div class="my-3">
         <p><strong><%= comment.user.username %></strong> - le <%= (comment.created_at.day) %> / <%= comment.created_at.month %>/ <%= comment.created_at.year %></p>

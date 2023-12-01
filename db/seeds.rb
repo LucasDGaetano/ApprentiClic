@@ -16,14 +16,12 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
-file_course_1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
 course1 = Course.new(
    title: "S'entrainer à faire un double-clic",
    description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
    category: "Souris",
    difficulty: "Débutant"
  )
-course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
 course1.save!
 
 course2 = Course.create!(
@@ -40,8 +38,6 @@ course3 = Course.create!(
   category: "Messagerie",
   difficulty: "Débutant"
 )
-cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341724/Apprenticlic/photo_cour_envoyer_email.jpg")
-course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
 course4 = Course.create!(
@@ -113,6 +109,20 @@ chapter2_4 = Chapter.create!(
   <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
   </ul>"
 )
+
+chapter2_5 = Chapter.create!(
+  course: course2,
+  title: "Exercice pratique",
+  content: "<div class='my-5'>
+    <p>Vous avez ici 2 cases, il y a du texte dans celle de gauche,
+    il faut le mettre dans la case de droite à l'aide du copier/coller au clavier</p>
+    <div class='d-flex justify-content-evenly mt-4'>
+    <textarea cols='60' rows='2'>Copiez moi dans la case de droite !</textarea>
+    <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !' id='pastearea'></textarea>
+    </div>
+  </div>"
+)
+
 
 chapter3_1 = Chapter.create!(
   course: course3,
