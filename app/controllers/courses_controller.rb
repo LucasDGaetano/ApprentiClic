@@ -26,6 +26,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @chapters = @course.chapters.order(created_at: :asc)
+    @comment = Comment.new
   end
 
 end
