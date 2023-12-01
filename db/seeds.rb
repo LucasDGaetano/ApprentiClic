@@ -16,45 +16,132 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
+cover1 = URI.open("https://www.ledito.me/images/documents/2019/10/click-gauche.png")
+file_course_1 = URI.open("https://www.ledito.me/images/documents/2019/10/click-gauche.png")
 course1 = Course.new(
    title: "S'entrainer à faire un double-clic",
    description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
    category: "Souris",
    difficulty: "Débutant"
  )
+course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
+course1.cover.attach(io: cover1, filename: "course1_cover.jpg", content_type: "image/png")
 course1.save!
 
+cover2 = URI.open("https://www.justgeek.fr/wp-content/uploads/2021/11/comment-faire-un-copier-coller-avec-le-clavier-1160x653.jpg")
+file_course_2 = URI.open("https://www.justgeek.fr/wp-content/uploads/2021/11/comment-faire-un-copier-coller-avec-le-clavier-1160x653.jpg")
 course2 = Course.create!(
   title: "Apprendre à faire un copier/coller au clavier",
-  description: "Dans ce cours vous apprendrez à utiliser les combinaisons de touches pour faire des copier/coller",
+  description: "Dans ce cours vous apprenez à utiliser les combinaisons de touches pour faire des copier/coller",
   category: "Clavier",
   difficulty: "Intermédiaire"
 )
+course2.photo.attach(io: file_course_2, filename: "course1.png", content_type: "image/jpeg")
+course2.cover.attach(io: cover2, filename: "course1_cover.jpg", content_type: "image/jpeg")
 course2.save!
 
+file_course_3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362739/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash_qbr9qi.jpg")
 course3 = Course.create!(
   title: "Envoyer un email avec Gmail",
-  description: "Dans ce cours vous apprendrez à vous servir de Gmail pour envoyer vos premiers messages",
+  description: "Dans ce cours vous apprenez à vous servir de Gmail pour envoyer vos premiers messages",
   category: "Messagerie",
   difficulty: "Débutant"
 )
+cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362739/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash_qbr9qi.jpg")
+course3.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
+course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
+cover4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701425817/Apprenticlic/capture-ecran_ljat1m.png")
+file_course_4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701425817/Apprenticlic/capture-ecran_ljat1m.png")
 course4 = Course.create!(
   title: "Faire une capture d'écran",
-  description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
+  description: "Dans ce cours vous apprenez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
   category: "Souris",
   difficulty: "Intermédiaire"
 )
+course4.photo.attach(io: file_course_4, filename: "course1.png", content_type: "image/png")
+course4.cover.attach(io: cover4, filename: "course3_cover.jpg", content_type: "image/png")
 course4.save!
+
+cover5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150/Apprenticlic/glisser-deposer_sbbguz.png")
+file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150/Apprenticlic/glisser-deposer_sbbguz.png")
+course5 = Course.create!(
+  title: "Glissé-Déposé",
+  description: "Dans ce cours vous apprenez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
+  category: "Souris",
+  difficulty: "Intermédiaire"
+)
+course5.photo.attach(io: file_course_5, filename: "course1.png", content_type: "image/png")
+course5.cover.attach(io: cover5, filename: "course3_cover.jpg", content_type: "image/png")
+course5.save!
+
+cover6 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426475/Apprenticlic/noun-computer-keyboard-32403781_uuhqzg.png")
+file_course_6 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426475/Apprenticlic/noun-computer-keyboard-32403781_uuhqzg.png")
+course6 = Course.create!(
+  title: "Le raccourci clavier",
+  description: "Dans ce cours vous apprenez à faire un raccourci avec votre clavier à l'aide de l’utilisation d’une ou plusieurs touches afin de réaliser une action ou une commande sur votre ordinateur.",
+  category: "Clavier",
+  difficulty: "Intermédiaire"
+)
+course6.photo.attach(io: file_course_6, filename: "course1.png", content_type: "image/png")
+course6.cover.attach(io: cover6, filename: "course3_cover.jpg", content_type: "image/png")
+course6.save!
+
+cover7 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+file_course_7 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+course7 = Course.create!(
+  title: "Sélectionner plusieurs fichiers ou dossiers?",
+  description: "Dans ce cours vous apprenez à sélectionner plusieurs fichiers en même temps pour gagner du temps et bien organiser votre ordinateur.",
+  category: "Navigation",
+  difficulty: "Intermédiaire"
+)
+course7.photo.attach(io: file_course_7, filename: "course1.png", content_type: "image/jpeg")
+course7.cover.attach(io: cover7, filename: "course3_cover.jpg", content_type: "image/jpeg")
+course7.save!
+
+cover8 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701427656/Apprenticlic/gmail-messageri-Acces_h5m0ch.jpg")
+file_course_8 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701427656/Apprenticlic/gmail-messageri-Acces_h5m0ch.jpg")
+course8 = Course.create!(
+  title: "Créer une adresse gmail messagerie",
+  description: "Dans ce cours vous allez découvrir les principales étapes pour créer un adresse gmail messagerie.",
+  category: "Messagerie",
+  difficulty: "Débutant"
+)
+course8.photo.attach(io: file_course_8, filename: "course1.png", content_type: "image/jpeg")
+course8.cover.attach(io: cover8, filename: "course3_cover.jpg", content_type: "image/jpeg")
+course8.save!
+
+cover9 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+file_course_9 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+course9 = Course.create!(
+  title: "Faire une recherche sur Google",
+  description: "Dans ce cours, découvrez comment effectuer des recherches efficaces et précises sur Internet grâce au moteur de recherche de Google.",
+  category: "Internet",
+  difficulty: "Débutant"
+)
+course9.photo.attach(io: file_course_9, filename: "course1.png", content_type: "image/jpeg")
+course9.cover.attach(io: cover9, filename: "course3_cover.jpg", content_type: "image/jpeg")
+course9.save!
+
+cover10 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+file_course_10 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426750/Apprenticlic/Rappel-se%CC%81lection-multiple_xpcwon.jpg")
+course10 = Course.create!(
+  title: "Enregistrer un fichier en pdf",
+  description: "Dans ce cours, vous apprenez à enregistrer un fichier pdf à partir de n’importe quel document.",
+  category: "Internet",
+  difficulty: "Débutant"
+)
+course10.photo.attach(io: file_course_10, filename: "course1.png", content_type: "image/jpeg")
+course10.cover.attach(io: cover10, filename: "course3_cover.jpg", content_type: "image/jpeg")
+course10.save!
 
 puts "CREATED COURSES"
 
 chapter1_1 = Chapter.create!(
   course: course1,
   title: "Pour commencer",
-  content: "Le double clic permet d’ouvrir un fichier, un dossier ou un logiciel dont l’icône se situerait sur le bureau ou dans une fenêtre.
-  Le double-clic s'effectue le plus souvent sur le bouton gauche."
+  content: "Le double clic permet d’ouvrir un fichier, un dossier ou un logiciel dont l’icône se situerait sur le bureau ou dans une fenêtre.",
 )
 
 chapter1_2 = Chapter.create!(
@@ -96,6 +183,9 @@ chapter2_3 = Chapter.create!(
  </ul>"
 )
 
+file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
+file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
+file3 =  URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
 chapter2_4 = Chapter.create!(
   course: course2,
   title: "Faire un copier-coller : l’essentiel",
@@ -107,6 +197,9 @@ chapter2_4 = Chapter.create!(
   <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
   </ul>"
 )
+chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
+chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
+chapter2_4.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
 
 chapter2_5 = Chapter.create!(
   course: course2,
@@ -140,8 +233,8 @@ chapter3_2 = Chapter.create!(
   <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
   </ul>"
 )
-file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
-chapter3_2.photo.attach(io: file2, filename: "chapter3_2_photo.jpg", content_type: "image/png")
+file4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
+chapter3_2.photo.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
 chapter3_3 = Chapter.create!(
   course: course3,
@@ -155,6 +248,8 @@ chapter3_3 = Chapter.create!(
   </ol>
   Ces 5 étapes sont matérialisées dans la copie d’écran suivante :"
 )
+file5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341809/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.43.31_sbkdn6.png")
+chapter3_3.photo.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
 chapter4_1 = Chapter.create!(
   course: course4,
@@ -168,6 +263,8 @@ chapter4_2 = Chapter.create!(
   title: "Vidéo explicative sur Mac ou PC",
   content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d’écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC."
 )
+video1 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701341713/Apprenticlic/Comment_faire_une_capture_d_e%CC%81cran_dxbuwf.mov")
+chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_type: "video/mov")
 
 puts "CREATED CHAPTERS"
 

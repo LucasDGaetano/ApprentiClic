@@ -3,7 +3,8 @@
   <div class="container">
     <h1>ApprentiClic vous aide à devenir <strong>autonome</strong> avec des outils numériques</h1>
     <p>Entraînez-vous en toute tranquillité avec nos cours adapté à tout niveau</p>
-    <button class="btn btn-success">Consulter les cours</button>
+    <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
+
   </div>
 </div>
 
@@ -48,31 +49,68 @@
     </div>
 </section>
 
-  <!-- Section des cards -->
+<!-- Section des cards des cours les plus consultés -->
   <section class="card-section">
     <div class="container">
-      <div class="card">
-        <img src="chemin/vers/image1.jpg" alt="Card 1">
+      <div class="card-product my-3">
+        <img src="https://i.ytimg.com/vi/m-mHz6uVxpY/maxresdefault.jpg" alt="Card 1">
         <div class="card-content">
-          <h2>Titre de la card 1</h2>
-          <p>Description de la card 1</p>
-          <a href="#" class="button">En savoir plus</a>
+          <h4>Apprendre à manipuler la souris : tout ce qu’il faut savoir!</h4>
+          <p>Mis à jour le 30/11/2023</p>
+          <p>Savoir manipuler la souris est une chose essentielle pour pouvoir communiquer avec son ordinateur.</p>
+          <p>Catégorie : Souris</p>
+          <a href="#" class="button">Plus de détails</a>
         </div>
       </div>
-      <!-- Répétez cette structure pour chaque card -->
-      <div class="card">
-        <img src="chemin/vers/image2.jpg" alt="Card 2">
+
+      <div class="card-product my-3">
+        <%# <div style='background: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701424352/Apprenticlic/comment-faire-un-copier-coller-avec-le-clavier-1160x653_b1utm2.jpg)'></div> %>
+        <img src="https://res.cloudinary.com/dzqqjrcor/image/upload/v1701424352/Apprenticlic/comment-faire-un-copier-coller-avec-le-clavier-1160x653_b1utm2.jpg" alt="Card 1">
         <div class="card-content">
-          <h2>Titre de la card 2</h2>
-          <p>Description de la card 2</p>
-          <a href="#" class="button">En savoir plus</a>
+          <h4>Copier/coller</h4>
+          <p>Mis à jour le 15/11/2023</p>
+          <p>Apprenez à utiliser les combinaisons de touches pour faire des copier/coller</p>
+          <p>Catégorie : Clavier</p>
+          <a href="/cours/124/recap" class="button">Plus de détails</a>
         </div>
       </div>
-      <!-- Autres cards -->
-    </div>
+
+      <div class="card-product my-3">
+        <img src="https://cours-informatique-gratuit.fr/wp-content/uploads/2014/05/glisser-deposer.png" alt="Card 1">
+        <div class="card-content">
+          <h4>Glissé-déposé</h4>
+          <p>Mis à jour le 28/10/2023</p>
+          <p>Apprenez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris</p>
+          <p>Catégorie : Navigation</p>
+          <a href="#" class="button">Plus de détails</a>
+        </div>
+      </div>
   </section>
 
-  <!-- Autres sections ou éléments de la page -->
+<!-- Section des cards des faux-sites -->
+  <section class="card-section">
+    <div class="container">
+    <h3>Mes premiers pas</h3>
+      <div class="card-product my-3">
+        <img src="https://cdn.paris.fr/paris/2020/11/16/huge-afb361602bc8fa94c493b84e325ad9f5.jpg" alt="Card 1">
+        <div class="card-content">
+          <h4>Entraînez-vous sur la réplique du site de la CAF</h4>
+          <p>Mis à jour le 30/11/2023</p>
+          <p>Apprenez à déclarer vos ressources facilement avec notre entraînement gratuit</p>
+          <a href="#" class="button">Plus de détails</a>
+        </div>
+      </div>
+
+      <div class="card-product my-3">
+        <img src="https://www.impots.gouv.fr/sites/default/files/2023-10/bloc_impots_gouv.svg" alt="Card 1">
+        <div class="card-content">
+          <h4>Entraînez-vous sur la réplique du site des impôts</h4>
+          <p>Mis à jour le 30/11/2023</p>
+          <p>Apprenez à faire vos déclarations facilement avec notre entraînement gratuit</p>
+          <a href="#" class="button">Plus de détails</a>
+        </div>
+      </div>
+    </div>
 </div>
 
 <!-- Footer -->
