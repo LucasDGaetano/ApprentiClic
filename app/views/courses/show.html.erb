@@ -5,6 +5,7 @@
     <%= cl_image_tag(@course.cover.key, class: "image-cour") if @course.cover.attached?%>
   </div>
 
+<div class="container">
   <%# Section titre et mini-descriptif du cour %>
   <div class="mb-5">
     <h1><strong><%= @course.title %></strong></h1>
@@ -18,9 +19,7 @@
     <p><%= chapter.content.html_safe %></p>
     <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fill if chapter.photo.attached?%>
      <%= cl_video_tag chapter.video.key, height: 300, width: 400, crop: :fill, controls: true if chapter.video.attached?%>
-    <% if users_chapter.done %>
-
-  <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
+    <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
       <%= turbo_frame_tag "done_chapter_#{chapter.id}" do %>
         <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch } do %>
           <div class="my-3">
