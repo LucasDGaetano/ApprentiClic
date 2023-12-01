@@ -16,14 +16,12 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
-file_course_1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
 course1 = Course.new(
    title: "S'entrainer à faire un double-clic",
    description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
    category: "Souris",
    difficulty: "Débutant"
  )
-course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
 course1.save!
 
 course2 = Course.create!(
@@ -40,8 +38,6 @@ course3 = Course.create!(
   category: "Messagerie",
   difficulty: "Débutant"
 )
-cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341724/Apprenticlic/photo_cour_envoyer_email.jpg")
-course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
 course4 = Course.create!(
@@ -74,7 +70,6 @@ chapter1_3 = Chapter.create!(
   content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur."
 )
 
-file1 = URI.open("https://www.pariszigzag.fr/wp-content/uploads/2019/03/atelier-suzanne-valandon-paris-zigag-e1551883982843.jpg")
 chapter2_1 = Chapter.new(
   course: course2,
   title: "Pour commencer",
@@ -82,7 +77,6 @@ chapter2_1 = Chapter.new(
   du temps et de l’effort lors de la manipulation de texte,
   d’images ou d’autres types de contenu. Cette fonction vous aide aussi à bien organiser votre ordinateur."
 )
-chapter2_1.photo.attach(io: file1, filename: "atelier.png", content_type: "image/png")
 chapter2_1.save!
 
 chapter2_2 = Chapter.create!(
@@ -112,6 +106,21 @@ chapter2_4 = Chapter.create!(
   <li>Appuyez simultanément sur les touches Ctrl et V pour coller
   <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
   </ul>"
+)
+
+chapter2_5 = Chapter.create!(
+  course: course2,
+  title: "Exercice pratique",
+  content: "<div class='my-5' data-controller='copy-paste'>
+    <p>Vous avez ici 2 cases, il y a du texte dans celle de gauche,
+    il faut le mettre dans la case de droite à l'aide du copier/coller au clavier <br>
+    Quand vous reussirez chacune des actions, le fond de chaque case deviendra vert</p>
+    <div class='d-flex justify-content-evenly mt-4'>
+    <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
+    <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !'
+    data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
+    </div>
+  </div>"
 )
 
 chapter3_1 = Chapter.create!(
