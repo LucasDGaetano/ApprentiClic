@@ -30,12 +30,29 @@
   <% end %>
 
 <%# Section encart commentaire %>
-  <div class="flex flex-col my-3 w-full p-3 lg:max-w-3xl">
-    <h2 class="text-left w-full text-md font-extrabold">Commentaires </h2>
-    <div class="AddComment__AddCommentStyled-zwnbey-0 jiWEeD">
-      <textarea role="textbox" placeholder="Qu'en pensez-vous ?"></textarea>
-      <button class="btn btn-success">Envoyer</button>
-    </div>
+
+  <div class="my-5">
+    <h2>Commentaires</h2>
+    <% @course.comments.each do |comment| %>
+      <div class="my-3">
+        <p><strong><%= comment.user.username %></strong> - le <%= (comment.created_at.day) %> / <%= comment.created_at.month %>/ <%= comment.created_at.year %></p>
+        <p><%= comment.content %></p>
+          <div class= "container mx-5">
+            <% comment.answers.each do |answer| %>
+              <p><strong><%= answer.user.username %></strong> - le <%= (answer.created_at.day) %> / <%= answer.created_at.month %>/ <%= answer.created_at.year %></p>
+             <p><%= answer.content %></p>
+            <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= simple_form_for [@course, @comment] do |f|%>
+      <h6>Laisser un commentaire</h6>
+    <%= f.input :content, label: false%>
+    <%= f.submit "Commenter", class: "btn btn-success mb-5" %>
+    <% end %>
   </div>
 
 </div>
