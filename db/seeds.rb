@@ -113,12 +113,13 @@ chapter2_4 = Chapter.create!(
 chapter2_5 = Chapter.create!(
   course: course2,
   title: "Exercice pratique",
-  content: "<div class='my-5'>
+  content: "<div class='my-5' data-controller='copy-paste'>
     <p>Vous avez ici 2 cases, il y a du texte dans celle de gauche,
     il faut le mettre dans la case de droite à l'aide du copier/coller au clavier</p>
     <div class='d-flex justify-content-evenly mt-4'>
-    <textarea cols='60' rows='2'>Copiez moi dans la case de droite !</textarea>
-    <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !' id='pastearea'></textarea>
+    <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
+    <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !'
+    data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
   </div>"
 )
