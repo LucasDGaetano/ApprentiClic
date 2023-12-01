@@ -9,12 +9,12 @@ export default class extends Controller {
 
   copy() {
     console.log("copied")
-    this.copyAreaTarget.style="background-color: green;"
+    this.copyAreaTarget.style="background-color: #84A59D;"
   }
 
   paste() {
     console.log("pasted")
-    this.pasteAreaTarget.style="background-color: green;"
+    this.pasteAreaTarget.style="background-color: #84A59D;"
   }
 
 }
