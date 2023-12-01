@@ -14,7 +14,7 @@
     <% end %>
   </ol>
 
-  <% if current_user.users_courses.any? { |uc| uc.course == @course } %>
+  <%  if user_signed_in? && current_user.users_courses.any? { |uc| uc.course == @course } %>
     <p>Vous suivez déjà ce cours</p>
     <%= link_to "Cliquez ici pour vous y rendre", course_path(@course), class: "btn btn-success mb-5" %>
   <% else %>
