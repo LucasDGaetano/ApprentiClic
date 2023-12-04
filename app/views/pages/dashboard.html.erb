@@ -11,10 +11,15 @@
 
     <!-- User profile card-->
     <div class="card-profile col-4">
-      
+      <div class="text-center mt-3">
+        <% if current_user.profile_pic.attached? %>
+              <%= cl_image_tag current_user.profile_pic.key, class: "avatar-large mb-3", height: 1000, width: 1000, crop: :fill %>
+            <% else %>
+              <%= image_tag "default_avatar.jpg", class: "avatar-large", alt: "dropdown menu"  %>
+            <% end %>
+        <h4><%= current_user.username %></h4>
+      </div>
       <h2 class="text-center mt-3">Votre résumé</h2>
-      <h4>Pseudonyme</h4>
-      <p><%= current_user.username %></p>
       <h4>Email</h4>
       <p><%= current_user.email %></p>
       <h4>Cours terminés</h4>
