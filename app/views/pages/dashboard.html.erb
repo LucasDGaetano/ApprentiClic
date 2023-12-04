@@ -12,9 +12,11 @@
   <div class="my-3">
     <h3>Voici vos progrès actuels :</h3>
       <ul>
-        <% current_user.users_courses.each do |ucourses| %>
-        <li><%= ucourses.course.title %> - progrès : <%= ucourses.progress %>%</li>
-        <%= link_to "Retourner au cours", course_path(ucourses.course), class: "btn btn-success mb-3" %>
+        <% current_user.users_courses.each do |ucourse| %>
+        <div>
+          <%= render "progressbar", course: ucourse.course, ucourse: ucourse %>
+          <%= link_to "Retourner au cours", course_path(ucourse.course), class: "btn btn-success mb-3" %>
+        </div>
         <% end %>
       </ul>
   </div>

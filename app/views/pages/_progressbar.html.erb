@@ -1,0 +1,7 @@
+    <p style="width:<%= ucourse.progress %>%" data-value="<%= ucourse.progress %>"><strong><%= course.title %></strong></p>
+		<progress max="100" value="<%= ucourse.progress %>" class="jquery">
+			<!-- Browsers that support HTML5 progress element will ignore the html inside `progress` element. Whereas older browsers will ignore the `progress` element and instead render the html inside it. -->
+			<div class="progress-bar">
+				<span style="width: <%= ucourse.progress %>%"><%= ucourse.progress %>%</span>
+			</div>
+		</progress>
