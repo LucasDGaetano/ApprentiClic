@@ -1,7 +1,20 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
+    @courses = Course.all
+    if params[:category].present?
+      sql_subquery = "category ILIKE :query"
+      @courses = @courses.where(sql_subquery, query: "%#{params[:category]}%")
+    end
+    if params[:difficulty].present?
+      sql_subquery = "difficulty ILIKE :query"
+      @courses = @courses.where(sql_subquery, query: "%#{params[:difficulty]}%")
+    end
+    if params[:query].present?
+      sql_subquery = "title ILIKE :query"
+      @courses = @courses.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def dashboard
