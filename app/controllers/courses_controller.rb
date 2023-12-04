@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :overview ]
+  skip_before_action :authenticate_user!, only: [:index, :overview]
 
   def index
     @courses = Course.all
@@ -28,5 +28,4 @@ class CoursesController < ApplicationController
     @chapters = @course.chapters.order(created_at: :asc)
     @comment = Comment.new
   end
-
 end
