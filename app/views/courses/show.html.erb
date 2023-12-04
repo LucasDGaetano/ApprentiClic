@@ -35,8 +35,8 @@
           <p><%= comment.content %></p>
           <div class= "container mx-5">
             <% comment.answers.each do |answer| %>
-              <p><strong><%= answer.user.username %></strong> - le <%= (answer.created_at.day) %> / <%= answer.created_at.month %>/ <%= answer.created_at.year %></p>
-              <p><%= answer.content %></p>
+              <p><strong><%= answer.user.username %></strong> - le <%=answer.created_at.strftime("%d/%m/%Y")  %></p>
+             <p><%= answer.content %></p>
             <% end %>
           </div>
         </div>

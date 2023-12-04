@@ -1,5 +1,6 @@
 .card-product {
   overflow: hidden;
+  height: 150px;
   background: $pink;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -48,4 +49,12 @@
 .card-product .card-product-infos .reduced-font-size-and-margin {
   font-size: 14px; /* Réglez la taille de la police selon vos préférences */
   margin-top: -5px;
+}
+
+
+.card-profile {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+
 }
