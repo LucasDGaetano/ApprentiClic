@@ -1,14 +1,21 @@
 .form-control {
   background-color: whitesmoke;
+  text-align: end;
 }
 
 .explanations {
-  font-size: 30px;
+  font-size: 25px;
   background-color: $red;
+  opacity: 0.7;
+  border-radius: 8px;
+  text-align: justify;
+  padding: 5px;
+  color: black;
 }
 
 .column {
   font-family: 'Roboto', sans-serif;
+  color: #e8e8e8 !important;
   text-align: center;
   background-color: rgb(50, 78, 106) !important;
   border: solid;
@@ -26,5 +33,6 @@
 }
 
 td {
-  background-color: #e8e8e8;
+  background-color: #e8e8e8 !important;
+  text-align: center;
 }
