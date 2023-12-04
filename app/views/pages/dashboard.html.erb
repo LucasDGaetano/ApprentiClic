@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>Bienvenue sur votre profil !</h1>
+  <h1> Bonjour <%= current_user.username %>, bienvenue sur votre profil !</h1>
 
   <div class="my-3">
     <p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>

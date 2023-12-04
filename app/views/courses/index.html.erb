@@ -26,7 +26,7 @@
           <h2>Voici les résultat pour votre recherche "<%= params[:query] %>"</h2>
         <% end %>
       <% @courses.each do |course| %>
-        <div class="card-product my-3 col">
+        <div class="card-product">
           <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
           <div class="card-product-infos">
             <h4><%= course.title %></h4>

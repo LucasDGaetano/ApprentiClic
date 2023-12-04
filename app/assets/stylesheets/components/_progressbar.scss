@@ -89,8 +89,7 @@ p[data-value]:after {
 	position: absolute; right:0;
 }
 
-.jquery::-webkit-progress-value,
-.node-js::-webkit-progress-value
+.jquery::-webkit-progress-value
 {
 	/* Gradient background with Stripes */
 	background-image:
@@ -106,8 +105,7 @@ p[data-value]:after {
      -webkit-linear-gradient( left, #09c, #690);
 }
 
-.jquery::-moz-progress-bar,
-.node-js::-moz-progress-bar {
+.jquery::-moz-progress-bar {
 	/* Gradient background with Stripes */
 	background-image:
 	-moz-linear-gradient( 135deg,
