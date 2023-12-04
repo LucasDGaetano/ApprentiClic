@@ -1,36 +1,54 @@
 <div class="container">
 
-  <h1> Bonjour <%= current_user.username %>, bienvenue sur votre profil !</h1>
 
-  <div class="my-3">
-    <p>Vous suivez actuellement <%= current_user.courses.count %> cours : </p>
-    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.first).count %> débutants</p>
-    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.second).count %> intermédiaires</p>
-    <p>dont <%= current_user.courses.where(difficulty: Course::DIFFICULTIES.third).count %> avancés</p>
+  <div class="row">
+    <div class="my-3 col-8">
+      <h1> Bonjour <%= current_user.username %></h1>
+      <h2>Bienvenue sur votre page de profil !</h2>
+      <hr>
+      <h3>Vous suivez actuellement <strong><%= current_user.courses.count %></strong> cours</h3>
+    </div>
+
+    <!-- User profile card-->
+    <div class="card-profile col-4">
+      
+      <h2 class="text-center mt-3">Votre résumé</h2>
+      <h4>Pseudonyme</h4>
+      <p><%= current_user.username %></p>
+      <h4>Email</h4>
+      <p><%= current_user.email %></p>
+      <h4>Cours terminés</h4>
+      <div class="d-flex justify-content-evenly align-items-end mb-3">
+        <%= @completed_courses_easy.count %>/<%= @current_courses_easy.count %> <%= image_tag "svgs/difficulty-low.svg", class:"difficulty" %><%= @completed_courses_medium.count %>/<%= @current_courses_medium.count %> <%= image_tag "svgs/difficulty-intermediate.svg", class:"difficulty" %> <%= @completed_courses_hard.count %>/<%= @current_courses_hard.count %> <%= image_tag "svgs/difficulty-high.svg", class:"difficulty" %>
+      </div>
+      <hr>
+      <p>Membre depuis le <%= current_user.created_at.strftime("%d/%m/%Y") %></p>
+    </div>
   </div>
 
-  <div class="my-3">
-    <h3>Voici vos progrès actuels :</h3>
-      <ul>
-        <% current_user.users_courses.each do |ucourse| %>
-        <div>
-          <%= render "progressbar", course: ucourse.course, ucourse: ucourse %>
-          <%= link_to "Retourner au cours", course_path(ucourse.course), class: "btn btn-success mb-3" %>
-        </div>
-        <% end %>
-      </ul>
-  </div>
 
-  <div class="my-3">
-  <% if @completed_courses_count > 0 %>
-    <h3>Vous avez actuellement terminé <%= @completed_courses_count %> cours !</h3>
-    <ul>
-      <% @completed_courses.each do |cc| %>
-      <li><%= cc.course.title %></li>
+  <div class="row row-cols-2">
+    <div class="my-3 col">
+      <h3>Vos progrès actuels :</h3>
+        <ul>
+          <% current_user.users_courses.each do |ucourse| %>
+          <div>
+            <%= render "progressbar", course: ucourse.course, ucourse: ucourse %>
+            <%= link_to "Retourner au cours", course_path(ucourse.course), class: "btn btn-success mb-3" %>
+          </div>
+          <% end %>
+        </ul>
+    </div>
+    <div class="my-3 col">
+      <% if @completed_courses_count > 0 %>
+        <h3>Vous avez actuellement terminé <%= @completed_courses_count %> cours !</h3>
+          <% @completed_courses.each do |cc| %>
+          <p><strong><%= cc.course.title %></strong> - <%= cc.course.difficulty %> - le <%= cc.updated_at.strftime("%d/%m/%Y") %> </p>
+          <% end %>
+      <% else %>
+        <h3>Vous n'avez pas encore terminé de cours, courage !</h3>
       <% end %>
-    </ul>
-  <% else %>
-    <h3>Vous n'avez pas encore terminé de cours, courage !</h3>
-  <% end %>
+    </div>
   </div>
+
 </div>
