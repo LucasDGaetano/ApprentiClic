@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :users_chapters, through: :users_courses, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :answers, dependent: :destroy
+  has_one_attached :profile_pic
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
