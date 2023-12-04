@@ -1,27 +1,32 @@
-  <div>
-    <%= cl_image_tag(@course.cover.key, class: "image-cour", crop: :fill) if @course.cover.attached?%>
-  </div>
-<div class="container">
 
-  <h1><strong><%= @course.title %></strong></h1>
-  <h2>Pour rappel avant de commencer :</h2>
-  <p><%= @course.description %></p>
+
+  <div class="image-cour"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fit, width: 1000 %>')">
+    <div class="container">
+      <h1><strong><%= @course.title %></strong></h1>
+      <h2>Pour rappel avant de commencer :</h2>
+      <p><%= @course.description %></p>
+    </div>
+  </div>
+
+<div class="container">
   <h3 class="my-4">Sommaire</h3>
   <ol>
     <% @chapters.each do |chapter| %>
      <li><h4><%= chapter.title %></h4></li>
     <% end %>
   </ol>
+    <hr>
 
   <div class="my-5">
     <h3>Auto-evaluation</h3>
-    <p>A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton vert comme ceci : <br>
-    "<button class="btn btn-success my-3">J'ai compris !</button>" Celui-ci est cliquable mais ne vous fera pas progresser</p>
+    <p>A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton vert comme ceci :
+    "<button class="btn btn-success my-3" style="font-size: 14px;">J'ai compris !</button>"</p>
     <p>Ce bouton sers à <strong> marquer votre progression</strong>, c'est à <strong>vous</strong> d'évaluez si vous avez bien compris une étape ! <br> Vous pourrez retrouver votre progression sur votre page de profil après avoir créé un compte</p>
   </div>
-
+<hr>
   <% if user_signed_in? && current_user.users_courses.any? { |uc| uc.course == @course } %>
-    <p>Il semble que vous suivez déjà ce cours</p>
+    <h3>Il semble que vous suivez déjà ce cours</h3>
     <%= link_to "Cliquez ici pour reprendre", course_path(@course), class: "btn btn-success mb-5" %>
   <% else %>
     <h3 class="mt-5">Vous êtes prêt ? On se lance ?</h3>
@@ -29,23 +34,28 @@
     <%= f.submit "Commencer le cours !", class: "btn btn-success mb-5" %>
     <% end %>
   <% end %>
+<hr>
 
-  <div>
-    <h3>Ce qu'ils en pensent</h3>
-    <% if @course.comments.any? %>
-      <div class="my-3 mx-5">
-        <h4>Commentaires</h4>
-        <% @course.comments.each do |comment| %>
-          <div class="my-3">
-            <p><strong><%= comment.user.username %></strong> - le <%= (comment.created_at.day) %> / <%= comment.created_at.month %>/ <%= comment.created_at.year %></p>
-            <p><%= comment.content %></p>
-          </div>
-        <% end %>
-      </div>
-      <% else %>
-      <p><em>Ce cours n'a pas encore de commentaires</em></p>
-    <% end %>
+  <div data-controller="toggle-comments">
+    <button class="btn btn-info" data-action="click->toggle-comments#fire">Voir les commentaires</button>
+    <div data-toggle-comments-target="toggable" class="d-none mt-3">
+      <h3>Ce qu'ils en pensent</h3>
+      <% if @course.comments.any? %>
+        <div class="my-3 mx-5">
+          <h4>Commentaires</h4>
+          <% @course.comments.each do |comment| %>
+            <div class="my-3">
+              <p><strong><%= comment.user.username %></strong> - le <%= comment.created_at.strftime("%d/%m/%Y") %></p>
+              <p><%= comment.content %></p>
+            </div>
+          <% end %>
+        </div>
+        <% else %>
+        <p><em>Ce cours n'a pas encore de commentaires</em></p>
+      <% end %>
+    </div>
   </div>
+
   <div>
     <%= link_to "Retourner à la liste de cours", courses_path, class: "btn btn-success my-5" %>
   </div>
