@@ -47,6 +47,9 @@
               </div>
               <hr>
             <% end %>
+            <% if @course.comments.none? %>
+              <p><em>Ce cours n'a pas encore de commentaires</em> </p>
+            <% end %>
           </div>
         </div>
     </div>
