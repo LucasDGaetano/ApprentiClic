@@ -1,4 +1,76 @@
 // Specific CSS for your home-page
 
 
-/* Reset des marges et des paddings pour uniformiser l'affichage */
+/* Styles pour la section Pourquoi choisir Apprenticlic */
+.company-description {
+  background-color: $light-gray;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.company-description h3 {
+font-size: 24px;
+text-align: center;
+}
+
+.company-description p {
+  font-size: 20px;
+  margin-bottom: 0rem;
+}
+
+.company-subject {
+  background-color: $light-gray;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.company-subject h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.company-subject p {
+  font-size: 20px;
+  margin-bottom: 0rem;
+}
+
+/* Styles pour la section Qu'en disent nos utilisateurs */
+
+.review {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.users-reviews {
+  background-color: $light-gray;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.users-reviews h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.review-text {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 0rem;
+}
+
+.review-text strong {
+  font-weight: bold;
+}

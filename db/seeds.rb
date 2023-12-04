@@ -19,11 +19,11 @@ puts "CLEANED DATABASE"
 cover1 = URI.open("https://www.ledito.me/images/documents/2019/10/click-gauche.png")
 file_course_1 = URI.open("https://www.ledito.me/images/documents/2019/10/click-gauche.png")
 course1 = Course.new(
-   title: "S'entrainer à faire un double-clic",
-   description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
-   category: "Souris",
-   difficulty: "Débutant"
- )
+  title: "S'entrainer à faire un double-clic",
+  description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
+  category: "Souris",
+  difficulty: "Débutant",
+)
 course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
 course1.cover.attach(io: cover1, filename: "course1_cover.jpg", content_type: "image/png")
 course1.save!
@@ -34,7 +34,7 @@ course2 = Course.create!(
   title: "Apprendre à faire un copier/coller au clavier",
   description: "Dans ce cours vous apprenez à utiliser les combinaisons de touches pour faire des copier/coller",
   category: "Clavier",
-  difficulty: "Intermédiaire"
+  difficulty: "Intermédiaire",
 )
 course2.photo.attach(io: file_course_2, filename: "course1.png", content_type: "image/jpeg")
 course2.cover.attach(io: cover2, filename: "course1_cover.jpg", content_type: "image/jpeg")
@@ -45,7 +45,7 @@ course3 = Course.create!(
   title: "Envoyer un email avec Gmail",
   description: "Dans ce cours vous apprenez à vous servir de Gmail pour envoyer vos premiers messages",
   category: "Messagerie",
-  difficulty: "Débutant"
+  difficulty: "Débutant",
 )
 cover3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701362739/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash_qbr9qi.jpg")
 course3.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
@@ -58,7 +58,7 @@ course4 = Course.create!(
   title: "Faire une capture d'écran",
   description: "Dans ce cours vous apprenez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
   category: "Souris",
-  difficulty: "Intermédiaire"
+  difficulty: "Intermédiaire",
 )
 course4.photo.attach(io: file_course_4, filename: "course1.png", content_type: "image/png")
 course4.cover.attach(io: cover4, filename: "course3_cover.jpg", content_type: "image/png")
@@ -70,7 +70,7 @@ course5 = Course.create!(
   title: "Glissé-Déposé",
   description: "Dans ce cours vous apprenez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
   category: "Souris",
-  difficulty: "Intermédiaire"
+  difficulty: "Intermédiaire",
 )
 course5.photo.attach(io: file_course_5, filename: "course1.png", content_type: "image/png")
 course5.cover.attach(io: cover5, filename: "course3_cover.jpg", content_type: "image/png")
@@ -82,7 +82,7 @@ course6 = Course.create!(
   title: "Le raccourci clavier",
   description: "Dans ce cours vous apprenez à faire un raccourci avec votre clavier à l'aide de l’utilisation d’une ou plusieurs touches afin de réaliser une action ou une commande sur votre ordinateur.",
   category: "Clavier",
-  difficulty: "Intermédiaire"
+  difficulty: "Intermédiaire",
 )
 course6.photo.attach(io: file_course_6, filename: "course1.png", content_type: "image/png")
 course6.cover.attach(io: cover6, filename: "course3_cover.jpg", content_type: "image/png")
@@ -94,7 +94,7 @@ course7 = Course.create!(
   title: "Sélectionner plusieurs fichiers ou dossiers?",
   description: "Dans ce cours vous apprenez à sélectionner plusieurs fichiers en même temps pour gagner du temps et bien organiser votre ordinateur.",
   category: "Navigation",
-  difficulty: "Intermédiaire"
+  difficulty: "Intermédiaire",
 )
 course7.photo.attach(io: file_course_7, filename: "course1.png", content_type: "image/jpeg")
 course7.cover.attach(io: cover7, filename: "course3_cover.jpg", content_type: "image/jpeg")
@@ -106,7 +106,7 @@ course8 = Course.create!(
   title: "Créer une adresse gmail messagerie",
   description: "Dans ce cours vous allez découvrir les principales étapes pour créer un adresse gmail messagerie.",
   category: "Messagerie",
-  difficulty: "Débutant"
+  difficulty: "Débutant",
 )
 course8.photo.attach(io: file_course_8, filename: "course1.png", content_type: "image/jpeg")
 course8.cover.attach(io: cover8, filename: "course3_cover.jpg", content_type: "image/jpeg")
@@ -118,7 +118,7 @@ course9 = Course.create!(
   title: "Faire une recherche sur Google",
   description: "Dans ce cours, découvrez comment effectuer des recherches efficaces et précises sur Internet grâce au moteur de recherche de Google.",
   category: "Internet",
-  difficulty: "Débutant"
+  difficulty: "Débutant",
 )
 course9.photo.attach(io: file_course_9, filename: "course1.png", content_type: "image/jpeg")
 course9.cover.attach(io: cover9, filename: "course3_cover.jpg", content_type: "image/jpeg")
@@ -130,7 +130,7 @@ course10 = Course.create!(
   title: "Enregistrer un fichier en pdf",
   description: "Dans ce cours, vous apprenez à enregistrer un fichier pdf à partir de n’importe quel document.",
   category: "Internet",
-  difficulty: "Débutant"
+  difficulty: "Débutant",
 )
 course10.photo.attach(io: file_course_10, filename: "course1.png", content_type: "image/jpeg")
 course10.cover.attach(io: cover10, filename: "course3_cover.jpg", content_type: "image/jpeg")
@@ -148,13 +148,13 @@ chapter1_2 = Chapter.create!(
   course: course1,
   title: "Qu’est ce qu’un double-clic ?",
   content: "Il s’agit d’une action courante utilisée dans divers programmes et applications informatiques.
-  Le double clic c’est le fait de cliquer 2 fois consécutives et rapides sur le bouton gauche de la souris."
+  Le double clic c’est le fait de cliquer 2 fois consécutives et rapides sur le bouton gauche de la souris.",
 )
 
 chapter1_3 = Chapter.create!(
   course: course1,
   title: "A quoi sert un double-clic ?",
-  content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur."
+  content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur.",
 )
 
 chapter2_1 = Chapter.new(
@@ -162,30 +162,30 @@ chapter2_1 = Chapter.new(
   title: "Pour commencer",
   content: "Savoir comment effectuer un copier-coller vous permet d’économiser
   du temps et de l’effort lors de la manipulation de texte,
-  d’images ou d’autres types de contenu. Cette fonction vous aide aussi à bien organiser votre ordinateur."
+  d’images ou d’autres types de contenu. Cette fonction vous aide aussi à bien organiser votre ordinateur.",
 )
 chapter2_1.save!
 
 chapter2_2 = Chapter.create!(
- course: course2,
- title: "Qu’est-ce qu’un copier-coller ?",
- content: "Il s’agit d’une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
- l’identique sur un support numérique.Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers."
+  course: course2,
+  title: "Qu’est-ce qu’un copier-coller ?",
+  content: "Il s’agit d’une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
+ l’identique sur un support numérique.Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers.",
 )
 chapter2_3 = Chapter.create!(
- course: course2,
- title: "A quoi sert un copier-coller ?",
- content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels : <ul>
+  course: course2,
+  title: "A quoi sert un copier-coller ?",
+  content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels : <ul>
  <li> un traitement de texte, comme word, ou le bloc note. Vous pourrez copier et coller du texte, dupliquer rapidement un paragraphe ou une phrase pour agrémenter la mise en forme ou revoir la mise en page de vos documents.</li>
  <li> Dans votre navigateur internet, vous avez possibilité de copier du texte pour ensuite le coller dans un traitement de texte par exemple </li>
  <li> Ça marche également dans les tableurs comme excel dans lequel vous pouvez effectuer le collage de cellules.</li>
  <li> La technique du coller vous sera utile lors de la capture d’écran pour déposer votre capture dans un logiciel tel que Paint…</li>
- </ul>"
+ </ul>",
 )
 
 file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
 file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
-file3 =  URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
+file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
 chapter2_4 = Chapter.create!(
   course: course2,
   title: "Faire un copier-coller : l’essentiel",
@@ -195,7 +195,7 @@ chapter2_4 = Chapter.create!(
   <li>Allez à l’emplacement où vous désirez placer la copie
   <li>Appuyez simultanément sur les touches Ctrl et V pour coller
   <li>La copie de l’élément devrait apparaître dans l’emplacement que vous avez choisi
-  </ul>"
+  </ul>",
 )
 chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
@@ -213,14 +213,14 @@ chapter2_5 = Chapter.create!(
     <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !'
     data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
-  </div>"
+  </div>",
 )
 
 chapter3_1 = Chapter.create!(
   course: course3,
   title: "Pour commencer",
   content: "Envoyer un mail est une des actions de base sur Internet.
-  Elle va vous permettre de communiquer avec vos amis et vos proches mais également avec les administrations. "
+  Elle va vous permettre de communiquer avec vos amis et vos proches mais également avec les administrations. ",
 )
 
 chapter3_2 = Chapter.create!(
@@ -231,7 +231,7 @@ chapter3_2 = Chapter.create!(
   <li>Le champ 1 correspond la première étape de l’envoi d’un email, il s’agit de l’adresse email de votre destinataire. L’adresse que vous saisissez dans l’étape 1 doit être une adresse complète. Elle doit se composer d’un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
   <li>Le champ 2 correspond à l’objet de votre email, c’est en quelque sorte le sujet sur lequel porte votre email. La saisie de l’objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
   <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
-  </ul>"
+  </ul>",
 )
 file4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
 chapter3_2.photo.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
@@ -246,7 +246,7 @@ chapter3_3 = Chapter.create!(
   <li>Dans le dernier champ, écrivez votre message
   <li>Cliquez sur le bouton Envoyer pour faire partir votre message
   </ol>
-  Ces 5 étapes sont matérialisées dans la copie d’écran suivante :"
+  Ces 5 étapes sont matérialisées dans la copie d’écran suivante :",
 )
 file5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341809/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.43.31_sbkdn6.png")
 chapter3_3.photo.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
@@ -255,13 +255,13 @@ chapter4_1 = Chapter.create!(
   course: course4,
   title: "Pour commencer",
   content: "Une capture d’écran est une photo du contenu apparaissant à l’écran qui peut être enregistrée sous la forme d’un fichier dans la mémoire de votre ordinateur.
-  Une capture d’écran peut-être une photo de l’ensemble ou d’une portion de votre écran."
+  Une capture d’écran peut-être une photo de l’ensemble ou d’une portion de votre écran.",
 )
 
 chapter4_2 = Chapter.create!(
   course: course4,
   title: "Vidéo explicative sur Mac ou PC",
-  content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d’écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC."
+  content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d’écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC.",
 )
 video1 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701341713/Apprenticlic/Comment_faire_une_capture_d_e%CC%81cran_dxbuwf.mov")
 chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_type: "video/mov")
