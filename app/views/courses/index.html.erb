@@ -21,25 +21,26 @@
     </div>
   </div>
 
-  <div class="row row-cols-2 justify-content-center my-5">
+  <div class="row justify-content-center my-5">
         <% if params[:query].present? %>
-          <h2>Voici les résultat pour votre recherche "<%= params[:query] %>"</h2>
+          <h2>Voici les résultats pour votre recherche "<%= params[:query] %>"</h2>
         <% end %>
       <% @courses.each do |course| %>
-        <div class="card-product">
+        <div class="card-product col-12 my-3 p-0">
           <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
           <div class="card-product-infos">
-            <h4><%= course.title %></h4>
+            <h3><%= course.title %></h3>
             <p><%= course.description %></p>
             <div class="card-product-footer mt-2">
-              <%= link_to overview_path(course) do %>
-              <button class="btn btn-success">Acceder à ce cours</button>
-              <% end %>
-              <p><%= course.comments.count %> commentaires</p>
+              <p></p>
+              <p><%= pluralize(course.comments.count, 'commentaire') %></p>
               <p>|</p>
               <p><%= course.category %></p>
               <p>|</p>
               <p><%= course.difficulty %></p>
+              <%= link_to overview_path(course) do %>
+              <button class="btn btn-success">Acceder à ce cours</button>
+              <% end %>
             </div>
           </div>
         </div>
