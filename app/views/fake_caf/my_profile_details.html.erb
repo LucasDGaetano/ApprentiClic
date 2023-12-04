@@ -1,20 +1,55 @@
-<div class="container">
-  <h1 class="text-primary text-uppercase">MON PROFIL</h1>
+<div class="container king">
+  <div class="container">
+    <h1 class="text-primary text-uppercase">MON PROFIL</h1>
 
-  <p> C'est sur cette page que seront renseignés les différentes informations des
-    encadrés. Pour les modifier, il faut appuyer sur le crayon bleu à droite des
-    titres. Pour continuer (lorsque toutes les informations sont remplies)
-    appuyez ensuite sur "Confirmer mon profil"
-  </p>
-</div>
+    <p class="explanations"> C'est sur cette page que seront renseignés les différentes informations des
+      encadrés. Pour les modifier, il faut appuyer sur le crayon bleu à droite des
+      titres. Pour continuer (lorsque toutes les informations sont remplies)
+      appuyez ensuite sur "Confirmer mon profil"
+    </p>
+  </div>
 
-<div class="container">
-  <div class="row">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-caf">
+              <h5 class="card-title">SITUATION FAMILIALE</h5>
+              <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+            </div>
+            <p class="card-text">...</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-caf">
+              <h5 class="card-title">SITUATION PROFESSIONNELLE</h5>
+              <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+            </div>
+            <p class="card-text">...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card w-100 mb-3 mt-3">
+      <div class="card-body">
+        <div class="card-caf">
+          <h5 class="card-title">ENFANTS ET AUTRES PERSONNES</h5>
+          <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
+        </div>
+        <p class="card-text">...</p>
+      </div>
+    </div>
+
+    <div class="row">
     <div class="col-sm-6 mb-3 mb-sm-0">
       <div class="card">
         <div class="card-body">
           <div class="card-caf">
-            <h5 class="card-title">SITUATION FAMILIALE</h5>
+            <h5 class="card-title">ADRESSE</h5>
             <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
           </div>
           <p class="card-text">...</p>
@@ -25,7 +60,7 @@
       <div class="card">
         <div class="card-body">
           <div class="card-caf">
-            <h5 class="card-title">SITUATION PROFESSIONNELLE</h5>
+            <h5 class="card-title">ADRESSE MAIL ET TELEPHONES</h5>
             <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
           </div>
           <p class="card-text">...</p>
@@ -33,49 +68,16 @@
       </div>
     </div>
   </div>
+
   <div class="card w-100 mb-3 mt-3">
     <div class="card-body">
       <div class="card-caf">
-        <h5 class="card-title">ENFANTS ET AUTRES PERSONNES</h5>
+        <h5 class="card-title">COORDONNES BANCAIRES</h5>
         <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
       </div>
       <p class="card-text">...</p>
     </div>
   </div>
-
-  <div class="row">
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-caf">
-          <h5 class="card-title">ADRESSE</h5>
-          <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
-        </div>
-        <p class="card-text">...</p>
-      </div>
-    </div>
+    <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path, class: 'btn-caf' %></div>
   </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-caf">
-          <h5 class="card-title">ADRESSE MAIL ET TELEPHONES</h5>
-          <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
-        </div>
-        <p class="card-text">...</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card w-100 mb-3 mt-3">
-  <div class="card-body">
-    <div class="card-caf">
-      <h5 class="card-title">COORDONNES BANCAIRES</h5>
-      <a href="#" class="btn btn-profile"><i class="fa-solid fa-pen"></i></a>
-    </div>
-    <p class="card-text">...</p>
-  </div>
-</div>
-  <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path, class: 'btn-caf' %></div>
 </div>

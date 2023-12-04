@@ -1,43 +1,50 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 no-padding-right no-padding-left">
-    <p class="explanations">Selon les ressources que vous allez déclarer, la procédure
-      sera différente. Ici nous renseignerons celles des ressources annuelles.
-    </p>
+<div class="container king">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 no-padding-right no-padding-left">
+      <p class="explanations mt-3">Selon les ressources que vous allez déclarer, la procédure
+        sera différente. Ici nous renseignerons celles des ressources trimestrielles. Appuyer
+        sur "Déclarer" pour continuer
+      </p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-9" style="float: none, margin: auto">
-      <div class="container">
-        <h1 class="text-primary text-uppercase">MES RESSOURCES</h1>
-      </div>
-      <h3 class="text-uppercase">CONSULTER OU DECLARER</h3>
-      <div class="row">
-        <div class="col-sm-12">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="container">
+          <h1 class="text-primary text-uppercase">MES RESSOURCES</h1>
+        </div>
+        <div class="container encadre w-100">
+          <h3 class="text-uppercase underline">CONSULTER OU DECLARER</h3>
           <div class="row">
-            <div class="col-sm-6 col-xs-12">
-              <h4>Mes ressources annuelles</h4>
-            </div>
-            <div class="col-sm-6 hidden-xs">
-              <div class="text-right">
-              </div>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-              <h4>Mes ressources trimestrielles Rsa et Prime d'activité</h4>
-            </div>
-            <div class="col-sm-6 hidden-xs">
-              <div class="text-right">
-                <%= link_to "Déclarer",  faux_site_mes_ressources_mon_profil_path, class: 'btn-caf' %>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-              <h4>Mes ressources Aide au logement</h4>
-            </div>
-            <div class="col-sm-6 hidden-xs">
-              <div class="text-right">
+            <div class="col-sm-12">
+              <div class="justify-content-center row">
+                <div class="col-11 py-3 underline">
+                  <h4>Mes ressources annuelles</h4>
+                </div>
+                <div class="col-11 underline d-flex">
+                  <div class="col-sm-6">
+                    <h4 class="text-left">Mes ressources trimestrielles Rsa et Prime d'activité</h4>
+                  </div>
+                  <div class="col-sm-6 d-flex justify-content-between align-items-center">
+                    <div class="text-start" style="margin-left: 15%">
+                      <button type="button" class="btn-caf-secondary">Consulter</button>
+                    </div>
+                    <div class="text-end">
+                      <button type="button" class="btn-caf"><%= link_to "Déclarer",  faux_site_mes_ressources_mon_profil_path, class:'btn-caf'%></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-11 py-3 underline">
+                  <h4>Mes ressources Aide au logement</h4>
+                </div>
+                <div class="col-sm-6 hidden-xs">
+                  <div class="text-right">
+                  </div>
+                </div>
               </div>
             </div>
           </div>
