@@ -1,7 +1,7 @@
 
 
   <div class="image-cour"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fit, width: 1000 %>')">
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fill, gravity: "auto", width: 1920, height: 1080 %>')">
     <div class="container">
       <h1><strong><%= @course.title %></strong></h1>
       <h2>Pour rappel avant de commencer :</h2>
@@ -22,12 +22,12 @@
     <h3>Auto-evaluation</h3>
     <p>A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton vert comme ceci :
     "<button class="btn btn-success my-3" style="font-size: 14px;">J'ai compris !</button>"</p>
-    <p>Ce bouton sers à <strong> marquer votre progression</strong>, c'est à <strong>vous</strong> d'évaluez si vous avez bien compris une étape ! <br> Vous pourrez retrouver votre progression sur votre page de profil après avoir créé un compte</p>
+    <p>Ce bouton sers à <strong> marquer votre progression</strong>, c'est à <strong>vous</strong> d'évaluez si vous avez bien compris un chapitre du cours ! <br> Vous pourrez retrouver votre progression sur votre page de profil après avoir créé un compte</p>
   </div>
 <hr>
   <% if user_signed_in? && current_user.users_courses.any? { |uc| uc.course == @course } %>
     <h3>Il semble que vous suivez déjà ce cours</h3>
-    <%= link_to "Cliquez ici pour reprendre", course_path(@course), class: "btn btn-success mb-5" %>
+    <%= link_to "Cliquez ici pour reprendre", course_path(@course), class: "btn btn-success mb-3" %>
   <% else %>
     <h3 class="mt-5">Vous êtes prêt ? On se lance ?</h3>
     <%= simple_form_for [@course, @uc] do |f|%>
