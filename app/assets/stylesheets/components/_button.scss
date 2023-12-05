@@ -9,3 +9,12 @@
   width: 160px;
   color: $gray;
 }
+
+.btn-success {
+
+  &:hover {
+    color: $white;
+    background-color: $purple;
+    transition: background-color 0.5s;
+  }
+}

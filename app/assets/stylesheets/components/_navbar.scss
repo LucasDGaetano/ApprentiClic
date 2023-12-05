@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  .title-left {
+    color: $purple;
+  }
+  .title-right {
+    color: $orange;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,5 +20,10 @@
 
 .navbar-lewagon h1 {
   justify-content: space-between;
-  color: $red;
+}
+
+.navbar-lewagon .nav-link{
+  margin-right: 10px;
+  border-bottom: 2px solid $orange;
+
 }

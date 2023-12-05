@@ -13,13 +13,13 @@
                 <p><%= course.description %></p>
                 <div class="card-product-footer mt-2">
                   <p></p>
-                  <p><%= pluralize(course.comments.count, 'commentaire') %></p>
+                  <span class="badge rounded-pill text-bg-info"><p><%= pluralize(course.comments.count, 'commentaire') %></p></span>
                   <p>|</p>
-                  <p><%= course.category %></p>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.category %></p></span>
                   <p>|</p>
-                  <p><%= course.difficulty %></p>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.difficulty %></p></span>
                   <%= link_to overview_path(course) do %>
-                  <button class="btn btn-success">Acceder à ce cours</button>
+                  <button class="btn btn-success"><strong>Acceder à ce cours >></strong></button>
                   <% end %>
                 </div>
               </div>
