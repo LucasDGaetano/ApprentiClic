@@ -15,6 +15,10 @@ class CoursesController < ApplicationController
       sql_subquery = "title ILIKE :query"
       @courses = @courses.where(sql_subquery, query: "%#{params[:query]}%")
     end
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "courses/list", locals: {courses: @courses}, formats: [:html] }
+    end
   end
 
   def overview
@@ -27,5 +31,6 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @chapters = @course.chapters.order(created_at: :asc)
     @comment = Comment.new
+    @answer = Answer.new
   end
 end

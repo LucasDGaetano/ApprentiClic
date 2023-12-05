@@ -1,49 +1,32 @@
-<div class="container mt-5">
+<div class="container mt-5" data-controller="search-courses">
   <h1>Catalogue de nos cours</h1>
 
-  <div class="row justify-content-center">
+  <!--section barre de recherche-->
+  <div class="row justify-content-center" >
     <div class="col-12 my-3">
-      <%= form_with url: courses_path, method: :get do %>
-      <div class="d-flex justify-content-evenly form-holder">
-        <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Recherchez un mot-clé",
-            id: "form-control-index"
-        %>
-        <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select text-center", prompt: "Sélectionnez une catégorie" %>
-        <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select text-center", prompt: "Sélectionnez une difficulté" %>
-        <%= button_tag(class:"btn form-button") do %>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        <% end %>
-      </div>
+      <%= form_with url: courses_path, method: :get, html: {class:
+        "mb-4", data: {search_courses_target: "form"}} do %>
+        <div class="d-flex justify-content-evenly form-holder">
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Recherchez un mot-clé",
+              id: "form-control-index",
+              data: {action: "keyup->search-courses#update", search_courses_target: "input"}
+          %>
+          <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select text-center", prompt: "Sélectionnez une catégorie", data: {action: "change->search-courses#update", search_courses_target: "category"} %>
+          <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select text-center", prompt: "Sélectionnez une difficulté" , data: {action: "change->search-courses#update", search_courses_target: "difficulty"} %>
+          <%= button_tag(class:"btn form-button") do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <% end %>
+        </div>
       <% end %>
     </div>
   </div>
 
-  <div class="row row-cols-2 justify-content-center my-5">
-        <% if params[:query].present? %>
-          <h2>Voici les résultat pour votre recherche "<%= params[:query] %>"</h2>
-        <% end %>
-      <% @courses.each do |course| %>
-        <div class="card-product">
-          <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
-          <div class="card-product-infos">
-            <h4><%= course.title %></h4>
-            <p><%= course.description %></p>
-            <div class="card-product-footer mt-2">
-              <%= link_to overview_path(course) do %>
-              <button class="btn btn-success">Acceder à ce cours</button>
-              <% end %>
-              <p><%= course.comments.count %> commentaires</p>
-              <p>|</p>
-              <p><%= course.category %></p>
-              <p>|</p>
-              <p><%= course.difficulty %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-  </div>
-
+  <% if @courses.none? %>
+      <h2 class="text-center"><em>Nous sommes désolé, nous n'avons pas trouvé de cours correspondant</em></h2>
+    <% else %>
+      <%= render "list", courses: @courses %>
+  <% end %>
 </div>
