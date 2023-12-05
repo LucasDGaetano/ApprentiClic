@@ -44,6 +44,13 @@
                     <% end %>
                   </div>
                 <% end %>
+                    <%# Section réponse à commentaire %>
+                    <div class="container">
+                      <%= simple_form_for [comment, @answer] do |f|%>
+                        <%= f.input :content, label: false%>
+                        <%= f.submit "Répondre à #{comment.user.username}", class: "btn btn-success mb-3" %>
+                      <% end %>
+                    </div>
               </div>
               <hr>
             <% end %>

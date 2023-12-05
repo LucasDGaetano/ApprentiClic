@@ -27,5 +27,6 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @chapters = @course.chapters.order(created_at: :asc)
     @comment = Comment.new
+    @answer = Answer.new
   end
 end
