@@ -1,4 +1,4 @@
-    <div data-controller="new-comment">
+    <div>
       <%= simple_form_for [course, comment], html: { data: { action: "submit->new-comment#addComment"}} do |f|%>
         <h6 class="mt-5">Laisser un commentaire</h6>
         <%= f.input :content, label: false%>

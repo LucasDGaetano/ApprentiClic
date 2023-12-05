@@ -27,15 +27,17 @@
       <hr>
     <% end %>
     <%# Section encart commentaire %>
-    <div data-controller="toggle-comments">
+    <div data-controller="toggle-comments new-comment">
         <button class="btn btn-info" data-action="click->toggle-comments#fire">Voir les commentaires</button>
         <div data-toggle-comments-target="toggable" class="d-none mt-3">
           <div class="my-3">
             <h5>Commentaires</h5>
-            <% @course.comments.each do |comment| %>
-              <%= render "comments/comment", comment: comment, answer: @answer %>
-              <hr>
-            <% end %>
+            <div data-new-comment-target="commentList">
+              <% @course.comments.each do |comment| %>
+                <%= render "comments/comment", comment: comment, answer: @answer %>
+                <hr>
+              <% end %>
+            </div>
             <% if @course.comments.none? %>
               <p><em>Ce cours n'a pas encore de commentaires</em> </p>
             <% end %>
