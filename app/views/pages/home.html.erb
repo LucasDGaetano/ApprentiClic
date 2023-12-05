@@ -1,13 +1,17 @@
 <!-- Section bannière -->
 <div class="banner" style="background-image: url(<%= image_path 'png/background_banner.png' %>);">
-  <div class="container">
-    <h1>ApprentiClic vous aide à devenir <strong>autonome</strong> avec des outils numériques</h1>
-    <p>Entraînez-vous en toute tranquillité avec nos cours adaptés à tout niveau</p>
-    <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
+  <div style="display: flex; align-items: center; justify-content: space-around;">
+    <div>
+      <h4>ApprentiClic vous aide à devenir <strong>autonome</strong> avec des outils numériques</h4>
+      <p>Entraînez-vous en toute tranquillité avec nos cours adaptés à tout niveau</p>
+      <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
+    </div>
+    <div>
+      <%= image_tag 'png/img-banner-homepage.png' %>
+    </div>
   </div>
-
-  <%= image_tag %>
 </div>
+
 <div class="container">
   <!-- Section description Apprenticlic -->
   <section class="company-description">
