@@ -1,0 +1,16 @@
+#square {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dot {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+}

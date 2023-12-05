@@ -157,6 +157,19 @@ chapter1_3 = Chapter.create!(
   content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur.",
 )
 
+chapter1_4 = Chapter.create!(
+  course: course1,
+  title: "Exercice pratique",
+  content: "<div class='exercice-clic' data-controller='double-clic'>
+  <p>Double-cliquer avec votre souris dans la zone carrée.
+  Quand vous réussisez votre double-clic, le fond de la case deviendra vert.<br>
+  Lorsque la case est rose, vous devez recommencer votre double-clic pour qu'elle passe au vert.</p>
+  <div data-action='click->double-clic#oneClick'
+  style='width: 100px; height: 100px; background-color: #ccc;'>
+  </div>
+</div>"
+)
+
 chapter2_1 = Chapter.new(
   course: course2,
   title: "Pour commencer",
