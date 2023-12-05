@@ -8,8 +8,12 @@ export default class extends Controller {
     console.log("Hello")
   }
 
-  advice() {
+  show() {
     this.clickableElementTarget.classList.remove("d-none")
+  }
+
+  hide() {
+    this.clickableElementTarget.classList.add("d-none")
   }
 
 }
