@@ -15,6 +15,10 @@ class CoursesController < ApplicationController
       sql_subquery = "title ILIKE :query"
       @courses = @courses.where(sql_subquery, query: "%#{params[:query]}%")
     end
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: "courses/list", locals: {courses: @courses}, formats: [:html] }
+    end
   end
 
   def overview
