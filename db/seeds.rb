@@ -269,7 +269,7 @@ chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_ty
 chapter5_1 = Chapter.create!(
   course: course5,
   title: "Pour commencer",
-  content: "Le glisser-déposé (ou 'drag and drop' en anglais) est une technique pour <strong>déplacer ou copier</strong> un fichier d'un dossier de départ vers un dossier 'd'arrivée' en un seul geste avec votre <strong>souris</strong>. C'est un gain de temps car cela évite de devoir faire des copier-coller et de naviguer dans l'ordinateur entre temps"
+  content: "Le glisser-déposer (ou <em>'drag and drop'</em> en anglais) est une technique pour <strong>déplacer ou copier</strong> un fichier d'un dossier de départ vers un dossier 'd'arrivée' en un seul geste avec votre <strong>souris</strong>. C'est un gain de temps car cela évite de devoir faire des copier-coller et de naviguer dans l'ordinateur entre temps"
 )
 
 chapter5_2 = Chapter.create!(
@@ -280,12 +280,17 @@ chapter5_2 = Chapter.create!(
 
 chapter5_3 = Chapter.create!(
   course: course5,
-  title: "Comment faire un glisser-",
-  content: "C'est une technique que l'on peut utiliser sur PC mais également sur les appareils mobiles, pour déplacer et ranger ses applications par exemple. Sur PC, vous pouvez vous en servir pour déplacer et ranger vos dossiers, mais aussi uploader un fichier sur internet lorsque cela vous est demander, vous verrez une petite fleche disant 'déposez votre fichier ici' -> c'est un glisser-déposé qui est attendu ! "
+  title: "Comment faire un glisser-déposer",
+  content: "Il faut positionner votre curseur sur le fichier que vous souhaitez déplacer. <br> Il faut ensuite cliquer avec le bouton gauche de la souris puis <strong>maintenir le clic tout en déplaçant la souris</strong> et le curseur vers le fichier de destination (ou le site internet)"
 )
-
 file5_3 = URI.open("https://www.digitalcitizen.life/wp-content/uploads/2021/07/drag_drop-2-1.png")
 chapter5_3.photo.attach(io: file5_3, filename: "chapter5_2_photo.jpg", content_type: "image/png")
+
+chapter5_3 = Chapter.create!(
+  course: course5,
+  title: "Exercice pratique",
+  content: "*En cours de construction*"
+)
 
 puts "CREATED CHAPTERS"
 
@@ -320,8 +325,8 @@ comment4 = Comment.create!(user: user3, course: course3, content: "C'était bifb
 
 puts "CREATED COMMENTS"
 
-answer1 = Answer.create!(user: user4, comment: comment1, content: "Git gud")
-answer2 = Answer.create!(user: user5, comment: comment2, content: "Git gud")
+answer1 = Answer.create!(user: user4, comment: comment1, content: "Essaie encore")
+answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maintenir Ctrl enfoncé")
 answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
 
 puts "CREATED ANSWERS"

@@ -4,7 +4,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["copyArea", "pasteArea"]
   connect() {
-    console.log("hello from cc controller")
   }
 
   copy() {

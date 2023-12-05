@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = ["toggable"]
 
   connect() {
-    console.log("hello from toggle comments");
   }
 
   fire(event) {

@@ -39,7 +39,7 @@
           <% current_user.users_courses.each do |ucourse| %>
           <div>
             <%= render "progressbar", course: ucourse.course, ucourse: ucourse %>
-            <%= link_to "Retourner au cours", course_path(ucourse.course), class: "btn btn-success mb-3" %>
+            <hr>
           </div>
           <% end %>
         </ul>

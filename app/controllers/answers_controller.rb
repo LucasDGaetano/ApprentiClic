@@ -6,7 +6,10 @@ class AnswersController < ApplicationController
     @answer.comment = comment
     @answer.user = current_user
     if @answer.save
-      redirect_to course_path(comment.course)
+      respond_to do |format|
+        format.html { redirect_to course_path(comment.course) }
+        format.text { render partial: "comments/comment", locals: { comment: comment, answer: Answer.new }, formats: :html }
+      end
     else
       render "course/show", status: :unprocessable_entity
     end
