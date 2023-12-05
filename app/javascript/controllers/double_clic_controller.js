@@ -13,7 +13,7 @@ export default class extends Controller {
   }
 
   alert() {
-    window.alert("Réessayez, c'était un simple clic et non pas un double-clic")
+    window.alert("Réessayez, c'était un simple clic et pas un double-clic")
   }
 
   oneClick(event) {
