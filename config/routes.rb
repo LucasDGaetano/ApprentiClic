@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get "faux_site/mes_ressources/mon_profil/details", to: "fake_caf#my_profile_details"
   get "faux_site/mes_ressources/mon_profil/modifications", to: "fake_caf#modify"
   get "faux_site/mes_ressources/amont", to: "fake_caf#amount"
+
 end
