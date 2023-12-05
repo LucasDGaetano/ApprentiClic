@@ -67,10 +67,10 @@ course4.save!
 cover5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150/Apprenticlic/glisser-deposer_sbbguz.png")
 file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701426150/Apprenticlic/glisser-deposer_sbbguz.png")
 course5 = Course.create!(
-  title: "Glissé-Déposé",
+  title: "Glisser-Déposer",
   description: "Dans ce cours vous apprenez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
   category: "Souris",
-  difficulty: "Intermédiaire",
+  difficulty: "Intermédiaire"
 )
 course5.photo.attach(io: file_course_5, filename: "course1.png", content_type: "image/png")
 course5.cover.attach(io: cover5, filename: "course3_cover.jpg", content_type: "image/png")
@@ -155,6 +155,19 @@ chapter1_3 = Chapter.create!(
   course: course1,
   title: "A quoi sert un double-clic ?",
   content: "Que vous utilisiez une souris traditionnelle ou un pavé tactile, il est essentiel d’apprendre à faire un double clic pour naviguer efficacement sur votre ordinateur.",
+)
+
+chapter1_4 = Chapter.create!(
+  course: course1,
+  title: "Exercice pratique",
+  content: "<div class='exercice-clic' data-controller='double-clic'>
+  <p>Double-cliquer avec votre souris dans la zone carrée.
+  Quand vous réussisez votre double-clic, le fond de la case deviendra vert.<br>
+  Lorsque la case est rose, vous devez recommencer votre double-clic pour qu'elle passe au vert.</p>
+  <div data-action='click->double-clic#oneClick'
+  style='width: 100px; height: 100px; background-color: #ccc;'>
+  </div>
+</div>"
 )
 
 chapter2_1 = Chapter.new(
@@ -266,6 +279,32 @@ chapter4_2 = Chapter.create!(
 video1 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701341713/Apprenticlic/Comment_faire_une_capture_d_e%CC%81cran_dxbuwf.mov")
 chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_type: "video/mov")
 
+chapter5_1 = Chapter.create!(
+  course: course5,
+  title: "Pour commencer",
+  content: "Le glisser-déposer (ou <em>'drag and drop'</em> en anglais) est une technique pour <strong>déplacer ou copier</strong> un fichier d'un dossier de départ vers un dossier 'd'arrivée' en un seul geste avec votre <strong>souris</strong>. C'est un gain de temps car cela évite de devoir faire des copier-coller et de naviguer dans l'ordinateur entre temps"
+)
+
+chapter5_2 = Chapter.create!(
+  course: course5,
+  title: "Pourquoi et où l'utiliser",
+  content: "C'est une technique que l'on peut utiliser sur PC mais également sur les appareils mobiles, pour déplacer et ranger ses applications par exemple. Sur PC, vous pouvez vous en servir pour déplacer et ranger vos dossiers, mais aussi uploader un fichier sur internet lorsque cela vous est demander, vous verrez une petite fleche disant 'déposez votre fichier ici' -> c'est un glisser-déposé qui est attendu ! "
+)
+
+chapter5_3 = Chapter.create!(
+  course: course5,
+  title: "Comment faire un glisser-déposer",
+  content: "Il faut positionner votre curseur sur le fichier que vous souhaitez déplacer. <br> Il faut ensuite cliquer avec le bouton gauche de la souris puis <strong>maintenir le clic tout en déplaçant la souris</strong> et le curseur vers le fichier de destination (ou le site internet)"
+)
+file5_3 = URI.open("https://www.digitalcitizen.life/wp-content/uploads/2021/07/drag_drop-2-1.png")
+chapter5_3.photo.attach(io: file5_3, filename: "chapter5_2_photo.jpg", content_type: "image/png")
+
+chapter5_3 = Chapter.create!(
+  course: course5,
+  title: "Exercice pratique",
+  content: "*En cours de construction*"
+)
+
 puts "CREATED CHAPTERS"
 
 user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
@@ -299,8 +338,8 @@ comment4 = Comment.create!(user: user3, course: course3, content: "C'était bifb
 
 puts "CREATED COMMENTS"
 
-answer1 = Answer.create!(user: user4, comment: comment1, content: "Git gud")
-answer2 = Answer.create!(user: user5, comment: comment2, content: "Git gud")
+answer1 = Answer.create!(user: user4, comment: comment1, content: "Essaie encore")
+answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maintenir Ctrl enfoncé")
 answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
 
 puts "CREATED ANSWERS"

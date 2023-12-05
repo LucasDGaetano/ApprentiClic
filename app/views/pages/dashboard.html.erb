@@ -39,14 +39,14 @@
           <% current_user.users_courses.each do |ucourse| %>
           <div>
             <%= render "progressbar", course: ucourse.course, ucourse: ucourse %>
-            <%= link_to "Retourner au cours", course_path(ucourse.course), class: "btn btn-success mb-3" %>
+            <hr>
           </div>
           <% end %>
         </ul>
     </div>
     <div class="my-3 col">
       <% if @completed_courses_count > 0 %>
-        <h3>Vous avez actuellement terminé <%= @completed_courses_count %> cours !</h3>
+        <h3>Vous avez terminé <%= @completed_courses_count %> cours ! Bravo !</h3>
           <% @completed_courses.each do |cc| %>
           <p><strong><%= cc.course.title %></strong> - <%= cc.course.difficulty %> - le <%= cc.updated_at.strftime("%d/%m/%Y") %> </p>
           <% end %>
