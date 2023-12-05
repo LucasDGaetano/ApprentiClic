@@ -4,8 +4,7 @@
 
     <p class="explanations"> C'est sur cette page que seront renseignés les différentes informations des
       encadrés. Pour les modifier, il faut appuyer sur le crayon bleu à droite des
-      titres. Pour continuer (lorsque toutes les informations sont remplies)
-      appuyez ensuite sur "Confirmer mon profil"
+      titres. Pour continuer appuyez ensuite sur "Confirmer mon profil"
     </p>
   </div>
 
@@ -78,6 +77,12 @@
       <p class="card-text">...</p>
     </div>
   </div>
-    <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path, class: 'btn-caf' %></div>
+    <div data-controller="click-on-button">
+      <div class="text-end"> <%= link_to "Confirmer mon profil", faux_site_mes_ressources_amont_path, class: 'btn-caf', data:{action:'mouseenter->click-on-button#show mouseleave->click-on-button#hide'} %></div>
+      <p data-click-on-button-target="clickableElement" class="modal-redirect d-none">
+          Pensez à remplir toutes les informations quand vous serez sur le site de la CAF.
+          En attendant, vous pouvez confirmer.
+      </p>
+    </div>
   </div>
 </div>
