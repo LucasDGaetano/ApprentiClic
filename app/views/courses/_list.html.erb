@@ -9,17 +9,15 @@
             <div class="card-product col-12 my-3 p-0">
               <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
               <div class="card-product-infos">
-                <h3><%= course.title %></h3>
+              <div>
+                <h3 class="title-thin"><%= course.title %></h3>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.category %></p></span>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.difficulty %></p></span>
+              </div>
                 <p><%= course.description %></p>
                 <div class="card-product-footer mt-2">
-                  <p></p>
-                  <p><%= pluralize(course.comments.count, 'commentaire') %></p>
-                  <p>|</p>
-                  <p><%= course.category %></p>
-                  <p>|</p>
-                  <p><%= course.difficulty %></p>
                   <%= link_to overview_path(course) do %>
-                  <button class="btn btn-success">Acceder à ce cours</button>
+                  <button class="btn btn-success"><strong>Acceder à ce cours >></strong></button>
                   <% end %>
                 </div>
               </div>

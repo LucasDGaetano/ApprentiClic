@@ -1,13 +1,11 @@
 <%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
 <%# Section image du cour %>
-  <div class="image-cour"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fill, gravity: "auto", width: 1920, height: 1080 %>')">
+
     <div class="container">
       <h1><strong><%= @course.title %></strong></h1>
       <h2>Pour rappel avant de commencer :</h2>
       <p><%= @course.description %></p>
     </div>
-  </div>
 <div class="container">
   <%# Section chapitre du cour %>
   <% @chapters.each do |chapter| %>
@@ -46,5 +44,3 @@
         <%= render "comments/form", course: @course, comment: @comment %>
     </div>
   </div>
-
-

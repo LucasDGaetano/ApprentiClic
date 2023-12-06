@@ -1,9 +1,9 @@
 .form-select {
   border: none;
-  border-left: 1px solid $red;
+  border-left: 1px solid $orange;
   background: none;
   border-radius: 0;
-  color: $white;
+  color: white;
 
   option {
     text-align: left;
@@ -21,7 +21,7 @@
 
 .form-holder {
   border-radius: 50px;
-  border: 1px solid $red;
+  border: 1px solid $orange;
 }
 
 .form-control {
@@ -36,4 +36,3 @@
 input::placeholder {
   color: $white !important;
 }
-
