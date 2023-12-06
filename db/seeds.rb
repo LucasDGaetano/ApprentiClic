@@ -183,34 +183,26 @@ chapter2_2 = Chapter.create!(
   course: course2,
   title: "Qu'est-ce qu'un copier-coller ?",
   content: "Il s'agit d'une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
- l'identique sur un support numérique.Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers.",
-)
-chapter2_3 = Chapter.create!(
-  course: course2,
-  title: "A quoi sert un copier-coller ?",
-  content: "La technique présentée dans ce cours peut être appliquée dans divers logiciels : <ul>
- <li> un traitement de texte, comme word, ou le bloc note. Vous pourrez copier et coller du texte, dupliquer rapidement un paragraphe ou une phrase pour agrémenter la mise en forme ou revoir la mise en page de vos documents.</li>
- <li> Dans votre navigateur internet, vous avez possibilité de copier du texte pour ensuite le coller dans un traitement de texte par exemple </li>
- <li> Ça marche également dans les tableurs comme excel dans lequel vous pouvez effectuer le collage de cellules.</li>
- <li> La technique du coller vous sera utile lors de la capture d'écran pour déposer votre capture dans un logiciel tel que Paint…</li>
- </ul>",
+ l'identique sur un support numérique. Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers.
+ Vous pourrez appliquer le copier/coller dans divers logiciels comme un traitement de texte, word, ou un bloc note. Mais aussi dans un fichier Excel ou votre navigateur Internet ",
 )
 
 file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
 file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
 file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
-chapter2_4 = Chapter.create!(
+chapter2_3 = Chapter.create!(
   course: course2,
-  title: "Faire un copier-coller : l'essentiel",
-  content: "<ul>
-  <li>Sélectionnez l'élément à copier en plaçant la souris sur l'élément et en le sélectionnant jusqu'à ce que vous le voyez surligné
-  <li>Pressez en même temps les touches Ctrl et C pour copier
+  title: "Sélectionner l'élément à copier/coller",
+  content: "Sélectionnez l'élément à copier en plaçant la souris sur l'élément et en le sélectionnant jusqu'à ce que vous le voyez surligné comme la photo ci-dessous"
+  chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
+  
+  "<li>Pressez en même temps les touches Ctrl et C pour copier
   <li>Allez à l'emplacement où vous désirez placer la copie
   <li>Appuyez simultanément sur les touches Ctrl et V pour coller
   <li>La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi
   </ul>",
 )
-chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
+
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
 chapter2_4.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
 
