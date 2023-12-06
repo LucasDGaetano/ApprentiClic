@@ -3,6 +3,15 @@
   background-position: center;
   padding: 200px 0;
   margin: 0 auto; /* Centrer la bannière horizontalement */
+
+  height: 700px;
+}
+
+.banner-course {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  margin: 0 auto; /* Centrer la bannière horizontalement */
   position:relative;
 
   .flower-overview {
@@ -16,7 +25,6 @@
     right: 68px;
     top: 95px;
   }
-  height: 700px;
 }
 
 .banner h1 {
