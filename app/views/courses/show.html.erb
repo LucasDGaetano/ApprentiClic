@@ -4,6 +4,7 @@
   <div class="container rot-180">
     <h1 class="underline-thin text-white"><strong><%= @course.title %></strong></h1>
     <p><%= @course.description %></p>
+    <%= image_tag 'png/tree-flowers.png', class:"flower-course" %>
   </div>
 </div>
 <div class="container">
@@ -13,7 +14,7 @@
     <h3 class="title"><%= chapter.title %></h3>
     <p class="course-content"><%= chapter.content.html_safe %></p>
     <div class="text-center">
-      <%= cl_image_tag chapter.photo.key, height: 300, width: 800, crop: :fit if chapter.photo.attached?%>
+      <%= cl_image_tag chapter.photo.key, height: 300, width: 400, crop: :fit if chapter.photo.attached?%>
       <%= cl_video_tag chapter.video.key, height: 300, width: 400, crop: :fill, controls: true if chapter.video.attached?%>
     </div>
     <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>

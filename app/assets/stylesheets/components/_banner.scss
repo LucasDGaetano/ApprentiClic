@@ -4,6 +4,19 @@
   background-position: center;
   padding: 200px 0;
   margin: 0 auto; /* Centrer la bannière horizontalement */
+  position:relative;
+
+  .flower-overview {
+    position: absolute;
+    right: 90px;
+    top: 325px;
+  }
+
+  .flower-course {
+    position: absolute;
+    right: 90px;
+    top: 72px;
+  }
 }
 
 .banner h4 {
