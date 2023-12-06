@@ -1,5 +1,5 @@
-<%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
-<%# Section image du cour %>
+<%# SHOW commune pour le cours de la capture d'écran et envoyer un email avec Gmail %>
+<%# Section image du cours %>
 
     <div class="container mt-5">
       <h1 class="title"><strong><%= @course.title %></strong></h1>
@@ -8,7 +8,7 @@
     </div>
 
 <div class="container">
-  <%# Section chapitre du cour %>
+  <%# Section chapitre du cours %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h3 class="title"><%= chapter.title %></h3>
