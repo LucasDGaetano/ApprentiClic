@@ -183,32 +183,37 @@ chapter2_2 = Chapter.create!(
   course: course2,
   title: "Qu'est-ce qu'un copier-coller ?",
   content: "Il s'agit d'une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
- l'identique sur un support numérique. Cette manipulation peut se faire aussi bien sur les fichiers que sur les dossiers.
- Vous pourrez appliquer le copier/coller dans divers logiciels comme un traitement de texte, word, ou un bloc note. Mais aussi dans un fichier Excel ou votre navigateur Internet ",
+ l'identique sur un support numérique. Cette manipulation peut se faire aussi bien sur des fichiers que sur des dossiers.
+ Vous pourrez appliquer le copier/coller dans divers logiciels comme un traitement de texte, word, bloc note,
+ fichier Excel mais aussi votre navigateur Internet ",
 )
 
 file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
-file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
-file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
 chapter2_3 = Chapter.create!(
-file3 = URI.open("https://images.radio-canada.ca/q_auto,w_960/v1/ici-premiere/16x9/ctrl-ctrl-c-ctrl-v-input-paste.jpg")
-chapter2_4 = Chapter.create!(
   course: course2,
   title: "Sélectionner l'élément à copier/coller",
   content: "Sélectionnez l'élément à copier en plaçant la souris sur l'élément et en le sélectionnant jusqu'à ce que vous le voyez surligné comme la photo ci-dessous"
-  chapter2_4.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
-
-  "<li>Pressez en même temps les touches Ctrl et C pour copier
-  <li>Allez à l'emplacement où vous désirez placer la copie
-  <li>Appuyez simultanément sur les touches Ctrl et V pour coller
-  <li>La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi
-  </ul>"
 )
+chapter2_3.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
 
+file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
+chapter2_4 = Chapter.create!(
+  course: course2,
+  title: "Effectuer l'action copier",
+  content: "Pour l'action du copier, vous devez pressez les touches Ctrl et C en même temps"
+)
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
-chapter2_4.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
 
+file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
 chapter2_5 = Chapter.create!(
+  course: course2,
+  title: "Effectuer l'action coller",
+  content: "Pour l'action du coller, vous devez pressez les touches Ctrl et V en même temps.
+  La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi"
+)
+chapter2_5.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
+
+chapter2_6 = Chapter.create!(
   course: course2,
   title: "Exercice pratique",
   content: "<div class='my-5' data-controller='copy-paste'>
