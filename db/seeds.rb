@@ -104,7 +104,7 @@ cover8 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701427656
 file_course_8 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701427656/Apprenticlic/gmail-messageri-Acces_h5m0ch.jpg")
 course8 = Course.create!(
   title: "Créer une adresse gmail messagerie",
-  description: "Dans ce cours vous allez découvrir les principales étapes pour créer un adresse gmail messagerie.",
+  description: "Dans ce cours vous allez découvrir les principales étapes pour créer une adresse de messagerie gmail.",
   category: "Messagerie",
   difficulty: "Débutant",
 )
