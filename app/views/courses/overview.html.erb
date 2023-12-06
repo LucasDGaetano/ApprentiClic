@@ -1,8 +1,10 @@
-<div class="banner rot-180" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857308/Apprenticlic/background-company-description_fdl9tc.png);">
+<div class="banner rot-180" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701879772/Apprenticlic/wavecover_courses_xw2by8.png);">
   <div class="container rot-180">
-    <h1 class="underline-thin text-white"><strong><%= @course.title %></strong></h1>
-    <p><%= @course.description %></p>
-      <%= image_tag 'png/tree-flowers.png', class:"flower-overview rot-180" %>
+    <div class="col-10">
+      <h1 class="underline-thin text-white"><strong><%= @course.title %></strong></h1>
+      <p><%= @course.description %></p>
+    </div>
+      <%= image_tag 'png/tree-flowers.png', class:"flower-course" %>
   </div>
 </div>
 
@@ -26,7 +28,7 @@
      <li><p class="course-content"><%= chapter.title %></p></li>
     <% end %>
   </ol>
-  <div class="my-3">
+  <div class="my-4">
     <h3 class="title">Auto-evaluation : petit rappel</h3>
     <p class="course-content">A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton orange disant <em class="underline-thin">"J'ai compris"</em></p>
     <p class="course-content"> Ce bouton sers à <strong> marquer votre progression</strong>, c'est à <strong>vous</strong> d'évaluez si vous avez bien compris un chapitre du cours ! <br> Vous pourrez retrouver votre progression sur votre page de profil après avoir créé un compte</p>
