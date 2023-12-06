@@ -10,7 +10,7 @@
   </div>
 </div>
 <div class="container">
-  <%# Section chapitre du cour %>
+  <%# Section chapitre du cours %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
     <h3 class="title"><%= chapter.title %></h3>
