@@ -1,10 +1,11 @@
 .footer {
   background-size: cover; /* Taille de l'image pour remplir toute la zone du footer */
   // background-position: center; /* Positionnement de l'image au centre */
-  height: 500px;
+  height: 200px;
   color: white; /* Couleur du texte */
   padding: 50px; /* Espacement intérieur */
   margin-top: 3em;
+  margin-left: -60px;
 }
 .footer-content {
   display: flex; /* Utilisation de flexbox */
