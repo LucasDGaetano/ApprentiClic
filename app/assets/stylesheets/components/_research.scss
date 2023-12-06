@@ -3,10 +3,11 @@
   border-left: 1px solid $orange;
   background: none;
   border-radius: 0;
-  background-color: white;
+  color: white;
 
   option {
     text-align: left;
+    background-color: $purple;
   }
 }
 
@@ -15,6 +16,7 @@
   border: none;
   background: none;
   text-align: left;
+  color: $white;
 }
 
 .form-holder {
@@ -29,4 +31,8 @@
 .form-button {
   border-radius: 50%;
   background-color: $orange;
+}
+
+input::placeholder {
+  color: $white !important;
 }
