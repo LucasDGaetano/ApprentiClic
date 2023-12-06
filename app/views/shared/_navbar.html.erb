@@ -1,4 +1,4 @@
-<div class="navbar background-white navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar background-purple navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Apprenticlic_logo_new.png" %>
@@ -6,15 +6,14 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <h1 class="text-center title-right">ApprentiClic</span></h1>
-
+    <h1 class="text-center title-left">Apprenti<span class="title-right">Clic</span></h1>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-          <%= link_to "Cours", courses_path, class: "nav-link" %>
+          <%= link_to "Cours", courses_path, class: "nav-link", style: "color:#ffffff ;" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Faux-sites", faux_site_path, class: "nav-link" %>
+          <%= link_to "Faux-sites", faux_site_path, class: "nav-link", style: "color:#ffffff ;" %>
         </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">

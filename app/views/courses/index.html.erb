@@ -1,37 +1,36 @@
-<div class="background-banner" style="background-image: url(<%= image_path 'png/background_banner.png' %>);">
-    <div class="container mt-5" data-controller="search-courses">
-      <h1 class="title mt-5">Catalogue de nos <span id="cours">cours</span></h1>
-
-      <!--section barre de recherche-->
-      <div class="row justify-content-center" >
-        <div class="col-12 my-3">
-          <%= form_with url: courses_path, method: :get, html: {class:
-            "mb-4", data: {search_courses_target: "form"}} do %>
-            <div class="d-flex justify-content-evenly form-holder">
-              <%= text_field_tag :query,
-                  params[:query],
-                  class: "form-control",
-                  placeholder: "Recherchez un mot-clé",
-                  id: "form-control-index",
-                  data: {action: "keyup->search-courses#update", search_courses_target: "input"}
-              %>
-              <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select text-center", prompt: "Sélectionnez une catégorie", data: {action: "change->search-courses#update", search_courses_target: "category"} %>
-              <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select text-center", prompt: "Sélectionnez une difficulté" , data: {action: "change->search-courses#update", search_courses_target: "difficulty"} %>
-              <%= button_tag(class:"btn form-button") do %>
-                <i class="fa-solid fa-magnifying-glass"></i>
-              <% end %>
-            </div>
-          <% end %>
+<div data-controller="search-courses">
+  <div class="background-banner" style="background-image: url(<%= image_path 'png/background_banner.png' %>);">
+      <div class="container">
+        <h1 class="title mt-5">Catalogue de nos <span id="cours">cours</span></h1>
+        <!--section barre de recherche-->
+        <div class="row justify-content-center" >
+          <div class="col-12 my-3">
+            <%= form_with url: courses_path, method: :get, html: {class:
+              "mb-4", data: {search_courses_target: "form"}} do %>
+              <div class="d-flex justify-content-evenly form-holder">
+                <%= text_field_tag :query,
+                    params[:query],
+                    class: "form-control",
+                    placeholder: "Recherchez un mot-clé",
+                    id: "form-control-index",
+                    data: {action: "keyup->search-courses#update", search_courses_target: "input"}
+                %>
+                <%= select_tag :category, options_for_select(Course::CATEGORIES, params[:category]), class:"form-select text-center", prompt: "Sélectionnez une catégorie", data: {action: "change->search-courses#update", search_courses_target: "category"} %>
+                <%= select_tag :difficulty, options_for_select(Course::DIFFICULTIES, params[:difficulty]), class:"form-select text-center", prompt: "Sélectionnez une difficulté" , data: {action: "change->search-courses#update", search_courses_target: "difficulty"} %>
+                <%= button_tag(class:"btn form-button") do %>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
-
-
     </div>
+  <div class="container">
+    <% if @courses.none? %>
+            <h2 class="text-center"><em>Nous sommes désolés, nous n'avons pas trouvé de cours correspondant</em></h2>
+          <% else %>
+            <%= render "list", courses: @courses %>
+        <% end %>
   </div>
-<div class="container">
-   <% if @courses.none? %>
-          <h2 class="text-center"><em>Nous sommes désolés, nous n'avons pas trouvé de cours correspondant</em></h2>
-        <% else %>
-          <%= render "list", courses: @courses %>
-      <% end %>
 </div>

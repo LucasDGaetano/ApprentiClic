@@ -1,18 +1,18 @@
 <%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
 <%# Section image du cour %>
-
-    <div class="container">
-      <h1><strong><%= @course.title %></strong></h1>
-      <h2>Pour rappel avant de commencer :</h2>
-      <p><%= @course.description %></p>
-    </div>
+<div class="banner rot-180" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857308/Apprenticlic/background-company-description_fdl9tc.png);">
+  <div class="container rot-180">
+    <h1 class="underline-thin text-white"><strong><%= @course.title %></strong></h1>
+    <p><%= @course.description %></p>
+  </div>
+</div>
 <div class="container">
   <%# Section chapitre du cour %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
-    <h4><%= chapter.title %></h4>
-    <p><%= chapter.content.html_safe %></p>
-    <div>
+    <h3 class="title"><%= chapter.title %></h3>
+    <p class="course-content"><%= chapter.content.html_safe %></p>
+    <div class="text-center">
       <%= cl_image_tag chapter.photo.key, height: 300, width: 800, crop: :fit if chapter.photo.attached?%>
       <%= cl_video_tag chapter.video.key, height: 300, width: 400, crop: :fill, controls: true if chapter.video.attached?%>
     </div>
@@ -37,10 +37,10 @@
               <% end %>
             </div>
             <% if @course.comments.none? %>
-              <p><em>Ce cours n'a pas encore de commentaires</em> </p>
+              <p class="course-content"><em>Ce cours n'a pas encore de commentaires</em> </p>
             <% end %>
-          </div>
         </div>
         <%= render "comments/form", course: @course, comment: @comment %>
     </div>
+          </div>
   </div>

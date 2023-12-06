@@ -6,6 +6,7 @@ export default class extends Controller {
 
   connect() {
     console.log("hello from search courses");
+    console.log(this.element);
   }
 
   update(event) {
