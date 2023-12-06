@@ -13,6 +13,7 @@
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
   margin-left: 5px;
+  padding: 15px;
 }
 
 .king{
@@ -21,6 +22,7 @@
 
 .encadre{
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
 }
 
 .underline{
@@ -42,13 +44,14 @@
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
   border: none;
+  padding: 15px;
 }
 
 .modal-redirect {
-  background-color: $red;
+  background-color: $orange;
   padding: 8px;
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

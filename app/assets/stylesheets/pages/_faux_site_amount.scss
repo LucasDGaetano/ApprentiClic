@@ -3,10 +3,14 @@
   text-align: end;
 }
 
+.form-control-amount::placeholder{
+  color: black !important;
+}
+
 .explanations {
   font-size: 25px;
-  background-color: $red;
-  opacity: 0.7;
+  background-color: $orange;
+  opacity: 0.8;
   border-radius: 8px;
   text-align: justify;
   padding: 8px;
