@@ -44,10 +44,6 @@ text-align: center;
   margin-bottom: 10px;
 }
 
-.quote {
-  font-size: 24px;
-  margin-right: 10px;
-}
 .users-reviews {
   padding: 40px;
   margin-top: -70px;
@@ -67,4 +63,25 @@ text-align: center;
 
 .review-text strong {
   font-weight: bold;
+}
+
+.name-review {
+  color: $purple;
+}
+
+.title-description {
+  position: relative;
+}
+
+.quote-right {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
+.quote-left {
+  position: absolute;
+  bottom: -20px;
+  right: -40px;
+  transform: rotate(180deg);
 }
