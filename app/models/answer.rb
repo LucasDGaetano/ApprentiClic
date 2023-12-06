@@ -5,5 +5,4 @@ class Answer < ApplicationRecord
 
   validates :user_id, presence: true
   validates :comment_id, presence: true
-  validates :content, length: { minimum: 6 }
 end

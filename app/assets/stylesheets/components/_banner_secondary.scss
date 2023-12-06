@@ -7,6 +7,12 @@
 }
 
 .background-banner {
-  height: 40vh;
+  height: 60vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.rot-180 {
+  transform: rotate(180deg);
 }

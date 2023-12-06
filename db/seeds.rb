@@ -200,7 +200,7 @@ chapter2_3 = Chapter.create!(
   <li>Allez à l'emplacement où vous désirez placer la copie
   <li>Appuyez simultanément sur les touches Ctrl et V pour coller
   <li>La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi
-  </ul>",
+  </ul>"
 )
 
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
@@ -215,7 +215,7 @@ chapter2_5 = Chapter.create!(
     Quand vous reussirez chacune des actions, le fond de chaque case deviendra vert</p>
     <div class='d-flex justify-content-evenly mt-4'>
     <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
-    <textarea cols='60' rows='2' placeholder='copiez le texte de gauche ici !'
+    <textarea cols='60' rows='2' placeholder='collez le texte de gauche ici !'
     data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
   </div>",
