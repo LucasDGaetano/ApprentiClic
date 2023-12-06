@@ -22,7 +22,7 @@
       <p><%= current_user.email %></p>
       <h4 class="title">Cours terminés</h4>
       <div class="d-flex justify-content-evenly align-items-end mb-3">
-        <%= @completed_courses_easy.count %>/<%= @current_courses_easy.count %> <%= image_tag "svgs/difficulty-low.svg", class:"difficulty" %><%= @completed_courses_medium.count %>/<%= @current_courses_medium.count %> <%= image_tag "svgs/difficulty-intermediate.svg", class:"difficulty" %> <%= @completed_courses_hard.count %>/<%= @current_courses_hard.count %> <%= image_tag "svgs/difficulty-high.svg", class:"difficulty" %>
+        <%= @completed_courses_easy.count %>/<%= @current_courses_easy.count %> <%= @completed_courses_medium.count %>/<%= @current_courses_medium.count %> <%= @completed_courses_hard.count %>/<%= @current_courses_hard.count %>
       </div>
       <hr>
       <p>Membre depuis le <%= current_user.created_at.strftime("%d/%m/%Y") %></p>
@@ -54,4 +54,19 @@
     </div>
   </div>
 
+</div>
+
+<!-- Footer -->
+<div class="footer" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857218/Apprenticlic/img-footer_rqnt7x.png);">
+<div class="footer-content">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <p>&copy; 2023 Cours informatique en ligne</p>
+  </div>
 </div>

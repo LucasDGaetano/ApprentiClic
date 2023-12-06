@@ -1,21 +1,20 @@
 <%# SHOW commune pour le cours de la capture d'écran et envoyer un email avec Gmail %>
 <%# Section image du cours %>
 
-    <div class="container mt-5">
-      <h1 class="title"><strong><%= @course.title %></strong></h1>
+    <div class="container">
+      <h1><strong><%= @course.title %></strong></h1>
       <h2>Pour rappel avant de commencer :</h2>
       <p><%= @course.description %></p>
     </div>
-
 <div class="container">
   <%# Section chapitre du cours %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
-    <h3 class="title"><%= chapter.title %></h3>
+    <h4><%= chapter.title %></h4>
     <p><%= chapter.content.html_safe %></p>
-    <div class="text-center">
+    <div>
       <%= cl_image_tag chapter.photo.key, height: 300, width: 800, crop: :fit if chapter.photo.attached?%>
-      <%= cl_video_tag chapter.video.key, height: 500, width: 800, crop: :fill, controls: true if chapter.video.attached?%>
+      <%= cl_video_tag chapter.video.key, height: 300, width: 400, crop: :fill, controls: true if chapter.video.attached?%>
     </div>
     <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
     <%= turbo_frame_tag "done_chapter_#{chapter.id}" do %>
@@ -30,7 +29,7 @@
         <button class="btn btn-info" data-action="click->toggle-comments#fire">Voir les commentaires</button>
         <div data-toggle-comments-target="toggable" class="d-none mt-3">
           <div class="my-3">
-            <h4 class="title-thin">Commentaires</h4>
+            <h5>Commentaires</h5>
             <div data-new-comment-target="commentList">
               <% @course.comments.each do |comment| %>
                 <%= render "comments/comment", comment: comment, answer: @answer %>
@@ -45,3 +44,17 @@
         <%= render "comments/form", course: @course, comment: @comment %>
     </div>
   </div>
+<!-- Footer -->
+<div class="footer" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857218/Apprenticlic/img-footer_rqnt7x.png);">
+<div class="footer-content">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    <p>&copy; 2023 Cours informatique en ligne</p>
+  </div>
+</div>

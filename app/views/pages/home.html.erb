@@ -1,108 +1,117 @@
 <!-- Section bannière background color -->
-<div class="banner" style="background-image: url(<%= image_path 'png/background_banner.png' %>);">
-  <div style="display: flex; align-items: center; justify-content: space-around;">
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857288/Apprenticlic/background_banner_qejfp3.png);">
+  <div style="display: flex; justify-content: space-around;">
     <div>
-      <h4><strong>ApprentiClic</strong> vous aide à devenir <strong>autonome</strong> avec des outils numériques</h4>
-      <p>Entraînez-vous en toute tranquillité avec nos cours <strong>gratuits</strong> adaptés à tout niveau</p>
-      <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
+      <h1 class="mb-3">ApprentiClic</h1>
+      <h5 class="mb-1">Devenez <strong>autonome</strong> sur vos outils numériques</h5>
+      <a href="<%= courses_path %>" class="btn btn-success" style="margin-top: 10px;">Consulter les cours</a>
     </div>
     <div>
-      <%= image_tag 'png/img-banner-homepage.png' %>
+      <%= image_tag 'https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857249/Apprenticlic/img-banner-homepage_adznwg.png' %>
     </div>
   </div>
-
 </div>
 <!-- Section Qu'en disent nos utilisateurs -->
-<div class="container">
-  <section class="users-reviews">
+<section class="users-reviews">
+  <div class="container">
     <div class="title">
       <h3>Ce qu'en disent nos apprentis</h3>
     </div>
-    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-      <div class="review" style="flex: 0 0 30%; margin: 10px;">
-        <div class="quote">“</div>
-        <p class="review-text">C'est formidable que ce site existe ! Je me sens tellement plus à l'aise sur mon ordinateur<br>
-          <strong>Laura P.</strong></p>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div class="review" style="flex: 0 0 30%; margin: 10px 0;">
+        <%# <div class="quote">“</div> %>
+        <p class="review-text">“ C'est formidable que ce site existe ! Je me sens tellement plus à l'aise sur mon ordinateur “<br>
+          <span class='name-review'><strong>Laura P.</strong></span></p>
       </div>
-      <div class="review" style="flex: 0 0 30%; margin: 10px;">
-        <div class="quote">“</div>
-        <p class="review-text">Super idée ces cours, j'ai trouvé le cour parfait<br>
-          <strong>Pierre E.</strong></p>
+      <div class="review" style="flex: 0 0 30%; margin: 10px 0;">
+        <%# <div class="quote">“</div> %>
+        <p class="review-text">“ Super idée ces cours, j'ai pu m'entraîner en toute sécurité sur le site de la CAF “<br>
+          <span class='name-review'><strong>Pierre E.</strong></span></p>
       </div>
-      <div class="review" style="flex: 0 0 30%; margin: 10px;">
-        <div class="quote">“</div>
-        <p class="review-text">Les cours que j'ai fait ont été très clairs et m'ont beaucoup aidé dans ma vie quotidienne<br>
-          <strong>Alexis D.</strong></p>
+      <div class="review" style="flex: 0 0 30%; margin: 10px 0;">
+        <%# <div class="quote">“</div> %>
+        <p class="review-text">“ Les cours que j'ai fait ont été très clairs et m'ont beaucoup aidé dans ma vie quotidienne “<br>
+          <span class='name-review'><strong>Alexis D.</strong></span></p>
       </div>
     </div>
   </section>
 </div>
 <!-- Section description Apprenticlic -->
-<div>
-<img src="two-flower.png" alt="">
-</div>
-<div class="banner" style="background-image: url(<%= image_path 'png/background-company-description.png' %>);">
-  <div class="container">
-    <h4>ApprentiClic a à coeur d'aider les personnes en difficulté numériquement, c'est pourquoi nous proposons une large
-      gamme de cours en ligne très simples d'utilisation avec des exercices interactifs pour vous entraîner.
+<div class="banner-description" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857308/Apprenticlic/background-company-description_fdl9tc.png);">
+  <!-- Photo des deux fleurs -->
+  <div style="position: absolute; top: -157px;margin-left: 50px;">
+    <%= image_tag 'https://res.cloudinary.com/dzqqjrcor/image/upload/v1701874538/Apprenticlic/two-flowers_m5i3uv.png'%>
+  </div>
+  <div class="container" style="display: flex; align-items: center; height: 100%;">
+    <h4 class='mb-0 title-description'>ApprentiClic a à coeur d'aider les personnes en difficulté numériquement, c'est pourquoi nous proposons une large
+      gamme de cours en ligne gratuits et très simples d'utilisation avec des exercices interactifs pour vous entraîner.
+      <!-- Photo des deux quotes -->
+      <%= image_tag 'png/quote.png', class: 'quote-right' %>
+      <%= image_tag 'png/quote.png', class: 'quote-left' %>
     </h4>
   </div>
 </div>
-
 <!-- Section des cards des cours les plus consultés -->
-<div class="container">
-   <div class="title">
-      <h3>Les cours les plus consultés</h3>
-    </div>
-<section class="card-section">
-  <% @courses.limit(3).each do |course| %>
-      <% if params[:query].present? %>
-      <% end %>
-       <div class="card-product col-12 my-3 p-0">
-              <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
-              <div class="card-product-infos">
-              <div>
-                <h3 class="title-thin"><%= course.title %></h3>
-                  <span class="badge rounded-pill text-bg-info"><p><%= course.category %></p></span>
-                  <span class="badge rounded-pill text-bg-info"><p><%= course.difficulty %></p></span>
-              </div>
-                <p><%= course.description %></p>
-                <div class="card-product-footer mt-2">
-                  <%= link_to overview_path(course) do %>
-                  <button class="btn btn-success"><strong>Acceder à ce cours >></strong></button>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-  <% end %>
+<div class="container mt-4">
+  <div class="title">
+    <h3>Les cours les plus consultés</h3>
+  </div>
+  <section class="card-section" style="margin-top: 25px;">
+    <% @courses.limit(3).each do |course| %>
+      <div class="card-product col-12 my-3 p-0">
+        <% if params[:query].present? %>
+        <% end %>
+        <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
+        <div class="card-product-infos">
+          <div>
+            <h3 class="title-thin"><%= course.title %></h3>
+            <span class="badge rounded-pill text-bg-info">
+              <p><%= course.category %></p>
+            </span>
+            <span class="badge rounded-pill text-bg-info">
+              <p><%= course.difficulty %></p>
+            </span>
+          </div>
+          <p><%= course.description %></p>
+          <div class="card-product-footer mt-2">
+            <%= link_to overview_path(course) do %>
+              <button class="btn btn-success">Acceder à ce cours</button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-</div>
-
 <!-- Section des cards des faux-sites -->
 <div class="container">
   <div class="title">
-      <h3>Mes premiers pas</h3>
+    <h3>Mes premiers pas</h3>
   </div>
-  <div class="card-product my-3">
-    <img src="https://cdn.paris.fr/paris/2020/11/16/huge-afb361602bc8fa94c493b84e325ad9f5.jpg" alt="Card 1">
-    <div class="card-product-infos">
-      <h3 class="title-thin">Entraînez-vous sur la réplique du site de la CAF</h4>
-      <p>Apprenez à déclarer vos ressources facilement avec notre entraînement gratuit</p>
-      <a href="<%= faux_site_path %>" class="btn btn-success">Plus de détails</a>
+  <section class="card-section" style="margin-top: 25px;">
+    <div class="card-product my-3">
+      <img src="https://cdn.paris.fr/paris/2020/11/16/huge-afb361602bc8fa94c493b84e325ad9f5.jpg" alt="Card 1">
+      <div class="card-product-infos">
+        <h3 class="title-thin">Entraînez-vous sur la réplique du site de la CAF</h3>
+        <p>Apprenez à déclarer vos ressources facilement avec notre entraînement gratuit</p>
+        <div class="d-flex justify-content-end">
+          <a href="<%= faux_site_path %>" class="btn btn-success" style='width: max-content;'>Plus de détails</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
 <!-- Footer -->
-<div class="footer-content">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+<div class="footer" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857218/Apprenticlic/img-footer_rqnt7x.png);">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2023 Cours informatique en ligne</p>
+    </div>
   </div>
-  <div class="footer-copyright">
-    <p>&copy; 2023 Cours informatique en ligne</p>
-  </div>
-</div>
