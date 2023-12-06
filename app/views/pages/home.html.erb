@@ -3,7 +3,7 @@
   <div style="display: flex; align-items: center; justify-content: space-around;">
     <div>
       <h4>ApprentiClic vous aide à devenir <strong>autonome</strong> avec des outils numériques</h4>
-      <p>Entraînez-vous en toute tranquillité avec nos cours adaptés à tout niveau</p>
+      <p>Entraînez-vous en toute tranquillité avec nos cours <strong>gratuits</strong> adaptés à tout niveau</p>
       <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
     </div>
     <div>
@@ -47,16 +47,9 @@
     </h4>
   </div>
 </div>
-<!-- Section Pourquoi choisir Apprenticlic -->
-<div class="container">
-  <section class="company-subject">
-    <h3>Pourquoi choisir ApprentiClic ?</h3>
-    <p>Avec ApprentiClic, n'ayez plus peur de faire de fausses manipulations qui pourraient avoir de graves conséquences.</p>
-    <p>Avec ApprentiClic, les cours sont gratuits.</p>
-    <p>Choisissez le cour qui vous convient grâce à des cours adaptés à tous les niveaux.</p>
-</section>
 
 <!-- Section des cards des cours les plus consultés -->
+<div class="container">
 <section class="card-section">
   <% @courses.limit(3).each do |course| %>
     <div class="card-product my-3">
@@ -82,6 +75,8 @@
     </div>
   <% end %>
 </div>
+</div>
+
 <!-- Section des cards des faux-sites -->
 <div class="container">
   <h3>Mes premiers pas</h3>
@@ -91,16 +86,7 @@
       <h4>Entraînez-vous sur la réplique du site de la CAF</h4>
       <p class="reduced-font-size-and-margin">Mis à jour le 30/11/2023</p>
       <p>Apprenez à déclarer vos ressources facilement avec notre entraînement gratuit</p>
-      <a href="#" class="button">Plus de détails</a>
-    </div>
-  </div>
-  <div class="card-product my-3">
-    <img src="https://www.impots.gouv.fr/sites/default/files/2023-10/bloc_impots_gouv.svg" alt="Card 1">
-    <div class="card-product-infos">
-      <h4>Entraînez-vous sur la réplique du site des impôts</h4>
-      <p class="reduced-font-size-and-margin">Mis à jour le 30/11/2023</p>
-      <p>Apprenez à faire vos déclarations facilement avec notre entraînement gratuit</p>
-      <a href="#" class="button">Plus de détails</a>
+      <a href="<%= faux_site_path %>" class="btn btn-success">Plus de détails</a>
     </div>
   </div>
 </div>
