@@ -1,18 +1,17 @@
 <%# SHOW commune pour le cour de la capture d'écran et envoyer un email avec Gmail %>
 <%# Section image du cour %>
-  <div class="image-cour"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fill, gravity: "auto", width: 1920, height: 1080 %>')">
+
     <div class="container">
-      <h1 class="title-decoration"><strong><%= @course.title %></strong></h1>
+      <h1 class="title"><strong><%= @course.title %></strong></h1>
       <h2>Pour rappel avant de commencer :</h2>
       <p><%= @course.description %></p>
     </div>
-  </div>
+
 <div class="container">
   <%# Section chapitre du cour %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
-    <h3 class="title-decoration"><%= chapter.title %></h3>
+    <h3 class="title"><%= chapter.title %></h3>
     <p><%= chapter.content.html_safe %></p>
     <div class="text-center">
       <%= cl_image_tag chapter.photo.key, height: 300, width: 800, crop: :fit if chapter.photo.attached?%>
@@ -31,7 +30,7 @@
         <button class="btn btn-info" data-action="click->toggle-comments#fire">Voir les commentaires</button>
         <div data-toggle-comments-target="toggable" class="d-none mt-3">
           <div class="my-3">
-            <h4 class="title-decoration">Commentaires</h4>
+            <h4 class="title-thin">Commentaires</h4>
             <div data-new-comment-target="commentList">
               <% @course.comments.each do |comment| %>
                 <%= render "comments/comment", comment: comment, answer: @answer %>

@@ -2,7 +2,7 @@
 <div class="banner" style="background-image: url(<%= image_path 'png/background_banner.png' %>);">
   <div style="display: flex; align-items: center; justify-content: space-around;">
     <div>
-      <h4>ApprentiClic vous aide à devenir <strong>autonome</strong> avec des outils numériques</h4>
+      <h4><strong>ApprentiClic</strong> vous aide à devenir <strong>autonome</strong> avec des outils numériques</h4>
       <p>Entraînez-vous en toute tranquillité avec nos cours <strong>gratuits</strong> adaptés à tout niveau</p>
       <a href="<%= courses_path %>" class="btn btn-success">Consulter les cours</a>
     </div>
@@ -56,27 +56,24 @@
     </div>
 <section class="card-section">
   <% @courses.limit(3).each do |course| %>
-    <div class="card-product my-3">
       <% if params[:query].present? %>
       <% end %>
-      <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
-      <div class="card-product-infos">
-        <h5><%= course.title %></h5>
-        <p class="reduced-font-size-and-margin">Mis à jour le 30/11/2023</p>
-        <p><%= course.description %></p>
-        <div class="card-product-footer mt-2">
-          <p></p>
-          <p><%= course.comments.count %> commentaires</p>
-          <p>|</p>
-          <p><%= course.category %></p>
-          <p>|</p>
-          <p><%= course.difficulty %></p>
-          <%= link_to overview_path(course) do %>
-            <button class="btn btn-success">Acceder à ce cours</button>
-          <% end %>
-        </div>
-      </div>
-    </div>
+       <div class="card-product col-12 my-3 p-0">
+              <%= cl_image_tag course.photo.key, crop: :fill if course.photo.attached? %>
+              <div class="card-product-infos">
+              <div>
+                <h3 class="title-thin"><%= course.title %></h3>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.category %></p></span>
+                  <span class="badge rounded-pill text-bg-info"><p><%= course.difficulty %></p></span>
+              </div>
+                <p><%= course.description %></p>
+                <div class="card-product-footer mt-2">
+                  <%= link_to overview_path(course) do %>
+                  <button class="btn btn-success"><strong>Acceder à ce cours >></strong></button>
+                  <% end %>
+                </div>
+              </div>
+            </div>
   <% end %>
 </div>
 </div>
@@ -89,8 +86,7 @@
   <div class="card-product my-3">
     <img src="https://cdn.paris.fr/paris/2020/11/16/huge-afb361602bc8fa94c493b84e325ad9f5.jpg" alt="Card 1">
     <div class="card-product-infos">
-      <h4>Entraînez-vous sur la réplique du site de la CAF</h4>
-      <p class="reduced-font-size-and-margin">Mis à jour le 30/11/2023</p>
+      <h3 class="title-thin">Entraînez-vous sur la réplique du site de la CAF</h4>
       <p>Apprenez à déclarer vos ressources facilement avec notre entraînement gratuit</p>
       <a href="<%= faux_site_path %>" class="btn btn-success">Plus de détails</a>
     </div>

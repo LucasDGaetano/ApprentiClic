@@ -1,6 +1,6 @@
 .form-select {
   border: none;
-  border-left: 1px solid $red;
+  border-left: 1px solid $orange;
   background: none;
   border-radius: 0;
   background-color: white;
@@ -19,7 +19,7 @@
 
 .form-holder {
   border-radius: 50px;
-  border: 1px solid $red;
+  border: 1px solid $orange;
 }
 
 .form-control {
@@ -28,5 +28,5 @@
 
 .form-button {
   border-radius: 50%;
-  background-color: $yellow;
+  background-color: $orange;
 }
