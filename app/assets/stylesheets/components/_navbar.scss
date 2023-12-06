@@ -1,8 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
   .title-left {
-    color: $purple;
+    color: $white;
   }
   .title-right {
     color: $orange;
@@ -11,32 +10,44 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  width: 210px;
+
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 50px;
-  border-radius: 5px;
+.navbar-lewagon .navbar-brand {
+  width: 210px;
+  img {
+      width: 50px;
+      border-radius: 5px;
+  }
 }
 
 .navbar-lewagon h1 {
   justify-content: space-between;
+  width: 210px;
 }
 
+
 .navbar-lewagon .nav-link{
-  margin-right: 10px;
-  border-bottom: 2px solid $orange;
+  mix-blend-mode: normal;
+  text-decoration: underline 1px solid $orange;
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .background-trans {
-  background: transparent;
+  // background: transparent;
 }
 
 .background-white {
   background: white;
+}
+
+.background-purple {
+  background: $purple;
 }

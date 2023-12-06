@@ -3,7 +3,40 @@
   background-position: center;
   padding: 200px 0;
   margin: 0 auto; /* Centrer la bannière horizontalement */
+
   height: 700px;
+}
+
+.banner-course {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  margin: 0 auto; /* Centrer la bannière horizontalement */
+  position:relative;
+
+  .flower-overview {
+    position: absolute;
+    right: 90px;
+    top: 325px;
+  }
+
+  .flower-course {
+    position: absolute;
+    right: 68px;
+    top: 95px;
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  h5 {
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
 }
 
 .banner h1 {
