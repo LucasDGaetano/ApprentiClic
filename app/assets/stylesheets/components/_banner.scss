@@ -6,17 +6,15 @@
   margin: 0 auto; /* Centrer la bannière horizontalement */
 }
 
-.banner h1 {
+.banner h4 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }

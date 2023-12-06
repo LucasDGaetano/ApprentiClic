@@ -21,10 +21,8 @@ text-align: center;
 }
 
 .company-subject {
-  background-color: $light-gray;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
 }
 
@@ -51,24 +49,19 @@ text-align: center;
   margin-right: 10px;
 }
 .users-reviews {
-  background-color: $light-gray;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .users-reviews h3 {
   font-size: 24px;
-  margin-bottom: 20px;
   text-align: center;
 }
-
 
 .review-text {
   font-size: 20px;
   text-align: center;
-  margin-top: -20px;
-  margin-bottom: 0rem;
+  margin-top: 15px;
 }
 
 .review-text strong {
