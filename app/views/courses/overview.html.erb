@@ -1,16 +1,13 @@
 
 
-  <div class="image-cour"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @course.cover.key, crop: :fill, gravity: "auto", width: 1920, height: 1080 %>')">
-    <div class="container">
-      <h1><strong><%= @course.title %></strong></h1>
+    <div class="container mt-5">
+      <h1 class="title-fat"><strong><%= @course.title %></strong></h1>
       <h2>Pour rappel avant de commencer :</h2>
       <p><%= @course.description %></p>
     </div>
-  </div>
 
 <div class="container">
-  <h3 class="my-4">Sommaire</h3>
+  <h3 class="my-4 title">Sommaire</h3>
   <ol>
     <% @chapters.each do |chapter| %>
      <li><h4><%= chapter.title %></h4></li>
@@ -19,17 +16,17 @@
     <hr>
 
   <div class="my-5">
-    <h3>Auto-evaluation</h3>
-    <p>A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton vert comme ceci :
+    <h3 class="title">Auto-evaluation</h3>
+    <p>A la fin de chacun des chapitre affiché ci-dessus vous aurez un petit bouton orange comme ceci :
     "<button class="btn btn-success my-3" style="font-size: 14px;">J'ai compris !</button>"</p>
     <p>Ce bouton sers à <strong> marquer votre progression</strong>, c'est à <strong>vous</strong> d'évaluez si vous avez bien compris un chapitre du cours ! <br> Vous pourrez retrouver votre progression sur votre page de profil après avoir créé un compte</p>
   </div>
 <hr>
   <% if user_signed_in? && current_user.users_courses.any? { |uc| uc.course == @course } %>
-    <h3>Il semble que vous suivez déjà ce cours</h3>
+    <h3 class="title">Il semble que vous suivez déjà ce cours</h3>
     <%= link_to "Cliquez ici pour reprendre", course_path(@course), class: "btn btn-success mb-3" %>
   <% else %>
-    <h3 class="mt-5">Vous êtes prêt ? On se lance ?</h3>
+    <h3 class="title mt-5">Vous êtes prêt ? On se lance ?</h3>
     <%= simple_form_for [@course, @uc] do |f|%>
     <%= f.submit "Commencer le cours !", class: "btn btn-success mb-5" %>
     <% end %>
@@ -42,7 +39,7 @@
       <h3>Ce qu'ils en pensent</h3>
       <% if @course.comments.any? %>
         <div class="my-3 mx-5">
-          <h4>Commentaires</h4>
+          <h4 class="title-thin">Commentaires</h4>
           <% @course.comments.each do |comment| %>
             <div class="my-3">
               <p><strong><%= comment.user.username %></strong> - le <%= comment.created_at.strftime("%d/%m/%Y") %></p>
