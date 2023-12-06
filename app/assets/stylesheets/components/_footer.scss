@@ -1,11 +1,27 @@
 .footer {
-  background-color: $yellow; /* Couleur de fond */
+  background-image: urlurl('/assets/images/png/img-footer.png');; /* Chemin vers votre image dans le dossier des assets */
+  background-size: cover; /* Taille de l'image pour remplir toute la zone du footer */
+  // background-position: center; /* Positionnement de l'image au centre */
+  height: 500px;
   color: white; /* Couleur du texte */
   padding: 50px; /* Espacement intérieur */
   margin-top: 3em;
 }
+.footer-content {
+  display: flex; /* Utilisation de flexbox */
+  flex-direction: column; /* Alignement vertical des éléments */
+  justify-content: space-between; /* Espacement entre les éléments */
+  height: 100%; /* Hauteur pour remplir le footer */
+}
+
+.footer-links {
+  display: flex; /* Utilisation de flexbox */
+  align-items: flex-end; /* Alignement des liens vers le bas */
+}
 
 .footer-links a {
+  display: flex; /* Utilisation de flexbox pour aligner les liens */
+  align-items: flex-end; /* Alignement des éléments au bas du conteneur */
   color: white; /* Couleur des liens */
   margin-right: 10px; /* Espacement entre les liens */
 }
