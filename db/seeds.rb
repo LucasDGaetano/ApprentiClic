@@ -233,166 +233,166 @@ chapter2_5 = Chapter.create!(
 )
 
 
-# chapter3_1 = Chapter.create!(
-#   course: course3,
-#   title: "Pour commencer",
-#   content: "Envoyer un mail est une des actions de base sur Internet.
-#   Elle va vous permettre de communiquer avec vos amis et vos proches mais également avec les administrations. ",
-# )
+chapter3_1 = Chapter.create!(
+  course: course3,
+  title: "Pour commencer",
+  content: "Envoyer un mail est une des actions de base sur Internet.
+  Elle va vous permettre de communiquer avec vos amis et vos proches mais également avec les administrations. ",
+)
 
-# chapter3_2 = Chapter.create!(
-#   course: course3,
-#   title: "Les différents champs d'un email",
-#   content: "Dans un email, vous aurez différentes informations à entrer comme le destinataire, l'objet, le contenu.
-#   <ul>
-#   <li>Le champ 1 correspond la première étape de l'envoi d'un email, il s'agit de l'adresse email de votre destinataire. L'adresse que vous saisissez dans l'étape 1 doit être une adresse complète. Elle doit se composer d'un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
-#   <li>Le champ 2 correspond à l'objet de votre email, c'est en quelque sorte le sujet sur lequel porte votre email. La saisie de l'objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
-#   <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
-#   </ul>",
-# )
-# file4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
-# chapter3_2.photo.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
+chapter3_2 = Chapter.create!(
+  course: course3,
+  title: "Les différents champs d'un email",
+  content: "Dans un email, vous aurez différentes informations à entrer comme le destinataire, l'objet, le contenu.
+  <ul>
+  <li>Le champ 1 correspond la première étape de l'envoi d'un email, il s'agit de l'adresse email de votre destinataire. L'adresse que vous saisissez dans l'étape 1 doit être une adresse complète. Elle doit se composer d'un identifiant suivi du caractère @ puis du nom du fournisseur de messagerie (ex : gmail.com, orange.fr, yahoo.fr, hotmail.fr…). Ainsi, une adresse complète doit ressembler à direction@lewagon.fr
+  <li>Le champ 2 correspond à l'objet de votre email, c'est en quelque sorte le sujet sur lequel porte votre email. La saisie de l'objet doit être limitée à quelques mots. Celui-ci est important car il permet de retrouver plus rapidement un mail dans sa boîte de messagerie.
+  <li>Le champ 3 correspond tout simplement au contenu de votre email. Vous pouvez y écrire ce que vous souhaitez.
+  </ul>",
+)
+file4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341783/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.48.33_l4inw4.png")
+chapter3_2.photo.attach(io: file4, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
-# chapter3_3 = Chapter.create!(
-#   course: course3,
-#   title: "Comment envoyer un email ?",
-#   content: " <ol>
-#   <li>Cliquez sur le bouton NOUVEAU MESSAGE. Lorsque vous cliquez sur le bouton NOUVEAU MESSAGE, une nouvelle fenêtre s'ouvre dans laquelle vous allez remplir les différents champs détaillés au-dessus et rédiger votre message
-#   <li>Dans le champ de saisie À, tapez l'adresse email de votre destinataire
-#   <li>Complétez le champ objet en précisant le sujet de votre email
-#   <li>Dans le dernier champ, écrivez votre message
-#   <li>Cliquez sur le bouton Envoyer pour faire partir votre message
-#   </ol>
-#   Ces 5 étapes sont matérialisées dans la copie d'écran suivante :",
-# )
-# file5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341809/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.43.31_sbkdn6.png")
-# chapter3_3.photo.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
+chapter3_3 = Chapter.create!(
+  course: course3,
+  title: "Comment envoyer un email ?",
+  content: " <ol>
+  <li>Cliquez sur le bouton NOUVEAU MESSAGE. Lorsque vous cliquez sur le bouton NOUVEAU MESSAGE, une nouvelle fenêtre s'ouvre dans laquelle vous allez remplir les différents champs détaillés au-dessus et rédiger votre message
+  <li>Dans le champ de saisie À, tapez l'adresse email de votre destinataire
+  <li>Complétez le champ objet en précisant le sujet de votre email
+  <li>Dans le dernier champ, écrivez votre message
+  <li>Cliquez sur le bouton Envoyer pour faire partir votre message
+  </ol>
+  Ces 5 étapes sont matérialisées dans la copie d'écran suivante :",
+)
+file5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341809/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_14.43.31_sbkdn6.png")
+chapter3_3.photo.attach(io: file5, filename: "chapter3_2_photo.jpg", content_type: "image/png")
 
-# chapter4_1 = Chapter.create!(
-#   course: course4,
-#   title: "Pour commencer",
-#   content: "Une capture d'écran est une photo du contenu apparaissant à l'écran qui peut être enregistrée sous la forme d'un fichier dans la mémoire de votre ordinateur.
-#   Une capture d'écran peut-être une photo de l'ensemble ou d'une portion de votre écran.",
-# )
+chapter4_1 = Chapter.create!(
+  course: course4,
+  title: "Pour commencer",
+  content: "Une capture d'écran est une photo du contenu apparaissant à l'écran qui peut être enregistrée sous la forme d'un fichier dans la mémoire de votre ordinateur.
+  Une capture d'écran peut-être une photo de l'ensemble ou d'une portion de votre écran.",
+)
 
-# chapter4_2 = Chapter.create!(
-#   course: course4,
-#   title: "Vidéo explicative sur Mac",
-#   content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d'écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC.",
-# )
-# video1 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701341713/Apprenticlic/Comment_faire_une_capture_d_e%CC%81cran_dxbuwf.mov")
-# chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_type: "video/mov")
+chapter4_2 = Chapter.create!(
+  course: course4,
+  title: "Vidéo explicative sur Mac",
+  content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d'écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC.",
+)
+video1 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701341713/Apprenticlic/Comment_faire_une_capture_d_e%CC%81cran_dxbuwf.mov")
+chapter4_2.video.attach(io: video1, filename: "chapter4_2_video.mov", content_type: "video/mov")
 
-# chapter4_3 = Chapter.create!(
-#   course: course4,
-#   title: "Vidéo explicative sur PC/Windows11",
-#   content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d'écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC.",
-# )
-# video2 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701812866/Apprenticlic/Faire_une_capture_d_%C3%A9cran_oehb0q.mp4")
-# chapter4_3.video.attach(io: video2, filename: "chapter4_3_video.mov", content_type: "video/mov")
+chapter4_3 = Chapter.create!(
+  course: course4,
+  title: "Vidéo explicative sur PC/Windows11",
+  content: "Afin de pouvoir vous aider à mieux comprendre et à reproduire une capture d'écran, nous vous proposons deux vidéos explicatives. Une sur le système Mac OS et une autre sur le système PC.",
+)
+video2 = URI.open("https://res.cloudinary.com/dzqqjrcor/video/upload/v1701812866/Apprenticlic/Faire_une_capture_d_%C3%A9cran_oehb0q.mp4")
+chapter4_3.video.attach(io: video2, filename: "chapter4_3_video.mov", content_type: "video/mov")
 
-# chapter5_1 = Chapter.create!(
-#   course: course5,
-#   title: "Pour commencer",
-#   content: "Le glisser-déposer (ou <em>'drag and drop'</em> en anglais) est une technique pour <strong>déplacer ou copier</strong> un fichier d'un dossier de départ vers un dossier 'd'arrivée' en un seul geste avec votre <strong>souris</strong>. C'est un gain de temps car cela évite de devoir faire des copier-coller et de naviguer dans l'ordinateur entre temps"
-# )
+chapter5_1 = Chapter.create!(
+  course: course5,
+  title: "Pour commencer",
+  content: "Le glisser-déposer (ou <em>'drag and drop'</em> en anglais) est une technique pour <strong>déplacer ou copier</strong> un fichier d'un dossier de départ vers un dossier 'd'arrivée' en un seul geste avec votre <strong>souris</strong>. C'est un gain de temps car cela évite de devoir faire des copier-coller et de naviguer dans l'ordinateur entre temps"
+)
 
-# chapter5_2 = Chapter.create!(
-#   course: course5,
-#   title: "Pourquoi et où l'utiliser",
-#   content: "C'est une technique que l'on peut utiliser sur PC mais également sur les appareils mobiles, pour déplacer et ranger ses applications par exemple. Sur PC, vous pouvez vous en servir pour déplacer et ranger vos dossiers, mais aussi uploader un fichier sur internet lorsque cela vous est demander, vous verrez une petite fleche disant 'déposez votre fichier ici' -> c'est un glisser-déposé qui est attendu ! "
-# )
+chapter5_2 = Chapter.create!(
+  course: course5,
+  title: "Pourquoi et où l'utiliser",
+  content: "C'est une technique que l'on peut utiliser sur PC mais également sur les appareils mobiles, pour déplacer et ranger ses applications par exemple. Sur PC, vous pouvez vous en servir pour déplacer et ranger vos dossiers, mais aussi uploader un fichier sur internet lorsque cela vous est demander, vous verrez une petite fleche disant 'déposez votre fichier ici' -> c'est un glisser-déposé qui est attendu ! "
+)
 
-# chapter5_3 = Chapter.create!(
-#   course: course5,
-#   title: "Comment faire un glisser-déposer",
-#   content: "Il faut positionner votre curseur sur le fichier que vous souhaitez déplacer. <br> Il faut ensuite cliquer avec le bouton gauche de la souris puis <strong>maintenir le clic tout en déplaçant la souris</strong> et le curseur vers le fichier de destination (ou le site internet)"
-# )
-# file5_3 = URI.open("https://www.digitalcitizen.life/wp-content/uploads/2021/07/drag_drop-2-1.png")
-# chapter5_3.photo.attach(io: file5_3, filename: "chapter5_2_photo.jpg", content_type: "image/png")
+chapter5_3 = Chapter.create!(
+  course: course5,
+  title: "Comment faire un glisser-déposer",
+  content: "Il faut positionner votre curseur sur le fichier que vous souhaitez déplacer. <br> Il faut ensuite cliquer avec le bouton gauche de la souris puis <strong>maintenir le clic tout en déplaçant la souris</strong> et le curseur vers le fichier de destination (ou le site internet)"
+)
+file5_3 = URI.open("https://www.digitalcitizen.life/wp-content/uploads/2021/07/drag_drop-2-1.png")
+chapter5_3.photo.attach(io: file5_3, filename: "chapter5_2_photo.jpg", content_type: "image/png")
 
-# chapter5_3 = Chapter.create!(
-#   course: course5,
-#   title: "Exercice pratique",
-#   content: "*En cours de construction*"
-# )
+chapter5_3 = Chapter.create!(
+  course: course5,
+  title: "Exercice pratique",
+  content: "*En cours de construction*"
+)
 
-# chapter6_1 = Chapter.create!(
-#   course: course6,
-#   title: "Pour commencer",
-#   content: "La combinaison de touche au clavier permet d'effectuer des commandes spécifiques sur l'ordinateur. On acrives donc ces commandes en pressant en même temps 2 ou plus touches du clavier"
-# )
+chapter6_1 = Chapter.create!(
+  course: course6,
+  title: "Pour commencer",
+  content: "La combinaison de touche au clavier permet d'effectuer des commandes spécifiques sur l'ordinateur. On acrives donc ces commandes en pressant en même temps 2 ou plus touches du clavier"
+)
 
-# chapter6_2 = Chapter.create!(
-#   course: course6,
-#   title: "Bon à savoir",
-#   content: "La combinaison de touches ne demandent pas presser d'un coup les boutons en même temps, il suffit d'en maintenir un, puis d'appuyer sur le deuxieme. Sans rester appuyer, juste une pression suffira. Lorsque vous verrez une combinaison de touche, les touches à <strong>maintenir appuyées en premier</strong> seront toujours <strong>Ctrl</strong> et/ou <strong>Alt</strong> et/ou <strong>Shit/Maj</strong>"
-# )
+chapter6_2 = Chapter.create!(
+  course: course6,
+  title: "Bon à savoir",
+  content: "La combinaison de touches ne demandent pas presser d'un coup les boutons en même temps, il suffit d'en maintenir un, puis d'appuyer sur le deuxieme. Sans rester appuyer, juste une pression suffira. Lorsque vous verrez une combinaison de touche, les touches à <strong>maintenir appuyées en premier</strong> seront toujours <strong>Ctrl</strong> et/ou <strong>Alt</strong> et/ou <strong>Shit/Maj</strong>"
+)
 
-# chapter7_1 = Chapter.create!(
-#   course: course7,
-#   title: "Pour commencer",
-#   content: "La sélection de plusieurs fichiers permet d'être plus rapide sur son ordinateur lorsque l'on doit deplacer ou supprimer des fichiers, cela évite de le faire 'à la main' un par un"
-# )
+chapter7_1 = Chapter.create!(
+  course: course7,
+  title: "Pour commencer",
+  content: "La sélection de plusieurs fichiers permet d'être plus rapide sur son ordinateur lorsque l'on doit deplacer ou supprimer des fichiers, cela évite de le faire 'à la main' un par un"
+)
 
-# chapter7_2 = Chapter.create!(
-#   course: course7,
-#   title: "1ère méthode : à la souris",
-#   content: "Faites un cadre de sélection (attention : sans que le premier clic soit sur un des fichiers) avec le clic gauche de la souris, le cadre doit englober les fichiers que vous souhaitez. Une fois cela fait, relâchez le bouton gauche de la souris : vos fichiers sont sélectionnés !"
-# )
+chapter7_2 = Chapter.create!(
+  course: course7,
+  title: "1ère méthode : à la souris",
+  content: "Faites un cadre de sélection (attention : sans que le premier clic soit sur un des fichiers) avec le clic gauche de la souris, le cadre doit englober les fichiers que vous souhaitez. Une fois cela fait, relâchez le bouton gauche de la souris : vos fichiers sont sélectionnés !"
+)
 
-# chapter7_3 = Chapter.create!(
-#   course: course7,
-#   title: "2ème méthode : avec la touche Ctrl",
-#   content: "Maintenez la touche Ctrl enfoncée, puis faites des clic gauches sur chacun des fichiers que vous souhaitez, vous verrez alors que chacun des fichiers sont bien sélectionnés chacun leurs tours. Attention de bien garder la touche Ctrl enfoncée <strong>PENDANT</strong> que vous faites chacun des clics. Ne la relevée qu'une fois que vous avez terminé votre selection. <br>Astuce: si vous faites une erreur et que vous selectionnez un fichier que vous ne voulez pas, il vous suffit de recliquer dessus toujours avec la touche Ctrl enfoncée pour le déselectionner ! "
-# )
+chapter7_3 = Chapter.create!(
+  course: course7,
+  title: "2ème méthode : avec la touche Ctrl",
+  content: "Maintenez la touche Ctrl enfoncée, puis faites des clic gauches sur chacun des fichiers que vous souhaitez, vous verrez alors que chacun des fichiers sont bien sélectionnés chacun leurs tours. Attention de bien garder la touche Ctrl enfoncée <strong>PENDANT</strong> que vous faites chacun des clics. Ne la relevée qu'une fois que vous avez terminé votre selection. <br>Astuce: si vous faites une erreur et que vous selectionnez un fichier que vous ne voulez pas, il vous suffit de recliquer dessus toujours avec la touche Ctrl enfoncée pour le déselectionner ! "
+)
 
-# chapter7_3 = Chapter.create!(
-#   course: course7,
-#   title: "2ème méthode : avec la touche Shift/Maj",
-#   content: "Face à une liste de vos fichiers :<ol>
-#   <li>Faites un clic gauche sur le premier fichier de la liste</li>
-#   <li>Appuyez sur la touche Shift/Maj et maintenez la appuyé (l'élément sélectionné de l'étape suivant doit toujours l'être)</li>
-#   <li>Faites un clic gauche sur le dernier fichier de la liste</li>
-#   </ol>
-#   Tout les fichiers entre le premier et le dernier élément de votre liste sont ainsi sélectionnés !"
-# )
+chapter7_3 = Chapter.create!(
+  course: course7,
+  title: "2ème méthode : avec la touche Shift/Maj",
+  content: "Face à une liste de vos fichiers :<ol>
+  <li>Faites un clic gauche sur le premier fichier de la liste</li>
+  <li>Appuyez sur la touche Shift/Maj et maintenez la appuyé (l'élément sélectionné de l'étape suivant doit toujours l'être)</li>
+  <li>Faites un clic gauche sur le dernier fichier de la liste</li>
+  </ol>
+  Tout les fichiers entre le premier et le dernier élément de votre liste sont ainsi sélectionnés !"
+)
 
-# puts "CREATED CHAPTERS"
+puts "CREATED CHAPTERS"
 
-# user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
-# user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456")
-# user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456")
-# user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456")
-# user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456")
-# puts "CREATED USERS"
+user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
+user2 = User.create!(username: "LucasDGaetano", email: "lucasdgaetano@hotmail.fr", password: "123456")
+user3 = User.create!(username: "ValetinBailly", email: "valentinbailly@numericable.fr", password: "123456")
+user4 = User.create!(username: "PierreGuitard", email: "pierre.guitard@gmail.com", password: "123456")
+user5 = User.create!(username: "LucileDevilla", email: "lucile.vilela@gmail.com", password: "123456")
+puts "CREATED USERS"
 
-# ucourse1 = UsersCourse.create!(user: user2, course: course1)
-# ucourse2 = UsersCourse.create!(user: user4, course: course2)
-# ucourse3 = UsersCourse.create!(user: user1, course: course2)
-# ucourse4 = UsersCourse.create!(user: user3, course: course3)
-# ucourse5 = UsersCourse.create!(user: user1, course: course1)
-# ucourse6 = UsersCourse.create!(user: user5, course: course1)
-# ucourse7 = UsersCourse.create!(user: user2, course: course2)
+ucourse1 = UsersCourse.create!(user: user2, course: course1)
+ucourse2 = UsersCourse.create!(user: user4, course: course2)
+ucourse3 = UsersCourse.create!(user: user1, course: course2)
+ucourse4 = UsersCourse.create!(user: user3, course: course3)
+ucourse5 = UsersCourse.create!(user: user1, course: course1)
+ucourse6 = UsersCourse.create!(user: user5, course: course1)
+ucourse7 = UsersCourse.create!(user: user2, course: course2)
 
-# puts "CREATED USERS_COURSES"
+puts "CREATED USERS_COURSES"
 
-# UsersCourse.all.each do |uc|
-#   uc.course.chapters.each do |chap|
-#     UsersChapter.create(users_course: uc, chapter: chap)
-#   end
-# end
-# puts "LINKED USERS_COURSES TO USERS_CHAPTERS"
+UsersCourse.all.each do |uc|
+  uc.course.chapters.each do |chap|
+    UsersChapter.create(users_course: uc, chapter: chap)
+  end
+end
+puts "LINKED USERS_COURSES TO USERS_CHAPTERS"
 
-# comment1 = Comment.create!(user: user1, course: course1, content: "Je ne suis pas sur d'avoir bien compris le rythme")
-# comment2 = Comment.create!(user: user1, course: course2, content: "Je ne suis pas sur d'avoir bien compris comment appuyer sur deux touches en meme temps. merci.")
-# comment3 = Comment.create!(user: user2, course: course1, content: "C'était top")
-# comment4 = Comment.create!(user: user3, course: course3, content: "C'était bifbof")
+comment1 = Comment.create!(user: user1, course: course1, content: "Je ne suis pas sur d'avoir bien compris le rythme")
+comment2 = Comment.create!(user: user1, course: course2, content: "Je ne suis pas sur d'avoir bien compris comment appuyer sur deux touches en meme temps. merci.")
+comment3 = Comment.create!(user: user2, course: course1, content: "C'était top")
+comment4 = Comment.create!(user: user3, course: course3, content: "C'était bifbof")
 
-# puts "CREATED COMMENTS"
+puts "CREATED COMMENTS"
 
-# answer1 = Answer.create!(user: user4, comment: comment1, content: "Essaie encore")
-# answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maintenir Ctrl enfoncé")
-# answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
+answer1 = Answer.create!(user: user4, comment: comment1, content: "Essaie encore")
+answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maintenir Ctrl enfoncé")
+answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
 
-# puts "CREATED ANSWERS"
+puts "CREATED ANSWERS"
