@@ -3,6 +3,6 @@ class UsersChapter < ApplicationRecord
   belongs_to :chapter
 
   def done?
-    done ? 'Bravo !' : "J'ai compris !"
+    done ? "<i class='fa-solid fa-check'></i>" : "J'ai compris !"
   end
 end
