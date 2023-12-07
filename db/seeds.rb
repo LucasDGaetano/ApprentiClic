@@ -391,3 +391,7 @@ answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maint
 answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
 
 puts "CREATED ANSWERS"
+
+
+# border: 1px solid;
+# border-radius: 5px;
