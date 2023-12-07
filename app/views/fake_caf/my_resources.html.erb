@@ -23,7 +23,7 @@
                     <div class="text-end">
                       <div data-controller="click-on-button">
                         <div class="click">
-                          <p data-click-on-button-target="clickableElement" class="modal-redirect d-none">Vous allez être dirigés vers les informations détaillées de votre profil</p>
+                          <div data-click-on-button-target="clickableElement" class="modal-redirect d-none p-5 shadow-lg">Vous allez être dirigés vers les informations détaillées de votre profil</div>
                         </div>
                         <button type="button" class="btn-caf"><%= link_to "Déclarer",  faux_site_mes_ressources_mon_profil_path, class:'btn-caf', data:{action:'mouseenter->click-on-button#show mouseleave->click-on-button#hide'} %></button>
                       </div>
