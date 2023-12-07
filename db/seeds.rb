@@ -185,7 +185,7 @@ chapter2_2 = Chapter.create!(
   content: "Il s'agit d'une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
  l'identique sur un support numérique. Cette manipulation peut se faire aussi bien sur des fichiers que sur des dossiers.
  Vous pourrez appliquer le copier/coller dans divers logiciels comme un traitement de texte, word, bloc note,
- fichier Excel mais aussi votre navigateur Internet ",
+ fichier Excel mais aussi votre navigateur Internet "
 )
 
 file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
@@ -222,7 +222,7 @@ chapter2_6 = Chapter.create!(
     Quand vous reussirez chacune des actions, le fond de chaque case deviendra vert</p>
     <div class='d-flex justify-content-between mt-4'>
     <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
-    <textarea cols='60' rows='2' placeholder='collez le texte de gauche ici !'
+    <textarea cols='60' rows='2' placeholder='Collez le texte de gauche ici !'
     data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
     <div class='d-none text-center my-3' data-copy-paste-target='congrats'>

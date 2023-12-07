@@ -9,7 +9,7 @@
     <%= image_tag 'png/tree-flowers.png', class:"flower-course" %>
   </div>
 </div>
-<div class="container">
+<div class="container" data-controller="show-fake">
   <%# Section chapitre du cours %>
   <% @chapters.each do |chapter| %>
     <% users_chapter = current_user.users_chapters.where(chapter_id: chapter).first %>
@@ -22,18 +22,16 @@
     <%# Section bouton j'ai compris pour faire évoluer la barre de progression %>
     <%= turbo_frame_tag "done_chapter_#{chapter.id}" do %>
       <%= link_to users_chapter_path(users_chapter), data: { turbo_method: :patch } do %>
-          <button class="btn btn-success my-3" <%= 'disabled' if users_chapter.done %>><%= users_chapter.done?.html_safe %></button>
+          <button class="btn btn-success my-3" data-action="click->show-fake#check" data-show-fake-target="finishButton" <%= 'disabled' if users_chapter.done %>><%= users_chapter.done?.html_safe %></button>
         <% end %>
       <% end %>
       <hr>
     <% end %>
     <%# Section afficher lien vers faux sites quand tout chapitres de ce cours terminés %>
-    <% if current_user.users_courses.where(course_id: @course.id).first.users_chapters.all?(&:done) %>
-    <div class="text-center">
+    <div class="text-center d-none" data-show-fake-target="fakeLink">
       <h3 class="title">Voulez semblez prêt.e à essayer un de nos faux-site</h3>
       <%= link_to faux_site_path do %>
-            <button class="btn btn-success my-3"><strong>Aller sur le faux-site de la CAF >></strong></button>
-        <% end %>
+        <button class="btn btn-success my-3"><strong>Aller sur le faux-site de la CAF >></strong></button>
     </div>
     <% end %>
     <%# Section encart commentaire %>
