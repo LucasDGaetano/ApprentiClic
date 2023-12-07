@@ -16,8 +16,7 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
-cover1 = URI.open("https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/mouse-double-click-icon.png")
-file_course_1 = URI.open("https://uxwing.com/wp-content/themes/uxwing/download/computers-mobile-hardware/mouse-double-click-icon.png")
+file_course_1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701957980/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_15.05.39_wn1hy7.png")
 course1 = Course.new(
   title: "S'entrainer à faire un double-clic",
   description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
@@ -25,47 +24,39 @@ course1 = Course.new(
   difficulty: "Débutant",
 )
 course1.photo.attach(io: file_course_1, filename: "course1.png", content_type: "image/png")
-course1.cover.attach(io: cover1, filename: "course1_cover.jpg", content_type: "image/png")
 course1.save!
 
-cover2 = URI.open("https://d36qbsb0kq4ix7.cloudfront.net/images/61a0e07f33b7b5a54127c45bebffea9e615fe317d2892.jpg")
-file_course_2 = URI.open("https://d36qbsb0kq4ix7.cloudfront.net/images/61a0e07f33b7b5a54127c45bebffea9e615fe317d2892.jpg")
+file_course_2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701947781/Apprenticlic/Ctrl-C-and-Ctrl-V-18727696-1-1-580x387_q7ef2f.jpg")
 course2 = Course.create!(
-  title: "Apprendre à faire un copier/coller au clavier",
-  description: "Dans ce cours vous apprendrez à utiliser les combinaisons de touches pour faire des copier/coller",
+  title: "Apprendre à faire un copier/coller avec le clavier",
+  description: "Dans ce cours vous apprendrez à utiliser les combinaisons de touches pour faire un copier/coller",
   category: "Clavier",
   difficulty: "Intermédiaire",
 )
 course2.photo.attach(io: file_course_2, filename: "course1.png", content_type: "image/jpeg")
-course2.cover.attach(io: cover2, filename: "course1_cover.jpg", content_type: "image/jpeg")
 course2.save!
 
-file_course_3 = URI.open("https://pic.clubic.com/v1/images/1722947/raw?fit=max&width=1200&hash=ef33f62ab28c8a9ee3e88ecae59297c7b99d29e5")
+file_course_3 = URI.open("https://www.cleanfox.io/blog/wp-content/uploads/2021/01/GMAIL-1024x772.png")
 course3 = Course.create!(
   title: "Envoyer un email avec Gmail",
   description: "Dans ce cours vous apprendrez à vous servir de Gmail pour envoyer vos premiers messages",
   category: "Messagerie",
   difficulty: "Débutant",
 )
-cover3 = URI.open("https://pic.clubic.com/v1/images/1722947/raw?fit=max&width=1200&hash=ef33f62ab28c8a9ee3e88ecae59297c7b99d29e5")
 course3.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
-course3.cover.attach(io: cover3, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course3.save!
 
-cover4 = URI.open("https://thumbs.dreamstime.com/b/screenshots-blue-gradient-concept-icon-screenshots-blue-gradient-concept-icon-capture-work-software-screen-computer-display-235427648.jpg")
-file_course_4 = URI.open("https://thumbs.dreamstime.com/b/screenshots-blue-gradient-concept-icon-screenshots-blue-gradient-concept-icon-capture-work-software-screen-computer-display-235427648.jpg")
+file_course_4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701958203/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_15.09.43_aobsls.png")
 course4 = Course.create!(
   title: "Faire une capture d'écran",
   description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
   category: "Souris",
   difficulty: "Intermédiaire",
 )
-course4.photo.attach(io: file_course_4, filename: "course1.png", content_type: "image/png")
-course4.cover.attach(io: cover4, filename: "course3_cover.jpg", content_type: "image/png")
+course4.photo.attach(io: file_course_4, filename: "course4.png", content_type: "image/png")
 course4.save!
 
-cover5 = URI.open("https://cdn1.vectorstock.com/i/1000x1000/46/95/drag-and-drop-image-photo-picture-icon-with-hand-vector-31064695.jpg")
-file_course_5 = URI.open("https://cdn1.vectorstock.com/i/1000x1000/46/95/drag-and-drop-image-photo-picture-icon-with-hand-vector-31064695.jpg")
+file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701957692/Apprenticlic/deplacer-fichier_znfa4i.png")
 course5 = Course.create!(
   title: "Glisser-Déposer",
   description: "Dans ce cours vous apprendrez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
@@ -73,34 +64,28 @@ course5 = Course.create!(
   difficulty: "Intermédiaire"
 )
 course5.photo.attach(io: file_course_5, filename: "course1.png", content_type: "image/png")
-course5.cover.attach(io: cover5, filename: "course3_cover.jpg", content_type: "image/png")
 course5.save!
 
-cover6 = URI.open("https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/input-devices/dell/keyboards/kb700/global-spi/ng/keyboard-kb700-gray-campaign-hero-504x350-ng.psd?fmt=jpg&wid=504&hei=350")
-file_course_6 = URI.open("https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/input-devices/dell/keyboards/kb700/global-spi/ng/keyboard-kb700-gray-campaign-hero-504x350-ng.psd?fmt=jpg&wid=504&hei=350")
+file_course_6 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701955467/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_14.23.54_vlcxte.png")
 course6 = Course.create!(
   title: "Combinaison de touches clavier",
   description: "Dans ce cours vous apprendrez à faire un raccourci avec votre clavier à l'aide de l'utilisation d'une ou plusieurs touches afin de réaliser une action ou une commande sur votre ordinateur.",
   category: "Clavier",
   difficulty: "Débutant",
 )
-course6.photo.attach(io: file_course_6, filename: "course1.png", content_type: "image/png")
-course6.cover.attach(io: cover6, filename: "course3_cover.jpg", content_type: "image/png")
+course6.photo.attach(io: file_course_6, filename: "course6.png", content_type: "image/png")
 course6.save!
 
-cover7 = URI.open("https://www.lifewire.com/thmb/als0_2avIl194PRlLgIUasviu-w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Select-File-Click-Drag-840c3468a23b46199368e4826ddfd6f7.jpg")
 file_course_7 = URI.open("https://www.lifewire.com/thmb/als0_2avIl194PRlLgIUasviu-w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Select-File-Click-Drag-840c3468a23b46199368e4826ddfd6f7.jpg")
 course7 = Course.create!(
-  title: "Sélectionner plusieurs fichiers ou dossiers?",
+  title: "Sélectionner plusieurs fichiers ou dossiers",
   description: "Dans ce cours vous apprendrez à sélectionner plusieurs fichiers en même temps pour gagner du temps et bien organiser votre ordinateur.",
   category: "Navigation",
   difficulty: "Intermédiaire",
 )
 course7.photo.attach(io: file_course_7, filename: "course1.png", content_type: "image/jpeg")
-course7.cover.attach(io: cover7, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course7.save!
 
-cover8 = URI.open("https://www.cleanfox.io/blog/wp-content/uploads/2021/01/GMAIL-1024x772.png")
 file_course_8 = URI.open("https://www.cleanfox.io/blog/wp-content/uploads/2021/01/GMAIL-1024x772.png")
 course8 = Course.create!(
   title: "Créer une adresse gmail messagerie",
@@ -109,22 +94,18 @@ course8 = Course.create!(
   difficulty: "Débutant",
 )
 course8.photo.attach(io: file_course_8, filename: "course1.png", content_type: "image/jpeg")
-course8.cover.attach(io: cover8, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course8.save!
 
-cover9 = URI.open("https://storage.googleapis.com/support-forums-api/attachment/message-2387379-15394479817974394242.png")
-file_course_9 = URI.open("https://storage.googleapis.com/support-forums-api/attachment/message-2387379-15394479817974394242.png")
+file_course_9 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701956785/Apprenticlic/logo-google_vvmfxr.png")
 course9 = Course.create!(
   title: "Faire une recherche sur Google",
   description: "Dans ce cours, découvrez comment effectuer des recherches efficaces et précises sur Internet grâce au moteur de recherche de Google.",
   category: "Internet",
   difficulty: "Débutant",
 )
-course9.photo.attach(io: file_course_9, filename: "course1.png", content_type: "image/jpeg")
-course9.cover.attach(io: cover9, filename: "course3_cover.jpg", content_type: "image/jpeg")
+course9.photo.attach(io: file_course_9, filename: "course9.png", content_type: "image/png")
 course9.save!
 
-cover10 = URI.open("https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/335692037/original/4c533bdaec617f468f89b5984f56cb0a8d98b280/save-file-image-jpg-jpeg-ai-etc-to-pdf.jpg")
 file_course_10 = URI.open("https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/335692037/original/4c533bdaec617f468f89b5984f56cb0a8d98b280/save-file-image-jpg-jpeg-ai-etc-to-pdf.jpg")
 course10 = Course.create!(
   title: "Enregistrer un fichier en pdf",
@@ -133,7 +114,6 @@ course10 = Course.create!(
   difficulty: "Débutant",
 )
 course10.photo.attach(io: file_course_10, filename: "course1.png", content_type: "image/jpeg")
-course10.cover.attach(io: cover10, filename: "course3_cover.jpg", content_type: "image/jpeg")
 course10.save!
 
 puts "CREATED COURSES"
@@ -188,7 +168,7 @@ chapter2_2 = Chapter.create!(
  fichier Excel mais aussi votre navigateur Internet "
 )
 
-file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341841/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.19.26_jj9320.png")
+file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_11.12.09_svqzhx.png")
 chapter2_3 = Chapter.create!(
   course: course2,
   title: "Sélectionner l'élément à copier/coller",
@@ -196,7 +176,7 @@ chapter2_3 = Chapter.create!(
 )
 chapter2_3.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
 
-file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341842/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.21.17_mrxsju.png")
+file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_11.00.36_jmaako.png")
 chapter2_4 = Chapter.create!(
   course: course2,
   title: "Effectuer l'action copier",
@@ -204,7 +184,7 @@ chapter2_4 = Chapter.create!(
 )
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
 
-file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701341843/Apprenticlic/Capture_d_e%CC%81cran_2023-11-29_a%CC%80_12.22.28_vesoxe.png")
+file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_11.00.51_srcuhc.png")
 chapter2_5 = Chapter.create!(
   course: course2,
   title: "Effectuer l'action coller",
@@ -395,7 +375,3 @@ answer2 = Answer.create!(user: user5, comment: comment2, content: "Il faut maint
 answer3 = Answer.create!(user: user3, comment: comment3, content: "Je suis bien d'acccord !")
 
 puts "CREATED ANSWERS"
-
-
-# border: 1px solid;
-# border-radius: 5px;
