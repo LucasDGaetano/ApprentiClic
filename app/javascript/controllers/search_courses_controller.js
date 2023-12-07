@@ -5,8 +5,6 @@ export default class extends Controller {
   static targets = ["form", "input", "category", "difficulty", "list"]
 
   connect() {
-    console.log("hello from search courses");
-    console.log(this.element);
   }
 
   update(event) {
@@ -15,7 +13,6 @@ export default class extends Controller {
     fetch(url, {headers: {"Accept": "text/plain"}})
       .then(response => response.text())
       .then((data) => {
-        console.log(data => data);
         this.listTarget.outerHTML = data
       })
   }

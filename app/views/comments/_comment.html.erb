@@ -1,6 +1,7 @@
 <div class="mt-2" data-controller="comment">
   <p class="course-content"><strong><%= comment.user.username %></strong> - le <%= comment.created_at.strftime("%d/%m/%Y") %></p>
   <p class="course-content"><%= comment.content %></p>
+  <button class="btn btn-info" data-action="click->comment#showAnswer">Répondre</button>
   <% if comment.answers.any? %>
     <div class= "container mx-3">
       <% comment.answers.each do |answer| %>
@@ -10,7 +11,7 @@
     </div>
   <% end %>
   <%# Section réponse à commentaire %>
-  <div>
+  <div class="d-none mt-3" data-comment-target="toggable">
     <%= simple_form_for [comment, answer], html: { data: { action: "submit->comment#addAnswer"}} do |f|%>
       <%= f.input :content, label: false%>
       <%= f.submit "Répondre à #{comment.user.username}", class: "btn btn-info mb-3" %>

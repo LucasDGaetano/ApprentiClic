@@ -2,6 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="comment"
 export default class extends Controller {
+  static targets = ["toggable"]
+
   connect() {
   }
 
@@ -20,5 +22,10 @@ export default class extends Controller {
       this.element.outerHTML = data
     })
 
+  }
+
+  showAnswer(event) {
+    event.currentTarget.classList.add('d-none')
+    this.toggableTarget.classList.remove('d-none');
   }
 }
