@@ -25,6 +25,7 @@ export default class extends Controller {
   }
 
   showAnswer(event) {
-    this.toggableTarget.classList.toggle('d-none');
+    event.currentTarget.classList.add('d-none')
+    this.toggableTarget.classList.remove('d-none');
   }
 }
