@@ -27,6 +27,11 @@
       <% end %>
       <hr>
     <% end %>
+    <%# Section afficher lien vers faux sites quand tout chapitres de ce cours terminés %>
+    <% if current_user %>
+      <p>Voulez semblez prêt.e à essayer un de nos faux-site</p>
+      <%= link_to 'Aller sur le faux-site de la CAF', faux_site_path, class: 'text-center' %>
+    <% end %>
     <%# Section encart commentaire %>
     <div data-controller="toggle-comments new-comment">
         <button class="btn btn-info" data-action="click->toggle-comments#fire">Voir les commentaires</button>
