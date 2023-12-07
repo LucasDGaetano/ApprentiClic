@@ -16,7 +16,7 @@ Course.destroy_all
 User.destroy_all
 puts "CLEANED DATABASE"
 
-file_course_1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701957980/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_15.05.39_wn1hy7.png")
+file_course_1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701967236/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_17.40.18_ime7yr.png")
 course1 = Course.new(
   title: "S'entrainer à faire un double-clic",
   description: "Dans ce cours, suivez le rythme pour vous entrainer a reussir tout vos double-clics !",
@@ -46,7 +46,7 @@ course3 = Course.create!(
 course3.photo.attach(io: file_course_3, filename: "course1.png", content_type: "image/jpeg")
 course3.save!
 
-file_course_4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701958203/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_15.09.43_aobsls.png")
+file_course_4 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701967159/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_17.38.52_vwycc1.png")
 course4 = Course.create!(
   title: "Faire une capture d'écran",
   description: "Dans ce cours vous apprendrez à faire une capture d'écran que vous soyez sur Mac ou sur PC",
@@ -56,7 +56,7 @@ course4 = Course.create!(
 course4.photo.attach(io: file_course_4, filename: "course4.png", content_type: "image/png")
 course4.save!
 
-file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701957692/Apprenticlic/deplacer-fichier_znfa4i.png")
+file_course_5 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701967029/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_17.36.54_dz1sjo.png")
 course5 = Course.create!(
   title: "Glisser-Déposer",
   description: "Dans ce cours vous apprendrez à déplacer un fichier pour le ranger à un autre endroit sur votre ordinateur rien qu'avec votre souris ",
@@ -106,7 +106,7 @@ course9 = Course.create!(
 course9.photo.attach(io: file_course_9, filename: "course9.png", content_type: "image/png")
 course9.save!
 
-file_course_10 = URI.open("https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/335692037/original/4c533bdaec617f468f89b5984f56cb0a8d98b280/save-file-image-jpg-jpeg-ai-etc-to-pdf.jpg")
+file_course_10 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701967741/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_17.48.46_p0odrk.png")
 course10 = Course.create!(
   title: "Enregistrer un fichier en pdf",
   description: "Dans ce cours, vous apprendrez à enregistrer un fichier pdf à partir de n'importe quel document.",
