@@ -14,8 +14,8 @@
 <!-- Section Qu'en disent nos utilisateurs -->
 <section class="users-reviews">
   <div class="container">
-    <div class="title">
-      <h3>Ce qu'en disent nos apprentis</h3>
+    <div >
+      <h3 class="title-homepage">Ce qu'en disent nos apprentis</h3>
     </div>
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
       <div class="review" style="flex: 0 0 30%; margin: 10px 0;">
@@ -53,7 +53,7 @@
 </div>
 <!-- Section des cards des cours les plus consultés -->
 <div class="container mt-4">
-  <div class="title">
+  <div class="title-homepage">
     <h3>Les cours les plus consultés</h3>
   </div>
   <section class="card-section" style="margin-top: 25px;">
@@ -85,7 +85,7 @@
 </div>
 <!-- Section des cards des faux-sites -->
 <div class="container">
-  <div class="title">
+  <div class="title-homepage">
     <h3>Mes premiers pas</h3>
   </div>
   <section class="card-section" style="margin-top: 25px;">
@@ -102,16 +102,14 @@
   </div>
 </div>
 <!-- Footer -->
-<div class="footer" style="background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701857218/Apprenticlic/img-footer_rqnt7x.png);">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
+<div class="footer" style="position: relative;background-image: url(https://res.cloudinary.com/dzqqjrcor/image/upload/v1701896148/Apprenticlic/img-footer2_yriomq.png);">
+  <!-- Photo des trois fleurs -->
+  <div style="position: absolute; bottom: 0; right: 0;">
+    <%= image_tag 'https://res.cloudinary.com/dzqqjrcor/image/upload/v1701939771/Apprenticlic/Group_70_1_od0da1.png'%>
+  </div>
+ <div class="footer-content">
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright" style="margin-left: 60px;">
       <p>&copy; 2023 Cours informatique en ligne</p>
     </div>
   </div>
