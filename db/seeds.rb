@@ -216,17 +216,21 @@ chapter2_5.photo.attach(io: file3, filename: "coller.png", content_type: "image/
 chapter2_6 = Chapter.create!(
   course: course2,
   title: "Exercice pratique",
-  content: "<div class='my-5' data-controller='copy-paste'>
+  content: "<div class='my-3' data-controller='copy-paste' data-copy-paste-is-copied-value='false'  data-copy-paste-is-pasted-value='false'>
     <p>Vous avez ici 2 cases, il y a du texte dans celle de gauche,
     il faut le mettre dans la case de droite à l'aide du copier/coller au clavier <br>
     Quand vous reussirez chacune des actions, le fond de chaque case deviendra vert</p>
-    <div class='d-flex justify-content-evenly mt-4'>
+    <div class='d-flex justify-content-between mt-4'>
     <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
     <textarea cols='60' rows='2' placeholder='collez le texte de gauche ici !'
     data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
-  </div>",
+    <div class='d-none text-center my-3' data-copy-paste-target='congrats'>
+      <h3> Bravo vous avez réussi !</h3>
+    </div>
+  </div>"
 )
+
 
 chapter3_1 = Chapter.create!(
   course: course3,
