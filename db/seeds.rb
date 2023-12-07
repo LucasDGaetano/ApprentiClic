@@ -337,6 +337,25 @@ chapter7_3 = Chapter.create!(
   Tout les fichiers entre le premier et le dernier élément de votre liste sont ainsi sélectionnés !"
 )
 
+chapter8_1 = Chapter.create!(
+  course: course8,
+  title: "Pour commencer",
+  content: "*Cours en construction, revenez plus tard*"
+)
+
+chapter9_1 = Chapter.create!(
+  course: course9,
+  title: "Pour commencer",
+  content: "*Cours en construction, revenez plus tard*"
+)
+
+chapter10_1 = Chapter.create!(
+  course: course10,
+  title: "Pour commencer",
+  content: "*Cours en construction, revenez plus tard*"
+)
+
+
 puts "CREATED CHAPTERS"
 
 user1 = User.create!(username: "ZairaCosman", email: "zairacosman@hotmail.fr", password: "lewagon20012023")
