@@ -9,7 +9,6 @@ export default class extends Controller {
 
   fire(event) {
     this.toggableTarget.classList.toggle('d-none');
-    console.log(event.currentTarget)
     if (this.toggableTarget.classList.contains('d-none')) {
       event.currentTarget.innerHTML = "Voir les commentaires"
     }
