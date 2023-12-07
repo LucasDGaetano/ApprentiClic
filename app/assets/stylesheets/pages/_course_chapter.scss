@@ -3,5 +3,11 @@
 }
 
 .course-title {
-    font-size: 28px;
+  font-size: 28px;
+}
+
+.course-image img {
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
