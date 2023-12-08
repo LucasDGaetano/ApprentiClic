@@ -142,7 +142,7 @@ chapter1_4 = Chapter.create!(
   title: "Exercice pratique",
   content: "<div class='exercice-clic' data-controller='double-clic'>
   <p>Double-cliquer avec votre souris dans la zone carrée.
-  Quand vous réussisez votre double-clic, le fond de la case deviendra vert.<br>
+  Quand vous réussissez votre double-clic, le fond de la case deviendra vert.<br>
   Lorsque la case est rose, vous devez recommencer votre double-clic pour qu'elle passe au vert.</p>
   <div data-action='click->double-clic#oneClick'
   style='width: 100px; height: 100px; background-color: #ccc;'>
@@ -165,14 +165,14 @@ chapter2_2 = Chapter.create!(
   content: "Il s'agit d'une action qui a pour but de copier du texte, une image, ou un fichier pour la reproduire à
  l'identique sur un support numérique. Cette manipulation peut se faire aussi bien sur des fichiers que sur des dossiers.
  Vous pourrez appliquer le copier/coller dans divers logiciels comme un traitement de texte, word, bloc note,
- fichier Excel mais aussi votre navigateur Internet "
+ fichier Excel mais aussi votre navigateur Internet."
 )
 
 file1 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/Apprenticlic/Capture_d_e%CC%81cran_2023-12-07_a%CC%80_11.12.09_svqzhx.png")
 chapter2_3 = Chapter.create!(
   course: course2,
   title: "Sélectionner l'élément à copier/coller",
-  content: "Sélectionnez l'élément à copier en plaçant la souris sur l'élément et en le sélectionnant jusqu'à ce que vous le voyez surligné comme la photo ci-dessous"
+  content: "Sélectionnez l'élément à copier en plaçant la souris sur l'élément et en le sélectionnant jusqu'à ce que vous le voyiez surligné comme la photo ci-dessous."
 )
 chapter2_3.photo.attach(io: file1, filename: "selection.png", content_type: "image/png")
 
@@ -180,7 +180,7 @@ file2 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/
 chapter2_4 = Chapter.create!(
   course: course2,
   title: "Effectuer l'action copier",
-  content: "Pour l'action du copier, vous devez pressez les touches Ctrl et C en même temps"
+  content: "Pour l'action du copier, vous devez presser les touches Ctrl et C en même temps."
 )
 chapter2_4.photo.attach(io: file2, filename: "copier.png", content_type: "image/png")
 
@@ -188,8 +188,8 @@ file3 = URI.open("https://res.cloudinary.com/dzqqjrcor/image/upload/v1701944009/
 chapter2_5 = Chapter.create!(
   course: course2,
   title: "Effectuer l'action coller",
-  content: "Pour l'action du coller, vous devez pressez les touches Ctrl et V en même temps.
-  La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi"
+  content: "Pour l'action du coller, vous devez presser les touches Ctrl et V en même temps.
+  La copie de l'élément devrait apparaître dans l'emplacement que vous avez choisi."
 )
 chapter2_5.photo.attach(io: file3, filename: "coller.png", content_type: "image/png")
 
@@ -198,15 +198,15 @@ chapter2_6 = Chapter.create!(
   title: "Exercice pratique",
   content: "<div class='my-3' data-controller='copy-paste' data-copy-paste-is-copied-value='false'  data-copy-paste-is-pasted-value='false'>
     <p>Vous avez ici 2 cases, il y a du texte dans celle de gauche,
-    il faut le mettre dans la case de droite à l'aide du copier/coller au clavier <br>
-    Quand vous reussirez chacune des actions, le fond de chaque case deviendra vert</p>
+    il faut le mettre dans la case de droite à l'aide du copier/coller au clavier.<br>
+    Quand vous réussirez chacune des actions, le fond de chaque case deviendra vert.</p>
     <div class='d-flex justify-content-between mt-4'>
-    <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez moi dans la case de droite !</textarea>
+    <textarea cols='60' rows='2' data-action='copy->copy-paste#copy' data-copy-paste-target='copyArea'>Copiez-moi dans la case de droite !</textarea>
     <textarea cols='60' rows='2' placeholder='Collez le texte de gauche ici !'
     data-action='paste->copy-paste#paste' data-copy-paste-target='pasteArea'></textarea>
     </div>
     <div class='d-none text-center my-3' data-copy-paste-target='congrats'>
-      <h3> Bravo vous avez réussi !</h3>
+      <h3>Bravo vous avez réussi !</h3>
     </div>
   </div>"
 )
