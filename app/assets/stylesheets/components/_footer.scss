@@ -1,3 +1,7 @@
+.min-content {
+  min-height: calc(100vh - 360px);
+}
+
 .footer {
   background-size: cover; /* Taille de l'image pour remplir toute la zone du footer */
   // background-position: center; /* Positionnement de l'image au centre */
